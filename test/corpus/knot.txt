@@ -134,3 +134,31 @@ test
     (body
       (dialog
         (text)))))
+
+==============
+Illegal divert
+==============
+
+asdsdf -> test asdf
+=== test ===
+test
+
+--------------------------------------------------------------------------------
+
+(program
+  (body
+    (dialog
+      (text)
+      (divert
+        (divert_start)
+        (identifier))))
+  (ERROR
+    (UNEXPECTED ' ')
+    (identifier))
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog
+        (text)))))
