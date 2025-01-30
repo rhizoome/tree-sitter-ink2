@@ -8,18 +8,57 @@
       "required": true,
       "types": [
         {
-          "type": "body_line",
-          "named": true
-        },
-        {
-          "type": "line_start",
+          "type": "paragraph",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "body_line",
+    "type": "paragraph",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body_start",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "text_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "program",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "empty_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_line",
     "named": true,
     "fields": {},
     "children": {
@@ -38,25 +77,19 @@
     }
   },
   {
-    "type": "program",
+    "type": "vocabular",
     "named": true,
-    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "body",
+          "type": "minus",
           "named": true
         }
       ]
     }
-  },
-  {
-    "type": "vocabular",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "-",
@@ -67,7 +100,19 @@
     "named": true
   },
   {
-    "type": "line_start",
+    "type": "body_start",
+    "named": true
+  },
+  {
+    "type": "empty_line",
+    "named": true
+  },
+  {
+    "type": "line_end",
+    "named": true
+  },
+  {
+    "type": "minus",
     "named": true
   }
 ]

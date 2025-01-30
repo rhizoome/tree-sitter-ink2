@@ -3,35 +3,85 @@
   "name": "ink",
   "rules": {
     "program": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "body"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "empty_line"
+          }
+        ]
+      }
+    },
+    "knot": {
       "type": "SEQ",
       "members": [
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "body"
-          }
+          "type": "SYMBOL",
+          "name": "knot_start"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*===*\\s"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
     "body": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "paragraph"
+          }
+        ]
+      }
+    },
+    "paragraph": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "line_start"
+          "name": "body_start"
         },
         {
           "type": "SYMBOL",
-          "name": "body_line"
+          "name": "text_line"
         },
         {
-          "type": "PATTERN",
-          "value": "\\n"
+          "type": "SYMBOL",
+          "name": "line_end"
         }
       ]
     },
-    "body_line": {
+    "dialog_line": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "choice_start"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*\\*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text_line"
+        }
+      ]
+    },
+    "text_line": {
       "type": "REPEAT1",
       "content": {
         "type": "CHOICE",
@@ -48,29 +98,28 @@
       }
     },
     "vocabular": {
-      "type": "PREC_RIGHT",
-      "value": 0,
+      "type": "REPEAT1",
       "content": {
-        "type": "REPEAT1",
-        "content": {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[\\p{L}_]+"
-            },
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "SYMBOL",
-                "name": "minus"
-              },
-              "named": false,
-              "value": "-"
-            }
-          ]
-        }
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "[\\p{L}_]+"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "minus"
+          },
+          {
+            "type": "STRING",
+            "value": "-"
+          }
+        ]
       }
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[\\p{L}_]+"
     }
   },
   "extras": [
@@ -79,7 +128,14 @@
       "value": "\\s"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "body"
+    ],
+    [
+      "vocabular"
+    ]
+  ],
   "precedences": [],
   "externals": [
     {
@@ -92,7 +148,23 @@
     },
     {
       "type": "SYMBOL",
-      "name": "line_start"
+      "name": "body_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "knot_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "choice_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "empty_line"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "line_end"
     }
   ],
   "inline": [],

@@ -1,38 +1,69 @@
 module.exports = grammar({
     name: "ink",
     conflicts: $ => [
+        [$.body],
+        [$.vocabular]
     ],
     externals: $ => [
         $.arrow,
         $.minus,
-        $.line_start
+        $.body_start,
+        $.knot_start,
+        $.choice_start,
+        $.empty_line,
+        $.line_end
     ],
 
     rules: {
 
-        program: $ => seq(
-            repeat($.body),
+        program: $ => repeat(
+            choice(
+                $.body,
+                //$.knot,
+                $.empty_line
+            )
         ),
 
-        body: $ => seq(
-            $.line_start,
-            $.body_line,
-            /\n/
+        knot: $ => seq(
+            $.knot_start,
+            /\s*===*\s/,
+            $.identifier
         ),
 
-        body_line: $ => repeat1(
+        body: $ => repeat1(
+            choice(
+                $.paragraph,
+                //$.dialog_line,
+            )
+        ),
+
+        paragraph: $ => seq(
+            $.body_start,
+            $.text_line,
+            $.line_end
+        ),
+
+        dialog_line: $ => seq(
+            $.choice_start,
+            /\s*\*/,
+            $.text_line,
+        ),
+
+        text_line: $ => repeat1(
             choice(
                 $.arrow,
                 $.vocabular
             )
         ),
 
-        vocabular: $ => prec.right(repeat1(
+        vocabular: $ => repeat1(
             choice(
                 /[\p{L}_]+/,
-                alias($.minus, "-")
+                $.minus, "-"
             )
-        ))
+        ),
+
+        identifier: $ => /[\p{L}_]+/,
 
         //program: $ => seq(
         //    optional($.body),
