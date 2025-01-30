@@ -5,6 +5,7 @@ module.exports = grammar({
         [$.knot],
         [$.body],
         [$.dialog],
+        [$.dialog, $.program],
     ],
 
     rules: {
@@ -12,7 +13,7 @@ module.exports = grammar({
         program: $ => seq(
             optional($.body),
             repeat($.knot),
-            /\n/
+            repeat(/\n/)
         ),
 
         knot: $ => seq(
@@ -45,6 +46,7 @@ module.exports = grammar({
             /\n/,
             repeat1(
                 choice(
+                    /\n/,
                     $.inline_logic,
                     field("text", repeat1(
                         choice(

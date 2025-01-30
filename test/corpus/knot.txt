@@ -162,3 +162,59 @@ test
     (body
       (dialog
         (text)))))
+
+===========
+End newline
+===========
+
+=== teet ===
+
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog))))
+
+=========
+End space
+=========
+
+=== teet ===
+ 
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog
+        (text)))))
+
+==========
+Empty line
+==========
+
+=== teet ===
+a
+
+b
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog
+        (text)
+        (text)))))

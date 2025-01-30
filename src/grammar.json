@@ -25,8 +25,11 @@
           }
         },
         {
-          "type": "PATTERN",
-          "value": "\\n"
+          "type": "REPEAT",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\n"
+          }
         }
       ]
     },
@@ -146,6 +149,10 @@
             "type": "CHOICE",
             "members": [
               {
+                "type": "PATTERN",
+                "value": "\\n"
+              },
+              {
                 "type": "SYMBOL",
                 "name": "inline_logic"
               },
@@ -234,6 +241,10 @@
     ],
     [
       "dialog"
+    ],
+    [
+      "dialog",
+      "program"
     ]
   ],
   "precedences": [],
