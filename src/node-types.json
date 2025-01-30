@@ -27,6 +27,10 @@
         "required": false,
         "types": [
           {
+            "type": "-",
+            "named": false
+          },
+          {
             "type": "text",
             "named": true
           }
@@ -38,7 +42,30 @@
       "required": false,
       "types": [
         {
+          "type": "divert",
+          "named": true
+        },
+        {
           "type": "inline_logic",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "divert",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "divert_start",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         }
       ]
@@ -93,6 +120,10 @@
       "required": false,
       "types": [
         {
+          "type": "body",
+          "named": true
+        },
+        {
           "type": "knot",
           "named": true
         }
@@ -128,6 +159,14 @@
         }
       ]
     }
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "divert_start",
+    "named": true
   },
   {
     "type": "identifier",

@@ -6,6 +6,18 @@
       "type": "SEQ",
       "members": [
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
@@ -134,21 +146,62 @@
             "type": "CHOICE",
             "members": [
               {
+                "type": "SYMBOL",
+                "name": "inline_logic"
+              },
+              {
                 "type": "FIELD",
                 "name": "text",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "text"
+                  "type": "REPEAT1",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "-"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "text"
+                      }
+                    ]
+                  }
                 }
-              },
-              {
-                "type": "SYMBOL",
-                "name": "inline_logic"
               }
             ]
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "divert"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
+    },
+    "divert": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "divert_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        }
+      ]
+    },
+    "divert_start": {
+      "type": "PATTERN",
+      "value": "->\\s*"
     },
     "identifier": {
       "type": "PATTERN",
@@ -164,7 +217,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^\\n{]+"
+      "value": "[^\\n{-]+"
     },
     "rest": {
       "type": "PATTERN",
@@ -178,6 +231,9 @@
     ],
     [
       "body"
+    ],
+    [
+      "dialog"
     ]
   ],
   "precedences": [],

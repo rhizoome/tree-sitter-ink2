@@ -1,0 +1,136 @@
+===========
+Single knot
+===========
+
+=== teäst ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    name: (identifier)
+    (rest)))
+
+===========
+Next knot
+===========
+
+=== test ===
+=== test ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest))
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)))
+
+=================
+Knot and stitches
+=================
+
+=== test ===
+=== test ===
+ = bla
+= fasel
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest))
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (stitch
+        (stitch_start)
+        (identifier))
+      (stitch
+        (stitch_start)
+        (identifier)))))
+
+=====================
+Knot with simple body
+=====================
+
+=== test ===
+body
+=== test ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog
+        (text))))
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)))
+
+===================
+Knot with code body
+===================
+
+=== test ===
+body {func{}} bla {x} asdf
+=== test ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog
+        (text)
+        (inline_logic)
+        (text)
+        (inline_logic)
+        (text))))
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)))
+
+======
+Divert
+======
+
+asdf-sdf -> test
+=== test ===
+test
+
+--------------------------------------------------------------------------------
+
+(program
+  (body
+    (dialog
+      (text)
+      (text)
+      (divert
+        (divert_start)
+        (identifier))))
+  (knot
+    (knot_start)
+    (identifier)
+    (rest)
+    (body
+      (dialog
+        (text)))))

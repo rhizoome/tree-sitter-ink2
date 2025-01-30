@@ -1,16 +1,16 @@
-const CATCH_ALL = -2;
-
 module.exports = grammar({
     name: "ink",
     extras: $ => [],
     conflicts: $ => [
         [$.knot],
         [$.body],
+        [$.dialog],
     ],
 
     rules: {
 
         program: $ => seq(
+            optional($.body),
             repeat($.knot),
             /\n/
         ),
@@ -29,7 +29,6 @@ module.exports = grammar({
             )
         ),
 
-
         stitch: $ => seq(
             $.stitch_start,
             field("name", $.identifier),
@@ -46,16 +45,28 @@ module.exports = grammar({
             /\n/,
             repeat1(
                 choice(
-                    field("text", $.text),
-                    $.inline_logic
+                    $.inline_logic,
+                    field("text", repeat1(
+                        choice(
+                            "-",
+                            $.text
+                        )
+                    )),
                 )
-            )
+            ),
+            optional($.divert)
         ),
 
+        divert: $ => seq(
+            $.divert_start,
+            $.identifier
+        ),
+
+        divert_start: $ => /->\s*/,
         identifier: $ => /\p{L}+/,
         knot_start: $ => /\n\s*={2,}=*\s*/,
         stitch_start: $ => /\n\s*=\s*/,
-        text: $ => /[^\n{]+/,
+        text: $ => /[^\n{-]+/,
         rest: $ => /[^\n]+/,
     }
 
