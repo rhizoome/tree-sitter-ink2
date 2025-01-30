@@ -6,249 +6,95 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "body"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "knot"
+            "name": "body"
           }
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "PATTERN",
-            "value": "\\n"
-          }
-        }
-      ]
-    },
-    "knot": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "knot_start"
-        },
-        {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "rest"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "body"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
         }
       ]
     },
     "body": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "line_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "body_line"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\n"
+        }
+      ]
+    },
+    "body_line": {
       "type": "REPEAT1",
       "content": {
         "type": "CHOICE",
         "members": [
           {
             "type": "SYMBOL",
-            "name": "stitch"
+            "name": "arrow"
           },
           {
             "type": "SYMBOL",
-            "name": "dialog"
+            "name": "vocabular"
           }
         ]
       }
     },
-    "stitch": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "stitch_start"
-        },
-        {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
-        },
-        {
+    "vocabular": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "rest"
+              "type": "PATTERN",
+              "value": "[\\p{L}_]+"
             },
             {
-              "type": "BLANK"
-            }
-          ]
-        }
-      ]
-    },
-    "inline_logic": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "{"
-        },
-        {
-          "type": "PATTERN",
-          "value": "[^}]+"
-        },
-        {
-          "type": "STRING",
-          "value": "}"
-        }
-      ]
-    },
-    "dialog": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "PATTERN",
-          "value": "\\n"
-        },
-        {
-          "type": "REPEAT1",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "\\n"
-              },
-              {
+              "type": "ALIAS",
+              "content": {
                 "type": "SYMBOL",
-                "name": "inline_logic"
+                "name": "minus"
               },
-              {
-                "type": "FIELD",
-                "name": "text",
-                "content": {
-                  "type": "REPEAT1",
-                  "content": {
-                    "type": "CHOICE",
-                    "members": [
-                      {
-                        "type": "STRING",
-                        "value": "-"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "text"
-                      }
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "divert"
-            },
-            {
-              "type": "BLANK"
+              "named": false,
+              "value": "-"
             }
           ]
         }
-      ]
-    },
-    "divert": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "divert_start"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "identifier"
-        }
-      ]
-    },
-    "divert_start": {
-      "type": "PATTERN",
-      "value": "->\\s*"
-    },
-    "identifier": {
-      "type": "PATTERN",
-      "value": "\\p{L}+"
-    },
-    "knot_start": {
-      "type": "PATTERN",
-      "value": "\\n\\s*={2,}=*\\s*"
-    },
-    "stitch_start": {
-      "type": "PATTERN",
-      "value": "\\n\\s*=\\s*"
-    },
-    "text": {
-      "type": "PATTERN",
-      "value": "[^\\n{-]+"
-    },
-    "rest": {
-      "type": "PATTERN",
-      "value": "[^\\n]+"
+      }
     }
   },
-  "extras": [],
-  "conflicts": [
-    [
-      "knot"
-    ],
-    [
-      "body"
-    ],
-    [
-      "dialog"
-    ],
-    [
-      "dialog",
-      "program"
-    ]
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
   ],
+  "conflicts": [],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "arrow"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "minus"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "line_start"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }

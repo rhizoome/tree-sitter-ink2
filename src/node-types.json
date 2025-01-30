@@ -8,52 +8,18 @@
       "required": true,
       "types": [
         {
-          "type": "dialog",
+          "type": "body_line",
           "named": true
         },
         {
-          "type": "stitch",
+          "type": "line_start",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "dialog",
-    "named": true,
-    "fields": {
-      "text": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "text",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "divert",
-          "named": true
-        },
-        {
-          "type": "inline_logic",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "divert",
+    "type": "body_line",
     "named": true,
     "fields": {},
     "children": {
@@ -61,50 +27,11 @@
       "required": true,
       "types": [
         {
-          "type": "divert_start",
+          "type": "arrow",
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "inline_logic",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "knot",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "body",
-          "named": true
-        },
-        {
-          "type": "knot_start",
-          "named": true
-        },
-        {
-          "type": "rest",
+          "type": "vocabular",
           "named": true
         }
       ]
@@ -122,78 +49,25 @@
         {
           "type": "body",
           "named": true
-        },
-        {
-          "type": "knot",
-          "named": true
         }
       ]
     }
   },
   {
-    "type": "stitch",
+    "type": "vocabular",
     "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "rest",
-          "named": true
-        },
-        {
-          "type": "stitch_start",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "-",
     "named": false
   },
   {
-    "type": "divert_start",
+    "type": "arrow",
     "named": true
   },
   {
-    "type": "identifier",
+    "type": "line_start",
     "named": true
-  },
-  {
-    "type": "knot_start",
-    "named": true
-  },
-  {
-    "type": "rest",
-    "named": true
-  },
-  {
-    "type": "stitch_start",
-    "named": true
-  },
-  {
-    "type": "text",
-    "named": true
-  },
-  {
-    "type": "{",
-    "named": false
-  },
-  {
-    "type": "}",
-    "named": false
   }
 ]
