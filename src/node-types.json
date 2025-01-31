@@ -22,10 +22,6 @@
           "named": true
         },
         {
-          "type": "choice_start",
-          "named": true
-        },
-        {
           "type": "knot_start",
           "named": true
         },
@@ -50,10 +46,6 @@
   },
   {
     "type": "body_start",
-    "named": true
-  },
-  {
-    "type": "choice_start",
     "named": true
   },
   {

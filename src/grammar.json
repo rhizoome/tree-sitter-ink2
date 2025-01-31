@@ -17,10 +17,6 @@
               {
                 "type": "SYMBOL",
                 "name": "knot_start"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "choice_start"
               }
             ]
           },
@@ -60,12 +56,7 @@
       }
     }
   },
-  "extras": [
-    {
-      "type": "PATTERN",
-      "value": "\\s"
-    }
-  ],
+  "extras": [],
   "conflicts": [],
   "precedences": [],
   "externals": [
@@ -84,10 +75,6 @@
     {
       "type": "SYMBOL",
       "name": "knot_start"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "choice_start"
     },
     {
       "type": "SYMBOL",

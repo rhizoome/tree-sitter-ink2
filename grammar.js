@@ -1,16 +1,13 @@
 module.exports = grammar({
     name: "ink",
-    extras: $ => [],
+    extras: $ => [/[^\S\n\r]/],
     conflicts: $ => [
-        //[$.body],
-        //[$.vocabular]
     ],
     externals: $ => [
         $.arrow,
         $.minus,
         $.body_start,
         $.knot_start,
-        $.choice_start,
         $.line_end
     ],
 
@@ -19,9 +16,9 @@ module.exports = grammar({
         program: $ => repeat(
             seq(
                 choice(
+                    $.choice_start
                     $.body_start,
                     $.knot_start,
-                    $.choice_start
                 ),
                 repeat(choice(
                     $.arrow,
@@ -30,6 +27,11 @@ module.exports = grammar({
                 )),
                 $.line_end
             )
+        ),
+
+        choice_start: $ => seq(
+            $.body_start,
+            /a/
         ),
 
         other: $ => prec(-1, /./),
