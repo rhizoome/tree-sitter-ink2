@@ -1,5 +1,123 @@
 [
   {
+    "type": "body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "body_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body_start",
+          "named": true
+        },
+        {
+          "type": "choice_text",
+          "named": true
+        },
+        {
+          "type": "code_text",
+          "named": true
+        },
+        {
+          "type": "dialog_text",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "choice_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dialog_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "knot",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "knot_start",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "other",
     "named": true,
     "fields": {}
@@ -14,19 +132,26 @@
       "required": false,
       "types": [
         {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "knot",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "arrow",
-          "named": true
-        },
-        {
-          "type": "body_start",
-          "named": true
-        },
-        {
-          "type": "knot_start",
-          "named": true
-        },
-        {
-          "type": "line_end",
           "named": true
         },
         {

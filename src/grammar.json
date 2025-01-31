@@ -12,37 +12,138 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "body_start"
+                "name": "body"
               },
               {
                 "type": "SYMBOL",
-                "name": "knot_start"
+                "name": "knot"
               }
             ]
-          },
-          {
-            "type": "REPEAT",
-            "content": {
+          }
+        ]
+      }
+    },
+    "body": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "SYMBOL",
+          "name": "body_line"
+        }
+      }
+    },
+    "body_line": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "body_start"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
               "type": "CHOICE",
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "arrow"
+                  "name": "choice_text"
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "minus"
+                  "name": "code_text"
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "other"
+                  "name": "dialog_text"
                 }
               ]
+            },
+            {
+              "type": "BLANK"
             }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        }
+      ]
+    },
+    "knot": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "knot_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "body"
+        }
+      ]
+    },
+    "choice_text": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\+"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        }
+      ]
+    },
+    "code_text": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "~"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        }
+      ]
+    },
+    "dialog_text": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        }
+      ]
+    },
+    "text": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "arrow"
           },
           {
             "type": "SYMBOL",
-            "name": "line_end"
+            "name": "minus"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "other"
           }
         ]
       }
@@ -56,7 +157,12 @@
       }
     }
   },
-  "extras": [],
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
   "conflicts": [],
   "precedences": [],
   "externals": [
