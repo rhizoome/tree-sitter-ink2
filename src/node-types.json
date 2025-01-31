@@ -1,41 +1,8 @@
 [
   {
-    "type": "body",
+    "type": "other",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "paragraph",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "paragraph",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "body_start",
-          "named": true
-        },
-        {
-          "type": "line_end",
-          "named": true
-        },
-        {
-          "type": "text_line",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "program",
@@ -47,53 +14,35 @@
       "required": false,
       "types": [
         {
-          "type": "body",
-          "named": true
-        },
-        {
-          "type": "empty_line",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "text_line",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
           "type": "arrow",
           "named": true
         },
         {
-          "type": "vocabular",
+          "type": "body_start",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "vocabular",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
+        },
+        {
+          "type": "choice_start",
+          "named": true
+        },
+        {
+          "type": "knot_start",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        },
         {
           "type": "minus",
           "named": true
+        },
+        {
+          "type": "other",
+          "named": true
         }
       ]
     }
-  },
-  {
-    "type": "-",
-    "named": false
   },
   {
     "type": "arrow",
@@ -104,7 +53,11 @@
     "named": true
   },
   {
-    "type": "empty_line",
+    "type": "choice_start",
+    "named": true
+  },
+  {
+    "type": "knot_start",
     "named": true
   },
   {
