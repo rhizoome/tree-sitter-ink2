@@ -4,7 +4,6 @@ module.exports = grammar({
     ],
     externals: $ => [
         $.arrow,
-        $.minus,
         $.body_start,
         $.stitch_start,
         $.knot_start,
@@ -103,12 +102,7 @@ module.exports = grammar({
         ),
 
         other: $ => /[^\s\n\r\p{L}_]+/,
-        vocabular: $ => prec.right(repeat1(
-            choice(
-                $.identifier,
-                $.minus
-            )
-        )),
+        vocabular: $ => /[\p{L}_-]+/,
         identifier: $ => /[\p{L}_]+/
 
     }

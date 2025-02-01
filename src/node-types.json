@@ -242,25 +242,6 @@
     }
   },
   {
-    "type": "vocabular",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "minus",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "weave_body",
     "named": true,
     "fields": {},
@@ -331,15 +312,15 @@
     "named": true
   },
   {
-    "type": "minus",
-    "named": true
-  },
-  {
     "type": "other",
     "named": true
   },
   {
     "type": "stitch_start",
+    "named": true
+  },
+  {
+    "type": "vocabular",
     "named": true
   }
 ]

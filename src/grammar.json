@@ -348,24 +348,8 @@
       "value": "[^\\s\\n\\r\\p{L}_]+"
     },
     "vocabular": {
-      "type": "PREC_RIGHT",
-      "value": 0,
-      "content": {
-        "type": "REPEAT1",
-        "content": {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "identifier"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "minus"
-            }
-          ]
-        }
-      }
+      "type": "PATTERN",
+      "value": "[\\p{L}_-]+"
     },
     "identifier": {
       "type": "PATTERN",
@@ -384,10 +368,6 @@
     {
       "type": "SYMBOL",
       "name": "arrow"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "minus"
     },
     {
       "type": "SYMBOL",

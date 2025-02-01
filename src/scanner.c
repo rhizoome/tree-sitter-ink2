@@ -1,9 +1,20 @@
 #include "tree_sitter/parser.h"
 #include <stdio.h>
 
+/* Notes
+- There is no need to lex single characters. Only multi-character symbols and
+  position dependent symbols need to be lexed by the scanner.
+*/
+
+/* Goals
+- Add special symbols to avoid conflicting grammer (GLR)
+- Try to keep all unicode "magic" in grammer.js
+- Except of course whitespaces handling, since you can't build this scanner without
+    - See is_unicode_whitespace()
+*/
+
 enum TokenType {
     ARROW,
-    MINUS,
     BODY_START,
     STITCH_START,
     KNOT_START,
@@ -132,20 +143,10 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     while (is_unicode_whitespace(lexer->lookahead)) {
         lexer->advance(lexer, true);
     }
-    if (
-        (
-            valid_symbols[ARROW] ||
-            valid_symbols[MINUS]
-        ) && lexer->lookahead == '-'
-    ) {
-        fprintf(stderr, "minus\n");
-        lexer->result_symbol = MINUS;
+    if (valid_symbols[ARROW]&& lexer->lookahead == '-') {
         lexer->advance(lexer, false);
-        lexer->mark_end(lexer);
         if (valid_symbols[ARROW] && lexer->lookahead == '>') {
-            fprintf(stderr, "arrow\n");
             lexer->advance(lexer, false);
-            lexer->mark_end(lexer);
             lexer->result_symbol = ARROW;
         }
         return true;
