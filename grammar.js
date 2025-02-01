@@ -24,15 +24,19 @@ module.exports = grammar({
         ),
 
         knot: $ => seq(
-            $.knot_start,
-            optional(/=+/),
-            $.identifier,
-            optional(/=+/),
-            $.line_end,
+            $.knot_header,
             optional($.weave_body),
             repeat(
                 $.stitch
             )
+        ),
+
+        knot_header: $ => seq(
+            $.knot_start,
+            optional(/=+/),
+            $.identifier,
+            optional(/=+/),
+            $.line_end
         ),
 
         stitch: $ => seq(

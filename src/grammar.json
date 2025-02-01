@@ -40,6 +40,34 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "knot_header"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "weave_body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "stitch"
+          }
+        }
+      ]
+    },
+    "knot_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
           "name": "knot_start"
         },
         {
@@ -73,25 +101,6 @@
         {
           "type": "SYMBOL",
           "name": "line_end"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "weave_body"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "stitch"
-          }
         }
       ]
     },

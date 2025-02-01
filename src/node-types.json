@@ -168,6 +168,29 @@
       "required": true,
       "types": [
         {
+          "type": "knot_header",
+          "named": true
+        },
+        {
+          "type": "stitch",
+          "named": true
+        },
+        {
+          "type": "weave_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "knot_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "identifier",
           "named": true
         },
@@ -177,14 +200,6 @@
         },
         {
           "type": "line_end",
-          "named": true
-        },
-        {
-          "type": "stitch",
-          "named": true
-        },
-        {
-          "type": "weave_body",
           "named": true
         }
       ]
