@@ -3,25 +3,85 @@
   "name": "ink",
   "rules": {
     "program": {
-      "type": "REPEAT",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "body"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "knot"
-              }
-            ]
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "knot"
           }
-        ]
-      }
+        }
+      ]
+    },
+    "knot": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "knot_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "stitch"
+          }
+        }
+      ]
+    },
+    "stitch": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "stitch_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "body"
+        }
+      ]
     },
     "body": {
       "type": "PREC_RIGHT",
@@ -69,27 +129,6 @@
         {
           "type": "SYMBOL",
           "name": "line_end"
-        }
-      ]
-    },
-    "knot": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "knot_start"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "text"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "line_end"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "body"
         }
       ]
     },
@@ -177,6 +216,10 @@
     {
       "type": "SYMBOL",
       "name": "body_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "stitch_start"
     },
     {
       "type": "SYMBOL",

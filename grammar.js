@@ -6,19 +6,35 @@ module.exports = grammar({
         $.arrow,
         $.minus,
         $.body_start,
+        $.stitch_start,
         $.knot_start,
         $.line_end
     ],
 
     rules: {
 
-        program: $ => repeat(
-            seq(
-                choice(
-                    $.body,
-                    $.knot,
-                )
+        program: $ => seq(
+            optional($.body),
+            repeat(
+                $.knot,
             )
+        ),
+
+        knot: $ => seq(
+            $.knot_start,
+            $.text,
+            $.line_end,
+            optional($.body),
+            repeat(
+                $.stitch
+            )
+        ),
+
+        stitch: $ => seq(
+            $.stitch_start,
+            $.text,
+            $.line_end,
+            $.body,
         ),
 
         body: $ => prec.right(repeat1($.body_line)),
@@ -31,13 +47,6 @@ module.exports = grammar({
                 $.dialog_text
             )),
             $.line_end
-        ),
-
-        knot: $ => seq(
-            $.knot_start,
-            $.text,
-            $.line_end,
-            $.body
         ),
 
         choice_text: $ => seq(

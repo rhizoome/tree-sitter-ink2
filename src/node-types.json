@@ -111,6 +111,10 @@
           "named": true
         },
         {
+          "type": "stitch",
+          "named": true
+        },
+        {
           "type": "text",
           "named": true
         }
@@ -137,6 +141,33 @@
         },
         {
           "type": "knot",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stitch",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "stitch_start",
+          "named": true
+        },
+        {
+          "type": "text",
           "named": true
         }
       ]
@@ -183,6 +214,10 @@
   },
   {
     "type": "minus",
+    "named": true
+  },
+  {
+    "type": "stitch_start",
     "named": true
   }
 ]

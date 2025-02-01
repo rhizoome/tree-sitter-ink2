@@ -5,6 +5,7 @@ enum TokenType {
     ARROW,
     MINUS,
     BODY_START,
+    STITCH_START,
     KNOT_START,
     LINE_END,
 };
@@ -46,6 +47,7 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     if (
         (
             valid_symbols[BODY_START] ||
+            valid_symbols[STITCH_START] ||
             valid_symbols[KNOT_START]
         ) &&
         lexer->get_column(lexer) == 0 && !lexer->eof(lexer)
@@ -53,13 +55,16 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         lexer->mark_end(lexer);
         lexer->result_symbol = BODY_START;
         do {
-            switch (lexer->lookahead) {
-                case '=':
+            if (lexer->lookahead == '=') {
+                lexer->result_symbol = STITCH_START;
+                lexer->advance(lexer, false);
+                lexer->mark_end(lexer);
+                if (valid_symbols[KNOT_START] && lexer->lookahead == '=') {
+                    lexer->advance(lexer, false);
+                    lexer->mark_end(lexer);
                     lexer->result_symbol = KNOT_START;
-                    if (valid_symbols[KNOT_START]) {
-                        return true;
-                    }
-                    break;
+                }
+                return true;
             }
             lexer->advance(lexer, false);
         } while(is_unicode_whitespace(lexer->lookahead));
@@ -92,12 +97,10 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         lexer->result_symbol = MINUS;
         lexer->advance(lexer, false);
         lexer->mark_end(lexer);
-        if (lexer->lookahead == '>') {
-            if (valid_symbols[ARROW]) {
-                lexer->advance(lexer, false);
-                lexer->mark_end(lexer);
-                lexer->result_symbol = ARROW;
-            }
+        if (valid_symbols[ARROW] && lexer->lookahead == '>') {
+            lexer->advance(lexer, false);
+            lexer->mark_end(lexer);
+            lexer->result_symbol = ARROW;
         }
         return true;
     }
