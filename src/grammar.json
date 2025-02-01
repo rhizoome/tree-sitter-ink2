@@ -334,8 +334,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "[\\+\\*]"
+          "type": "SYMBOL",
+          "name": "choice_mark"
         },
         {
           "type": "SYMBOL",
@@ -354,6 +354,13 @@
           ]
         }
       ]
+    },
+    "choice_mark": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "PATTERN",
+        "value": "[\\+\\*]"
+      }
     },
     "code_text": {
       "type": "SEQ",

@@ -97,9 +97,13 @@ module.exports = grammar({
         ),
 
         choice_text: $ => seq(
-            /[\+\*]/,
+            $.choice_mark,
             $.text,
             optional($.divert)
+        ),
+
+        choice_mark: $ => repeat1(
+            /[\+\*]/,
         ),
 
         code_text: $ => seq(
