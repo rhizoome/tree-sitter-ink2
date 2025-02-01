@@ -58,6 +58,7 @@ module.exports = grammar({
             $.function_start,
             optional(/=+/),
             $.identifier,
+            optional($.arguments),
             optional(/=+/),
             $.line_end,
             $.function_body,
@@ -74,6 +75,18 @@ module.exports = grammar({
             $.line_end
         ),
 
+        arguments: $ => seq(
+            /\(/,
+            $.identifier,
+            repeat(
+                seq(
+                    /,/,
+                    $.identifier
+                )
+            ),
+            optional(/,/),
+            /\)/
+        ),
 
         choice_text: $ => seq(
             /[\+\*]/,

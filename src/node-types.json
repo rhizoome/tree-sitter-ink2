@@ -1,5 +1,20 @@
 [
   {
+    "type": "arguments",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "choice_text",
     "named": true,
     "fields": {},
@@ -79,6 +94,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "arguments",
+          "named": true
+        },
         {
           "type": "function_body",
           "named": true

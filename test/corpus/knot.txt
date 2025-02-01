@@ -5,7 +5,12 @@ Just body
 ah-ell, abla
  + bahe-ll
 * bahe-ll -> asdf
-=== function asdf ===
+=== knot
+asd
+
+asd asd
+
+=== function asdf(arg, asd) ===
 asdf
 
 --------------------------------------------------------------------------------
