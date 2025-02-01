@@ -40,10 +40,14 @@ module.exports = grammar({
         ),
 
         stitch: $ => seq(
+            $.stitch_header,
+            $.weave_body,
+        ),
+
+        stitch_header: $ => seq(
             $.stitch_start,
             $.identifier,
             $.line_end,
-            $.weave_body,
         ),
 
         weave_body: $ => prec.right(repeat1($.weave_body_line)),

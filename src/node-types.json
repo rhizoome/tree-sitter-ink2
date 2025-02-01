@@ -238,6 +238,25 @@
       "required": true,
       "types": [
         {
+          "type": "stitch_header",
+          "named": true
+        },
+        {
+          "type": "weave_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stitch_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "identifier",
           "named": true
         },
@@ -247,10 +266,6 @@
         },
         {
           "type": "stitch_start",
-          "named": true
-        },
-        {
-          "type": "weave_body",
           "named": true
         }
       ]

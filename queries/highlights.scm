@@ -1,4 +1,5 @@
-(knot_start) @keyword
 (knot_header (identifier) @function)
 (knot_header) @keyword
 
+(stitch_header (identifier) @function)
+(stitch_header) @keyword

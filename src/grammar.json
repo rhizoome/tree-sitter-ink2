@@ -109,6 +109,19 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "stitch_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "weave_body"
+        }
+      ]
+    },
+    "stitch_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
           "name": "stitch_start"
         },
         {
@@ -118,10 +131,6 @@
         {
           "type": "SYMBOL",
           "name": "line_end"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "weave_body"
         }
       ]
     },
