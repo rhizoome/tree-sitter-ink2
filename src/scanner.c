@@ -71,6 +71,21 @@ static void skip_function_spacing(TSLexer *lexer) {
     }
 }
 
+static void skip_whitespace(TSLexer *lexer) {
+    while (is_unicode_whitespace(lexer->lookahead)) {
+        lexer->advance(lexer, true);
+    }
+}
+
+static void skip_whitespace_and_newline(TSLexer *lexer) {
+    while (
+        is_unicode_whitespace(lexer->lookahead) ||
+        lexer->lookahead == '\n' ||
+        lexer->lookahead == '\r'
+    ) {
+        lexer->advance(lexer, true);
+    }
+}
 
 static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     // Position dependant lexes (whitespaces may not be consumed)
@@ -85,38 +100,37 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     ) {
         lexer->mark_end(lexer);
         lexer->result_symbol = BODY_START;
-        do {
-            if (
-                lexer->lookahead == '=' &&
-                (
-                    valid_symbols[KNOT_START] ||
-                    valid_symbols[STITCH_START]
-                )
-            ) {
-                lexer->result_symbol = STITCH_START;
+        skip_whitespace_and_newline(lexer);
+        if (
+            lexer->lookahead == '=' &&
+            (
+                valid_symbols[KNOT_START] ||
+                valid_symbols[STITCH_START]
+            )
+        ) {
+            lexer->result_symbol = STITCH_START;
+            lexer->advance(lexer, false);
+            lexer->mark_end(lexer);
+            if (lexer->lookahead == '=' && valid_symbols[KNOT_START]) {
                 lexer->advance(lexer, false);
                 lexer->mark_end(lexer);
-                if (lexer->lookahead == '=' && valid_symbols[KNOT_START]) {
-                    lexer->advance(lexer, false);
-                    lexer->mark_end(lexer);
-                    lexer->result_symbol = KNOT_START;
-                    skip_function_spacing(lexer);
-                    if (lexer->lookahead == 'f' && valid_symbols[FUNCTION_START]) {
-                        if (lex_keyword(lexer, KW_FUNCTION)) {
-                            lexer->mark_end(lexer);
-                            if (
-                                lexer->lookahead == '(' ||
-                                is_unicode_whitespace(lexer->lookahead)
-                            ) {
-                                lexer->result_symbol = FUNCTION_START;
-                            }
+                lexer->result_symbol = KNOT_START;
+                skip_function_spacing(lexer);
+                if (lexer->lookahead == 'f' && valid_symbols[FUNCTION_START]) {
+                    if (lex_keyword(lexer, KW_FUNCTION)) {
+                        lexer->mark_end(lexer);
+                        if (
+                            lexer->lookahead == '(' ||
+                            is_unicode_whitespace(lexer->lookahead)
+                        ) {
+                            lexer->result_symbol = FUNCTION_START;
                         }
                     }
                 }
-                return true;
             }
-            lexer->advance(lexer, false);
-        } while(is_unicode_whitespace(lexer->lookahead));
+            return true;
+        }
+        lexer->advance(lexer, false);
         if (valid_symbols[BODY_START]) {
             return true;
         } else {

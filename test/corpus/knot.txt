@@ -1,22 +1,3 @@
-=========
-Just body
-=========
-
-=== function sadf(huhu, asdf) ===
-asdf -> x
-
-=== huhu ===
-= asdf
-* * asdf
-- asdf
-
-=== huhu ===
-asdf
-
-=== huhu ===
-asdf
---------------------------------------------------------------------------------
-
 ===========
 Single knot
 ===========
@@ -25,11 +6,12 @@ Single knot
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    name: (identifier)
-    (rest)))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
 ===========
 Next knot
@@ -40,15 +22,17 @@ Next knot
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest))
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
 =================
 Knot and stitches
@@ -56,27 +40,48 @@ Knot and stitches
 
 === test ===
 === test ===
- = bla
-= fasel
+ = test
+asd
+ = test
+asd
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest))
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (stitch
-        (stitch_start)
-        (identifier))
-      (stitch
-        (stitch_start)
-        (identifier)))))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))
+        (stitch
+          (stitch_header
+            (stitch_start)
+            (identifier)
+            (line_end))
+          (weave_body
+            (weave_body_line
+              (body_start)
+              (dialog_text
+                (text
+                  (vocabular)))
+              (line_end))))
+        (stitch
+          (stitch_header
+            (stitch_start)
+            (identifier)
+            (line_end))
+          (weave_body
+            (weave_body_line
+              (body_start)
+              (dialog_text
+                (text
+                  (vocabular)))
+              (line_end))))))
 
 =====================
 Knot with simple body
@@ -88,45 +93,25 @@ body
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog
-        (text))))
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))
+        (weave_body
+          (weave_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end))))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
-===================
-Knot with code body
-===================
-
-=== test ===
-body {func{}} bla {x} asdf
-=== test ===
-
---------------------------------------------------------------------------------
-
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog
-        (text)
-        (inline_logic)
-        (text)
-        (inline_logic)
-        (text))))
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)))
 
 ======
 Divert
@@ -138,49 +123,91 @@ test
 
 --------------------------------------------------------------------------------
 
-(program
-  (body
-    (dialog
-      (text)
-      (text)
-      (divert
-        (divert_start)
-        (identifier))))
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog
-        (text)))))
+    (program
+      (weave_body
+        (weave_body_line
+          (body_start)
+          (line_end))
+        (weave_body_line
+          (body_start)
+          (dialog_text
+            (text
+              (vocabular))
+            (divert
+              (arrow)
+              (identifier)))
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))
+        (weave_body
+          (weave_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end)))))
 
-==============
-Illegal divert
-==============
+================
+Illegal divert 1
+================
 
 asdsdf -> test asdf
-=== test ===
-test
+=== huhu ===
 
 --------------------------------------------------------------------------------
 
-(program
-  (body
-    (dialog
-      (text)
-      (divert
-        (divert_start)
-        (identifier))))
-  (ERROR
-    (UNEXPECTED ' ')
-    (identifier))
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog
-        (text)))))
+    (program
+      (weave_body
+        (weave_body_line
+          (body_start)
+          (line_end))
+        (weave_body_line
+          (body_start)
+          (dialog_text
+            (text
+              (vocabular))
+            (divert
+              (arrow)
+              (identifier)))
+          (ERROR
+            (vocabular))
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
+
+================
+Illegal divert 2
+================
+
+asdsdf ->
+=== huhu ===
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (body_start)
+          (line_end))
+        (weave_body_line
+          (body_start)
+          (dialog_text
+            (text
+              (vocabular)))
+          (ERROR
+            (arrow))
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
 ===========
 End newline
@@ -191,13 +218,12 @@ End newline
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog))))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
 =========
 End space
@@ -208,14 +234,12 @@ End space
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog
-        (text)))))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
 ==========
 Empty line

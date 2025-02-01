@@ -208,15 +208,11 @@
           "name": "gather_mark"
         },
         {
-          "type": "SYMBOL",
-          "name": "text"
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
               "type": "SYMBOL",
-              "name": "divert"
+              "name": "dialog_text"
             },
             {
               "type": "BLANK"
@@ -240,15 +236,11 @@
           "name": "choice_mark"
         },
         {
-          "type": "SYMBOL",
-          "name": "text"
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
               "type": "SYMBOL",
-              "name": "divert"
+              "name": "dialog_text"
             },
             {
               "type": "BLANK"
@@ -278,21 +270,26 @@
       ]
     },
     "dialog_text": {
-      "type": "SEQ",
+      "type": "CHOICE",
       "members": [
         {
           "type": "SYMBOL",
           "name": "text"
         },
         {
-          "type": "CHOICE",
+          "type": "SYMBOL",
+          "name": "divert"
+        },
+        {
+          "type": "SEQ",
           "members": [
             {
               "type": "SYMBOL",
-              "name": "divert"
+              "name": "text"
             },
             {
-              "type": "BLANK"
+              "type": "SYMBOL",
+              "name": "divert"
             }
           ]
         }
