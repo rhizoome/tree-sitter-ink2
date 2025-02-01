@@ -67,7 +67,7 @@ static bool lex_keyword(TSLexer *lexer, const char *keyword) {
 
 static void skip_function_spacing(TSLexer *lexer) {
     while (lexer->lookahead == '=' || is_unicode_whitespace(lexer->lookahead)) {
-        lexer->advance(lexer, true);
+        lexer->advance(lexer, false);
     }
 }
 
