@@ -16,15 +16,15 @@
 #define PRODUCTION_ID_COUNT 1
 
 enum ts_symbol_identifiers {
-  aux_sym_knot_header_token1 = 1,
-  aux_sym_arguments_token1 = 2,
-  aux_sym_arguments_token2 = 3,
-  aux_sym_arguments_token3 = 4,
-  aux_sym_choice_mark_token1 = 5,
-  aux_sym_code_text_token1 = 6,
-  sym_other = 7,
-  sym_vocabular = 8,
-  sym_identifier = 9,
+  sym_identifier = 1,
+  aux_sym_knot_header_token1 = 2,
+  aux_sym_arguments_token1 = 3,
+  aux_sym_arguments_token2 = 4,
+  aux_sym_arguments_token3 = 5,
+  aux_sym_choice_mark_token1 = 6,
+  aux_sym_code_text_token1 = 7,
+  sym_other = 8,
+  sym_vocabular = 9,
   sym_arrow = 10,
   sym_body_start = 11,
   sym_stitch_start = 12,
@@ -60,6 +60,7 @@ enum ts_symbol_identifiers {
 
 static const char * const ts_symbol_names[] = {
   [ts_builtin_sym_end] = "end",
+  [sym_identifier] = "identifier",
   [aux_sym_knot_header_token1] = "knot_header_token1",
   [aux_sym_arguments_token1] = "arguments_token1",
   [aux_sym_arguments_token2] = "arguments_token2",
@@ -68,7 +69,6 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_code_text_token1] = "code_text_token1",
   [sym_other] = "other",
   [sym_vocabular] = "vocabular",
-  [sym_identifier] = "identifier",
   [sym_arrow] = "arrow",
   [sym_body_start] = "body_start",
   [sym_stitch_start] = "stitch_start",
@@ -104,6 +104,7 @@ static const char * const ts_symbol_names[] = {
 
 static const TSSymbol ts_symbol_map[] = {
   [ts_builtin_sym_end] = ts_builtin_sym_end,
+  [sym_identifier] = sym_identifier,
   [aux_sym_knot_header_token1] = aux_sym_knot_header_token1,
   [aux_sym_arguments_token1] = aux_sym_arguments_token1,
   [aux_sym_arguments_token2] = aux_sym_arguments_token2,
@@ -112,7 +113,6 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_code_text_token1] = aux_sym_code_text_token1,
   [sym_other] = sym_other,
   [sym_vocabular] = sym_vocabular,
-  [sym_identifier] = sym_identifier,
   [sym_arrow] = sym_arrow,
   [sym_body_start] = sym_body_start,
   [sym_stitch_start] = sym_stitch_start,
@@ -151,6 +151,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
+  [sym_identifier] = {
+    .visible = true,
+    .named = true,
+  },
   [aux_sym_knot_header_token1] = {
     .visible = false,
     .named = false,
@@ -180,10 +184,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = true,
   },
   [sym_vocabular] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_identifier] = {
     .visible = true,
     .named = true,
   },
@@ -700,6 +700,18 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   }
 }
 
+static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
+  START_LEXER();
+  eof = lexer->eof(lexer);
+  switch (state) {
+    case 0:
+      ACCEPT_TOKEN(ts_builtin_sym_end);
+      END_STATE();
+    default:
+      return false;
+  }
+}
+
 static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0, .external_lex_state = 1},
   [1] = {.lex_state = 0, .external_lex_state = 2},
@@ -791,6 +803,7 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
+    [sym_identifier] = ACTIONS(1),
     [aux_sym_knot_header_token1] = ACTIONS(1),
     [aux_sym_arguments_token1] = ACTIONS(1),
     [aux_sym_arguments_token2] = ACTIONS(1),
@@ -798,7 +811,6 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_choice_mark_token1] = ACTIONS(1),
     [aux_sym_code_text_token1] = ACTIONS(1),
     [sym_vocabular] = ACTIONS(1),
-    [sym_identifier] = ACTIONS(1),
     [sym_arrow] = ACTIONS(1),
     [sym_body_start] = ACTIONS(1),
     [sym_stitch_start] = ACTIONS(1),
@@ -1284,9 +1296,9 @@ static const uint16_t ts_small_parse_table[] = {
       sym_line_end,
   [613] = 2,
     ACTIONS(145), 1,
-      aux_sym_knot_header_token1,
-    ACTIONS(147), 1,
       sym_identifier,
+    ACTIONS(147), 1,
+      aux_sym_knot_header_token1,
   [620] = 2,
     ACTIONS(99), 1,
       aux_sym_knot_header_token1,
@@ -1325,9 +1337,9 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_knot_header_token1,
   [668] = 2,
     ACTIONS(163), 1,
-      aux_sym_knot_header_token1,
-    ACTIONS(165), 1,
       sym_identifier,
+    ACTIONS(165), 1,
+      aux_sym_knot_header_token1,
   [675] = 2,
     ACTIONS(167), 1,
       aux_sym_knot_header_token1,
@@ -1565,8 +1577,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [139] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_dialog_text, 1, 0, 0),
   [141] = {.entry = {.count = 1, .reusable = true}}, SHIFT(82),
   [143] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
-  [145] = {.entry = {.count = 1, .reusable = true}}, SHIFT(80),
-  [147] = {.entry = {.count = 1, .reusable = true}}, SHIFT(48),
+  [145] = {.entry = {.count = 1, .reusable = true}}, SHIFT(48),
+  [147] = {.entry = {.count = 1, .reusable = true}}, SHIFT(80),
   [149] = {.entry = {.count = 1, .reusable = true}}, SHIFT(66),
   [151] = {.entry = {.count = 1, .reusable = true}}, SHIFT(65),
   [153] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_arguments, 3, 0, 0),
@@ -1574,8 +1586,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [157] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_arguments, 4, 0, 0),
   [159] = {.entry = {.count = 1, .reusable = true}}, SHIFT(57),
   [161] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_arguments, 5, 0, 0),
-  [163] = {.entry = {.count = 1, .reusable = true}}, SHIFT(67),
-  [165] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
+  [163] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
+  [165] = {.entry = {.count = 1, .reusable = true}}, SHIFT(67),
   [167] = {.entry = {.count = 1, .reusable = true}}, SHIFT(75),
   [169] = {.entry = {.count = 1, .reusable = true}}, SHIFT(24),
   [171] = {.entry = {.count = 1, .reusable = true}}, SHIFT(64),
@@ -1700,6 +1712,8 @@ TS_PUBLIC const TSLanguage *tree_sitter_ink(void) {
     .alias_sequences = &ts_alias_sequences[0][0],
     .lex_modes = ts_lex_modes,
     .lex_fn = ts_lex,
+    .keyword_lex_fn = ts_lex_keywords,
+    .keyword_capture_token = sym_identifier,
     .external_scanner = {
       &ts_external_scanner_states[0][0],
       ts_external_scanner_symbol_map,

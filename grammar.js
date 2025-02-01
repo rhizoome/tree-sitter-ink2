@@ -1,5 +1,6 @@
 module.exports = grammar({
     name: "ink",
+    word: $ => $.identifier,
     conflicts: $ => [
     ],
     externals: $ => [
@@ -127,7 +128,7 @@ module.exports = grammar({
 
         divert: $ => seq(
             $.arrow,
-            $.identifier
+            $.identifier,
         ),
 
         other: $ => /[^\s\n\r\p{L}_]+/,
