@@ -150,7 +150,7 @@ module.exports = grammar({
             /\)/
         ),
 
-        other: $ => /[^\s\n\r\p{L}_]+/,
+        other: $ => /[^\n\r\p{L}_]+/,
         vocabular: $ => /[\p{L}_-]+/,
         identifier: $ => /[\p{L}_]+/
 

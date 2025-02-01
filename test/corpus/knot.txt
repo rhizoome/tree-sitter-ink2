@@ -270,3 +270,13 @@ Spaces at end
 a 
 
 --------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (body_start)
+          (dialog_text
+            (text
+              (vocabular)
+              (other)))
+          (line_end))))

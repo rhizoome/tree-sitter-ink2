@@ -504,7 +504,7 @@
     },
     "other": {
       "type": "PATTERN",
-      "value": "[^\\s\\n\\r\\p{L}_]+"
+      "value": "[^\\n\\r\\p{L}_]+"
     },
     "vocabular": {
       "type": "PATTERN",
