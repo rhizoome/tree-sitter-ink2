@@ -1,6 +1,5 @@
 module.exports = grammar({
     name: "ink",
-    //extras: $ => [/[^\S\n\r]/],
     conflicts: $ => [
     ],
     externals: $ => [
