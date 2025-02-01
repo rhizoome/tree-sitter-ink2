@@ -104,23 +104,11 @@
       "required": true,
       "types": [
         {
-          "type": "arguments",
-          "named": true
-        },
-        {
           "type": "function_body",
           "named": true
         },
         {
-          "type": "function_start",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "line_end",
+          "type": "function_header",
           "named": true
         }
       ]
@@ -159,6 +147,33 @@
         },
         {
           "type": "dialog_text",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arguments",
+          "named": true
+        },
+        {
+          "type": "function_start",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         },
         {

@@ -188,6 +188,19 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "function_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_body"
+        }
+      ]
+    },
+    "function_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
           "name": "function_start"
         },
         {
@@ -233,10 +246,6 @@
         {
           "type": "SYMBOL",
           "name": "line_end"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "function_body"
         }
       ]
     },

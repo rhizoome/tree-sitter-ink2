@@ -63,13 +63,17 @@ module.exports = grammar({
         ),
 
         function: $ => seq(
+            $.function_header,
+            $.function_body
+        ),
+
+        function_header: $ => seq(
             $.function_start,
             optional(/=+/),
             $.identifier,
             optional($.arguments),
             optional(/=+/),
-            $.line_end,
-            $.function_body,
+            $.line_end
         ),
 
         function_body: $ => prec.right(repeat1($.function_body_line)),
