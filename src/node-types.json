@@ -184,6 +184,34 @@
     }
   },
   {
+    "type": "gather_mark",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "gather_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "divert",
+          "named": true
+        },
+        {
+          "type": "gather_mark",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "knot",
     "named": true,
     "fields": {},
@@ -351,6 +379,10 @@
         },
         {
           "type": "dialog_text",
+          "named": true
+        },
+        {
+          "type": "gather_text",
           "named": true
         },
         {

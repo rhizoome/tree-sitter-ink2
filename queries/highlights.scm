@@ -5,6 +5,7 @@
 (stitch_header (identifier) @function)
 
 (choice_mark) @keyword.directive
+(gather_mark) @type.builtin
 
 (function_header) @keyword
 (function_header (identifier) @function)

@@ -58,7 +58,8 @@ module.exports = grammar({
             optional(choice(
                 $.choice_text,
                 $.code_text,
-                $.dialog_text
+                $.dialog_text,
+                $.gather_text
             )),
             $.line_end
         ),
@@ -66,6 +67,46 @@ module.exports = grammar({
         function: $ => seq(
             $.function_header,
             $.function_body
+        ),
+
+        gather_text: $ => seq(
+            $.gather_mark,
+            $.text,
+            optional($.divert)
+        ),
+
+        gather_mark: $ => repeat1(
+            /-/,
+        ),
+
+        choice_text: $ => seq(
+            $.choice_mark,
+            $.text,
+            optional($.divert)
+        ),
+
+        choice_mark: $ => repeat1(
+            /[\+\*]/,
+        ),
+
+        code_text: $ => seq(
+            /~/,
+            $.text,
+        ),
+
+        dialog_text: $ => seq(
+            $.text,
+            optional($.divert)
+        ),
+
+        text: $ => repeat1(choice(
+            $.vocabular,
+            $.other
+        )),
+
+        divert: $ => seq(
+            $.arrow,
+            $.identifier,
         ),
 
         function_header: $ => seq(
@@ -99,36 +140,6 @@ module.exports = grammar({
             ),
             optional(/,/),
             /\)/
-        ),
-
-        choice_text: $ => seq(
-            $.choice_mark,
-            $.text,
-            optional($.divert)
-        ),
-
-        choice_mark: $ => repeat1(
-            /[\+\*]/,
-        ),
-
-        code_text: $ => seq(
-            /~/,
-            $.text,
-        ),
-
-        dialog_text: $ => seq(
-            $.text,
-            optional($.divert)
-        ),
-
-        text: $ => repeat1(choice(
-            $.vocabular,
-            $.other
-        )),
-
-        divert: $ => seq(
-            $.arrow,
-            $.identifier,
         ),
 
         other: $ => /[^\s\n\r\p{L}_]+/,
