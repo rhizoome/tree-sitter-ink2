@@ -1,58 +1,16 @@
 [
   {
-    "type": "body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "body_line",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "body_line",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "body_start",
-          "named": true
-        },
-        {
-          "type": "choice_text",
-          "named": true
-        },
-        {
-          "type": "code_text",
-          "named": true
-        },
-        {
-          "type": "dialog_text",
-          "named": true
-        },
-        {
-          "type": "line_end",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "choice_text",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "divert",
+          "named": true
+        },
         {
           "type": "text",
           "named": true
@@ -80,9 +38,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "divert",
+          "named": true
+        },
         {
           "type": "text",
           "named": true
@@ -91,9 +53,92 @@
     }
   },
   {
-    "type": "identifier",
+    "type": "divert",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arrow",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function_body",
+          "named": true
+        },
+        {
+          "type": "function_start",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function_body_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_body_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body_start",
+          "named": true
+        },
+        {
+          "type": "code_text",
+          "named": true
+        },
+        {
+          "type": "dialog_text",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "knot",
@@ -103,10 +148,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "body",
-          "named": true
-        },
         {
           "type": "identifier",
           "named": true
@@ -122,6 +163,10 @@
         {
           "type": "stitch",
           "named": true
+        },
+        {
+          "type": "weave_body",
+          "named": true
         }
       ]
     }
@@ -136,11 +181,15 @@
       "required": false,
       "types": [
         {
-          "type": "body",
+          "type": "function",
           "named": true
         },
         {
           "type": "knot",
+          "named": true
+        },
+        {
+          "type": "weave_body",
           "named": true
         }
       ]
@@ -155,10 +204,6 @@
       "required": true,
       "types": [
         {
-          "type": "body",
-          "named": true
-        },
-        {
           "type": "identifier",
           "named": true
         },
@@ -168,6 +213,10 @@
         },
         {
           "type": "stitch_start",
+          "named": true
+        },
+        {
+          "type": "weave_body",
           "named": true
         }
       ]
@@ -198,8 +247,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
         {
           "type": "minus",
           "named": true
@@ -208,11 +261,65 @@
     }
   },
   {
-    "type": "-",
-    "named": false
+    "type": "weave_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "weave_body_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "weave_body_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body_start",
+          "named": true
+        },
+        {
+          "type": "choice_text",
+          "named": true
+        },
+        {
+          "type": "code_text",
+          "named": true
+        },
+        {
+          "type": "dialog_text",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arrow",
+    "named": true
   },
   {
     "type": "body_start",
+    "named": true
+  },
+  {
+    "type": "function_start",
+    "named": true
+  },
+  {
+    "type": "identifier",
     "named": true
   },
   {

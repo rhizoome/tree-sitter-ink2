@@ -8,15 +8,19 @@ module.exports = grammar({
         $.body_start,
         $.stitch_start,
         $.knot_start,
+        $.function_start,
         $.line_end
     ],
 
     rules: {
 
         program: $ => seq(
-            optional($.body),
+            optional($.weave_body),
             repeat(
-                $.knot,
+                choice(
+                    $.knot,
+                    $.function
+                )
             )
         ),
 
@@ -26,7 +30,7 @@ module.exports = grammar({
             $.identifier,
             optional(/=+/),
             $.line_end,
-            optional($.body),
+            optional($.weave_body),
             repeat(
                 $.stitch
             )
@@ -36,12 +40,12 @@ module.exports = grammar({
             $.stitch_start,
             $.identifier,
             $.line_end,
-            $.body,
+            $.weave_body,
         ),
 
-        body: $ => prec.right(repeat1($.body_line)),
+        weave_body: $ => prec.right(repeat1($.weave_body_line)),
 
-        body_line: $ => seq(
+        weave_body_line: $ => seq(
             $.body_start,
             optional(choice(
                 $.choice_text,
@@ -51,9 +55,31 @@ module.exports = grammar({
             $.line_end
         ),
 
+        function: $ => seq(
+            $.function_start,
+            optional(/=+/),
+            $.identifier,
+            optional(/=+/),
+            $.line_end,
+            $.function_body,
+        ),
+
+        function_body: $ => prec.right(repeat1($.function_body_line)),
+
+        function_body_line: $ => seq(
+            $.body_start,
+            optional(choice(
+                $.code_text,
+                $.dialog_text
+            )),
+            $.line_end
+        ),
+
+
         choice_text: $ => seq(
             /[\+\*]/,
             $.text,
+            optional($.divert)
         ),
 
         code_text: $ => seq(
@@ -63,6 +89,7 @@ module.exports = grammar({
 
         dialog_text: $ => seq(
             $.text,
+            optional($.divert)
         ),
 
         text: $ => repeat1(choice(
@@ -70,11 +97,16 @@ module.exports = grammar({
             $.other
         )),
 
-        other: $ => /[^\S\n\r]/,
+        divert: $ => seq(
+            $.arrow,
+            $.identifier
+        ),
+
+        other: $ => token.immediate(/[^\s\n\r\p{L}_]+/),
         vocabular: $ => prec.right(repeat1(
             choice(
-                /[\p{L}_]+/,
-                $.minus, "-"
+                $.identifier,
+                $.minus
             )
         )),
         identifier: $ => /[\p{L}_]+/

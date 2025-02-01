@@ -7,8 +7,11 @@ enum TokenType {
     BODY_START,
     STITCH_START,
     KNOT_START,
+    FUNCTION_START,
     LINE_END,
 };
+
+static const char *KW_FUNCTION = "function";
 
 static int is_unicode_whitespace(int32_t wc) {
     switch (wc) {
@@ -42,27 +45,62 @@ static int is_unicode_whitespace(int32_t wc) {
     }
 }
 
+static bool lex_keyword(TSLexer *lexer, const char *keyword) {
+    for (int i = 0; keyword[i] != '\0'; i++) {
+        if (lexer->lookahead != keyword[i]) {
+            return false;
+        }
+        lexer->advance(lexer, false);
+    }
+    return true;
+}
+
+static void skip_function_spacing(TSLexer *lexer) {
+    while (lexer->lookahead == '=' || is_unicode_whitespace(lexer->lookahead)) {
+        lexer->advance(lexer, true);
+    }
+}
+
 
 static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     if (
+        lexer->get_column(lexer) == 0 && !lexer->eof(lexer) &&
         (
             valid_symbols[BODY_START] ||
             valid_symbols[STITCH_START] ||
-            valid_symbols[KNOT_START]
-        ) &&
-        lexer->get_column(lexer) == 0 && !lexer->eof(lexer)
+            valid_symbols[KNOT_START] ||
+            valid_symbols[FUNCTION_START]
+        )
     ) {
         lexer->mark_end(lexer);
         lexer->result_symbol = BODY_START;
         do {
-            if (lexer->lookahead == '=') {
+            if (
+                lexer->lookahead == '=' &&
+                (
+                    valid_symbols[KNOT_START] ||
+                    valid_symbols[STITCH_START]
+                )
+            ) {
                 lexer->result_symbol = STITCH_START;
                 lexer->advance(lexer, false);
                 lexer->mark_end(lexer);
-                if (valid_symbols[KNOT_START] && lexer->lookahead == '=') {
+                if (lexer->lookahead == '=' && valid_symbols[KNOT_START]) {
                     lexer->advance(lexer, false);
                     lexer->mark_end(lexer);
                     lexer->result_symbol = KNOT_START;
+                    skip_function_spacing(lexer);
+                    if (lexer->lookahead == 'f' && valid_symbols[FUNCTION_START]) {
+                        if (lex_keyword(lexer, KW_FUNCTION)) {
+                            lexer->mark_end(lexer);
+                            if (
+                                lexer->lookahead == '(' ||
+                                is_unicode_whitespace(lexer->lookahead)
+                            ) {
+                                lexer->result_symbol = FUNCTION_START;
+                            }
+                        }
+                    }
                 }
                 return true;
             }
