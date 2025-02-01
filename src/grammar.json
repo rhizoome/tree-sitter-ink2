@@ -344,11 +344,8 @@
       ]
     },
     "other": {
-      "type": "IMMEDIATE_TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "[^\\s\\n\\r\\p{L}_]+"
-      }
+      "type": "PATTERN",
+      "value": "[^\\s\\n\\r\\p{L}_]+"
     },
     "vocabular": {
       "type": "PREC_RIGHT",

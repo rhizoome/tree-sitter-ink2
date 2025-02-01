@@ -102,7 +102,7 @@ module.exports = grammar({
             $.identifier
         ),
 
-        other: $ => token.immediate(/[^\s\n\r\p{L}_]+/),
+        other: $ => /[^\s\n\r\p{L}_]+/,
         vocabular: $ => prec.right(repeat1(
             choice(
                 $.identifier,

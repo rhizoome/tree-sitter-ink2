@@ -63,6 +63,7 @@ static void skip_function_spacing(TSLexer *lexer) {
 
 
 static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+    // Position dependant lexes (whitespaces may not be consumed)
     if (
         lexer->get_column(lexer) == 0 && !lexer->eof(lexer) &&
         (
@@ -126,16 +127,23 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         }
         return true;
     }
+
+    // Position independant lexes (whitespaces must be consumed)
+    while (is_unicode_whitespace(lexer->lookahead)) {
+        lexer->advance(lexer, true);
+    }
     if (
         (
             valid_symbols[ARROW] ||
             valid_symbols[MINUS]
         ) && lexer->lookahead == '-'
     ) {
+        fprintf(stderr, "minus\n");
         lexer->result_symbol = MINUS;
         lexer->advance(lexer, false);
         lexer->mark_end(lexer);
         if (valid_symbols[ARROW] && lexer->lookahead == '>') {
+            fprintf(stderr, "arrow\n");
             lexer->advance(lexer, false);
             lexer->mark_end(lexer);
             lexer->result_symbol = ARROW;
