@@ -25,13 +25,12 @@ enum TokenType {
 static const char *KW_FUNCTION = "function";
 
 static int is_unicode_whitespace(int32_t wc) {
+    // Does not contain \n and \r since this is handled by LINE_END
     switch (wc) {
         case L' ':   // Space (U+0020)
         case L'\t':  // Tab (U+0009)
-        case L'\n':  // Line Feed (U+000A)
         case L'\v':  // Vertical Tab (U+000B)
         case L'\f':  // Form Feed (U+000C)
-        case L'\r':  // Carriage Return (U+000D)
         case L'\u00A0': // No-Break Space (U+00A0)
         case L'\u1680': // Ogham Space Mark (U+1680)
         case L'\u2000': // En Quad (U+2000)
