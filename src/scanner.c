@@ -87,6 +87,12 @@ static void skip_whitespace_and_newline(TSLexer *lexer) {
     }
 }
 
+static void skip_newline(TSLexer *lexer) {
+    while (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
+        lexer->advance(lexer, true);
+    }
+}
+
 static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     // Position dependant lexes (whitespaces may not be consumed)
     if (
@@ -100,7 +106,8 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     ) {
         lexer->mark_end(lexer);
         lexer->result_symbol = BODY_START;
-        skip_whitespace_and_newline(lexer);
+        // TODO wtf?
+        skip_whitespace(lexer);
         if (
             lexer->lookahead == '=' &&
             (
@@ -146,9 +153,7 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
             return true;
         }
         lexer->advance(lexer, true);
-        while (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
-            lexer->advance(lexer, true);
-        }
+        skip_newline(lexer);
         return true;
     }
 
