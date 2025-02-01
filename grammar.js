@@ -11,12 +11,14 @@ module.exports = grammar({
         $.stitch_start,
         $.knot_start,
         $.function_start,
+        $.empty_line,
         $.line_end
     ],
 
     rules: {
 
-        program: $ => seq(
+        program: $ => prec(1, seq(
+            optional(alias($.empty_line, "")),
             optional($.weave_body),
             repeat(
                 choice(
@@ -24,7 +26,7 @@ module.exports = grammar({
                     $.function
                 )
             )
-        ),
+        )),
 
         knot: $ => seq(
             $.knot_header,
@@ -53,7 +55,12 @@ module.exports = grammar({
             $.line_end,
         ),
 
-        weave_body: $ => prec.right(repeat1($.weave_body_line)),
+        weave_body: $ => prec.right(repeat1(
+            choice(
+                $.weave_body_line,
+                alias($.empty_line, "")
+            )
+        )),
 
         weave_body_line: $ => seq(
             $.body_start,

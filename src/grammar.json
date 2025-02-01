@@ -3,37 +3,58 @@
   "name": "ink",
   "rules": {
     "program": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "weave_body"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "REPEAT",
-          "content": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "empty_line"
+                },
+                "named": false,
+                "value": ""
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
             "type": "CHOICE",
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "knot"
+                "name": "weave_body"
               },
               {
-                "type": "SYMBOL",
-                "name": "function"
+                "type": "BLANK"
               }
             ]
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "knot"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "function"
+                }
+              ]
+            }
           }
-        }
-      ]
+        ]
+      }
     },
     "knot": {
       "type": "SEQ",
@@ -140,8 +161,22 @@
       "content": {
         "type": "REPEAT1",
         "content": {
-          "type": "SYMBOL",
-          "name": "weave_body_line"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "weave_body_line"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "empty_line"
+              },
+              "named": false,
+              "value": ""
+            }
+          ]
         }
       }
     },
@@ -508,6 +543,10 @@
     {
       "type": "SYMBOL",
       "name": "function_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "empty_line"
     },
     {
       "type": "SYMBOL",

@@ -340,7 +340,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "weave_body_line",
@@ -383,6 +383,10 @@
         }
       ]
     }
+  },
+  {
+    "type": "",
+    "named": false
   },
   {
     "type": "arrow",

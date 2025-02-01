@@ -127,9 +127,6 @@ test
       (weave_body
         (weave_body_line
           (body_start)
-          (line_end))
-        (weave_body_line
-          (body_start)
           (dialog_text
             (text
               (vocabular))
@@ -163,9 +160,6 @@ asdsdf -> test asdf
       (weave_body
         (weave_body_line
           (body_start)
-          (line_end))
-        (weave_body_line
-          (body_start)
           (dialog_text
             (text
               (vocabular))
@@ -192,9 +186,6 @@ asdsdf ->
 
     (program
       (weave_body
-        (weave_body_line
-          (body_start)
-          (line_end))
         (weave_body_line
           (body_start)
           (dialog_text
@@ -239,7 +230,8 @@ End space
         (knot_header
           (knot_start)
           (identifier)
-          (line_end))))
+          (line_end))
+        (weave_body)))
 
 ==========
 Empty line
@@ -252,12 +244,29 @@ b
 
 --------------------------------------------------------------------------------
 
-(program
-  (knot
-    (knot_start)
-    (identifier)
-    (rest)
-    (body
-      (dialog
-        (text)
-        (text)))))
+    (program
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))
+        (weave_body
+          (weave_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end))
+          (weave_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end)))))
+
+=============
+Spaces at end
+=============
+a 
+
+--------------------------------------------------------------------------------

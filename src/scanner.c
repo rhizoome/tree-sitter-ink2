@@ -19,6 +19,7 @@ enum TokenType {
     STITCH_START,
     KNOT_START,
     FUNCTION_START,
+    EMPTY_LINE,
     LINE_END,
 };
 
@@ -101,13 +102,22 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
             valid_symbols[BODY_START] ||
             valid_symbols[STITCH_START] ||
             valid_symbols[KNOT_START] ||
-            valid_symbols[FUNCTION_START]
+            valid_symbols[FUNCTION_START] ||
+            valid_symbols[EMPTY_LINE]
         )
     ) {
         lexer->mark_end(lexer);
         lexer->result_symbol = BODY_START;
-        // TODO wtf?
         skip_whitespace(lexer);
+        if (
+            valid_symbols[EMPTY_LINE] &&
+            (lexer->lookahead == '\n' || lexer->lookahead == '\r' || lexer->eof(lexer))
+        ) {
+            lexer->result_symbol = EMPTY_LINE;
+            skip_newline(lexer);
+            lexer->mark_end(lexer);
+            return true;
+        }
         if (
             lexer->lookahead == '=' &&
             (
@@ -149,10 +159,6 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         (lexer->lookahead == '\n' || lexer->lookahead == '\r' || lexer->eof(lexer))
     ) {
         lexer->result_symbol = LINE_END;
-        if (lexer->eof(lexer)) {
-            return true;
-        }
-        lexer->advance(lexer, true);
         skip_newline(lexer);
         return true;
     }
