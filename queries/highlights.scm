@@ -13,4 +13,3 @@
 (divert) @function
 
 (ERROR) @error
-(MISSING) @error
