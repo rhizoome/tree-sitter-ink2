@@ -50,7 +50,7 @@ module.exports = grammar({
         ),
 
         choice_text: $ => seq(
-            /\+/,
+            /[\+\*]/,
             $.text,
         ),
 
@@ -64,12 +64,17 @@ module.exports = grammar({
         ),
 
         text: $ => repeat1(choice(
-            $.arrow,
-            $.minus,
+            $.vocabular,
             $.other
         )),
 
-        other: $ => prec(-1, /./),
+        other: $ => /./,
+        vocabular: $ => prec.right(repeat1(
+            choice(
+                /[\p{L}_]+/,
+                $.minus, "-"
+            )
+        )),
 
     }
 })

@@ -137,7 +137,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "\\+"
+          "value": "[\\+\\*]"
         },
         {
           "type": "SYMBOL",
@@ -174,11 +174,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "arrow"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "minus"
+            "name": "vocabular"
           },
           {
             "type": "SYMBOL",
@@ -188,11 +184,31 @@
       }
     },
     "other": {
-      "type": "PREC",
-      "value": -1,
+      "type": "PATTERN",
+      "value": "."
+    },
+    "vocabular": {
+      "type": "PREC_RIGHT",
+      "value": 0,
       "content": {
-        "type": "PATTERN",
-        "value": "."
+        "type": "REPEAT1",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[\\p{L}_]+"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "minus"
+            },
+            {
+              "type": "STRING",
+              "value": "-"
+            }
+          ]
+        }
       }
     }
   },

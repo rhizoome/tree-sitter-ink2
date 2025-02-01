@@ -122,11 +122,6 @@
     }
   },
   {
-    "type": "other",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "program",
     "named": true,
     "root": true,
@@ -182,23 +177,34 @@
       "required": true,
       "types": [
         {
-          "type": "arrow",
-          "named": true
-        },
-        {
-          "type": "minus",
-          "named": true
-        },
-        {
           "type": "other",
+          "named": true
+        },
+        {
+          "type": "vocabular",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "arrow",
-    "named": true
+    "type": "vocabular",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "minus",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "-",
+    "named": false
   },
   {
     "type": "body_start",
@@ -214,6 +220,10 @@
   },
   {
     "type": "minus",
+    "named": true
+  },
+  {
+    "type": "other",
     "named": true
   },
   {
