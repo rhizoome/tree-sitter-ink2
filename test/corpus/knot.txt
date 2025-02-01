@@ -280,3 +280,61 @@ a
               (vocabular)
               (other)))
           (line_end))))
+
+========
+function
+========
+
+=== function asd() ===
+a
+
+
+a
+
+--------------------------------------------------------------------------------
+
+    (program
+      (function
+        (function_header
+          (function_start)
+          (identifier)
+          (line_end))
+        (function_body
+          (function_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end))
+          (function_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end)))))
+
+===============
+function spaces
+===============
+
+=== function asd ( asd , sd ) ===
+a
+
+--------------------------------------------------------------------------------
+
+    (program
+      (function
+        (function_header
+          (function_start)
+          (identifier)
+          (arguments
+            (identifier)
+            (identifier))
+          (line_end))
+        (function_body
+          (function_body_line
+            (body_start)
+            (dialog_text
+              (text
+                (vocabular)))
+            (line_end)))))

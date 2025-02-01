@@ -121,12 +121,19 @@ module.exports = grammar({
             $.function_start,
             optional(/=+/),
             $.identifier,
+            optional(/\(/),
             optional($.arguments),
+            optional(/\)/),
             optional(/=+/),
             $.line_end
         ),
 
-        function_body: $ => prec.right(repeat1($.function_body_line)),
+        function_body: $ => prec.right(repeat1(
+            choice(
+                $.function_body_line,
+                alias($.empty_line, "")
+            )
+        )),
 
         function_body_line: $ => seq(
             $.body_start,
@@ -138,7 +145,6 @@ module.exports = grammar({
         ),
 
         arguments: $ => seq(
-            /\(/,
             $.identifier,
             repeat(
                 seq(
@@ -147,7 +153,6 @@ module.exports = grammar({
                 )
             ),
             optional(/,/),
-            /\)/
         ),
 
         other: $ => /[^\n\r\p{L}_]+/,
