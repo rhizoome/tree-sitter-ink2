@@ -91,6 +91,11 @@
     }
   },
   {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "knot",
     "named": true,
     "fields": {},
@@ -103,6 +108,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "knot_start",
           "named": true
         },
@@ -112,10 +121,6 @@
         },
         {
           "type": "stitch",
-          "named": true
-        },
-        {
-          "type": "text",
           "named": true
         }
       ]
@@ -154,15 +159,15 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "line_end",
           "named": true
         },
         {
           "type": "stitch_start",
-          "named": true
-        },
-        {
-          "type": "text",
           "named": true
         }
       ]

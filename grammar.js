@@ -22,7 +22,9 @@ module.exports = grammar({
 
         knot: $ => seq(
             $.knot_start,
-            $.text,
+            optional(/=+/),
+            $.identifier,
+            optional(/=+/),
             $.line_end,
             optional($.body),
             repeat(
@@ -32,7 +34,7 @@ module.exports = grammar({
 
         stitch: $ => seq(
             $.stitch_start,
-            $.text,
+            $.identifier,
             $.line_end,
             $.body,
         ),
@@ -68,13 +70,14 @@ module.exports = grammar({
             $.other
         )),
 
-        other: $ => /./,
+        other: $ => /[^\S\n\r]/,
         vocabular: $ => prec.right(repeat1(
             choice(
                 /[\p{L}_]+/,
                 $.minus, "-"
             )
         )),
+        identifier: $ => /[\p{L}_]+/
 
     }
 })

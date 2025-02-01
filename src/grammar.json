@@ -34,8 +34,32 @@
           "name": "knot_start"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "=+"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
-          "name": "text"
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "=+"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "SYMBOL",
@@ -71,7 +95,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "text"
+          "name": "identifier"
         },
         {
           "type": "SYMBOL",
@@ -185,7 +209,7 @@
     },
     "other": {
       "type": "PATTERN",
-      "value": "."
+      "value": "[^\\S\\n\\r]"
     },
     "vocabular": {
       "type": "PREC_RIGHT",
@@ -210,6 +234,10 @@
           ]
         }
       }
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[\\p{L}_]+"
     }
   },
   "extras": [
