@@ -46,7 +46,7 @@ module.exports = grammar({
 
         stitch: $ => seq(
             $.stitch_header,
-            $.weave_body,
+            optional($.weave_body), // actually not optional
         ),
 
         stitch_header: $ => seq(
@@ -75,7 +75,7 @@ module.exports = grammar({
 
         function: $ => seq(
             $.function_header,
-            $.function_body
+            optional($.function_body) // actually not optional
         ),
 
         gather_text: $ => seq(
@@ -137,10 +137,10 @@ module.exports = grammar({
 
         function_body_line: $ => seq(
             $.body_start,
-            optional(choice(
+            choice(
                 $.code_text,
                 $.dialog_text
-            )),
+            ),
             $.line_end
         ),
 

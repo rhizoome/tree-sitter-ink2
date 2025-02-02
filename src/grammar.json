@@ -133,8 +133,16 @@
           "name": "stitch_header"
         },
         {
-          "type": "SYMBOL",
-          "name": "weave_body"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "weave_body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
@@ -230,8 +238,16 @@
           "name": "function_header"
         },
         {
-          "type": "SYMBOL",
-          "name": "function_body"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "function_body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
@@ -472,20 +488,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "code_text"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "dialog_text"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "code_text"
             },
             {
-              "type": "BLANK"
+              "type": "SYMBOL",
+              "name": "dialog_text"
             }
           ]
         },
