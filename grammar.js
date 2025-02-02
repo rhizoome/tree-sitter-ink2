@@ -24,6 +24,8 @@ module.exports = grammar({
         $.stitch_start,
         $.knot_start,
         $.function_start,
+        $.var_start,
+        $.const_start,
         $.empty_line,
         $.line_end
     ],
@@ -82,7 +84,8 @@ module.exports = grammar({
                 $.code_text,
                 $.dialog_text,
                 $.gather_text,
-                $.condition_text
+                $.condition_text,
+                $.var_text
             )),
             $.line_end
         ),
@@ -113,6 +116,13 @@ module.exports = grammar({
         code_text: $ => seq(
             /~/,
             $.text,
+        ),
+
+        var_text: $ => seq(
+            /VAR/,
+            $.identifier,
+            /=/,
+            $.identifier
         ),
 
         dialog_text: $ => choice(
@@ -168,8 +178,10 @@ module.exports = grammar({
         function_body_line: $ => seq(
             $.line_start,
             choice(
+                $.condition_text,
                 $.code_text,
-                $.dialog_text
+                $.dialog_text,
+                $.var_text
             ),
             $.line_end
         ),

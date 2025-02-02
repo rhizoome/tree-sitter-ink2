@@ -220,6 +220,10 @@
                 {
                   "type": "SYMBOL",
                   "name": "condition_text"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "var_text"
                 }
               ]
             },
@@ -321,6 +325,27 @@
         {
           "type": "SYMBOL",
           "name": "text"
+        }
+      ]
+    },
+    "var_text": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "VAR"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "PATTERN",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
@@ -555,11 +580,19 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "condition_text"
+            },
+            {
+              "type": "SYMBOL",
               "name": "code_text"
             },
             {
               "type": "SYMBOL",
               "name": "dialog_text"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "var_text"
             }
           ]
         },
@@ -738,6 +771,14 @@
     {
       "type": "SYMBOL",
       "name": "function_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "var_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "const_start"
     },
     {
       "type": "SYMBOL",

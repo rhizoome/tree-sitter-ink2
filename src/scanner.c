@@ -19,11 +19,15 @@ enum TokenType {
     STITCH_START,
     KNOT_START,
     FUNCTION_START,
+    VAR_START,
+    CONST_START,
     EMPTY_LINE,
     LINE_END,
 };
 
 static const char *KW_FUNCTION = "function";
+static const char *KW_VAR = "VAR";
+static const char *KW_CONST = "CONST";
 
 static int is_unicode_whitespace(int32_t wc) {
     // Does not contain \n and \r since this is handled by LINE_END
@@ -103,6 +107,8 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
             valid_symbols[STITCH_START] ||
             valid_symbols[KNOT_START] ||
             valid_symbols[FUNCTION_START] ||
+            valid_symbols[VAR_START] ||
+            valid_symbols[CONST_START] ||
             valid_symbols[EMPTY_LINE]
         )
     ) {
@@ -146,6 +152,14 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
                 }
             }
             return true;
+        }
+        if (lexer->lookahead == 'V' && valid_symbols[VAR_START]) {
+            if (lex_keyword(lexer, KW_VAR)) {
+                lexer->mark_end(lexer);
+                if (is_unicode_whitespace(lexer->lookahead)) {
+                    return true;
+                }
+            }
         }
         if (valid_symbols[LINE_START]) {
             return true;

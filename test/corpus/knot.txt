@@ -598,3 +598,62 @@ Illigal multidivert
           (ERROR
             (vocabular))
           (line_end))))
+
+===
+VAR
+===
+
+VAR huhu = 1
+=== huhu ===
+VAR huhu = 1
+= huhu
+VAR huhu = 1
+=== function sdf() ===
+VAR huhu = 1
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (var_text
+            (identifier)
+            (identifier))
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))
+        (weave_body
+          (weave_body_line
+            (line_start)
+            (var_text
+              (identifier)
+              (identifier))
+            (line_end)))
+        (stitch
+          (stitch_header
+            (stitch_start)
+            (identifier)
+            (line_end))
+          (weave_body
+            (weave_body_line
+              (line_start)
+              (var_text
+                (identifier)
+                (identifier))
+              (line_end)))))
+      (function
+        (function_header
+          (function_start)
+          (identifier)
+          (line_end))
+        (function_body
+          (function_body_line
+            (line_start)
+            (var_text
+              (identifier)
+              (identifier))
+            (line_end)))))

@@ -15,4 +15,6 @@
 
 (divert) @function
 
+(var_text) @attribute
+
 (ERROR) @error
