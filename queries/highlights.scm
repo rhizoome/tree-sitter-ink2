@@ -13,8 +13,11 @@
 
 (condition_block) @keyword
 
-(divert) @function
-(divert (dot)  @keyword.directive)
+(divert_chain) @function
+
+(arrow) @keyword.directive
+(double_arrow) @keyword.directive
+(dot) @keyword.directive
 
 (var_line) @attribute
 (const_line) @constant
