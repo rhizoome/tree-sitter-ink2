@@ -106,9 +106,9 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
             valid_symbols[EMPTY_LINE]
         )
     ) {
-        lexer->mark_end(lexer);
         lexer->result_symbol = LINE_START;
         skip_whitespace(lexer);
+        lexer->mark_end(lexer);
         if (
             valid_symbols[EMPTY_LINE] &&
             (lexer->lookahead == '\n' || lexer->lookahead == '\r' || lexer->eof(lexer))
