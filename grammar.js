@@ -1,6 +1,8 @@
 const WS = /[ \t\v\f\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u2028\u2029\u202F\u205F\u3000]/;
 
 /* Note
+- In ink line-endings are significant in many places, therefore we have to handle
+  line-endings throughout the grammar
 - Where it is possible without adding complications, clear error or confusion,
   we keep the grammar more flexible than the ink-language
     - Because it is difficult to correctly lint parse-errors
@@ -17,7 +19,7 @@ module.exports = grammar({
     ],
     externals: $ => [
         $.arrow,
-        $.body_start,
+        $.line_start,
         $.stitch_start,
         $.knot_start,
         $.function_start,
@@ -73,13 +75,13 @@ module.exports = grammar({
         )),
 
         weave_body_line: $ => seq(
-            $.body_start,
+            $.line_start,
             optional(choice(
                 $.choice_text,
                 $.code_text,
                 $.dialog_text,
                 $.gather_text,
-                //$.condition_text
+                $.condition_block
             )),
             $.line_end
         ),
@@ -111,17 +113,6 @@ module.exports = grammar({
             /~/,
             $.text,
         ),
-
-        //condition_text: $ => seq(
-        //    /\{/,
-        //    repeat1(
-        //        seq(
-        //            $.text,
-        //            $.weave_body_line
-        //        )
-        //    ),
-        //    /\}/
-        //),
 
         dialog_text: $ => choice(
             $.text,
@@ -158,7 +149,7 @@ module.exports = grammar({
         )),
 
         function_body_line: $ => seq(
-            $.body_start,
+            $.line_start,
             choice(
                 $.code_text,
                 $.dialog_text
@@ -177,6 +168,24 @@ module.exports = grammar({
             optional(/,/),
         ),
 
+        condition_block: $ => seq(
+            /\{/,
+            optional($.rest),
+            $.line_end,
+            repeat(
+                seq(
+                    $.line_start,
+                    optional($.rest),
+                    $.line_end
+                )
+            ),
+            $.line_start,
+            /\}/,
+            optional($.rest),
+        ),
+
+        any: $ => /[^\r\n]/,
+        rest: $ => /[^\r\n]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
         vocabular: $ => /[\p{N}\p{L}_-]+/,
         identifier: $ => /[\p{N}\p{L}_]+/

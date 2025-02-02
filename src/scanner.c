@@ -15,7 +15,7 @@
 
 enum TokenType {
     ARROW,
-    BODY_START,
+    LINE_START,
     STITCH_START,
     KNOT_START,
     FUNCTION_START,
@@ -99,7 +99,7 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     if (
         lexer->get_column(lexer) == 0 && !lexer->eof(lexer) &&
         (
-            valid_symbols[BODY_START] ||
+            valid_symbols[LINE_START] ||
             valid_symbols[STITCH_START] ||
             valid_symbols[KNOT_START] ||
             valid_symbols[FUNCTION_START] ||
@@ -107,7 +107,7 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         )
     ) {
         lexer->mark_end(lexer);
-        lexer->result_symbol = BODY_START;
+        lexer->result_symbol = LINE_START;
         skip_whitespace(lexer);
         if (
             valid_symbols[EMPTY_LINE] &&
@@ -147,8 +147,7 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
             }
             return true;
         }
-        lexer->advance(lexer, false);
-        if (valid_symbols[BODY_START]) {
+        if (valid_symbols[LINE_START]) {
             return true;
         } else {
             lexer->result_symbol = 0;
@@ -174,8 +173,8 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         if (valid_symbols[ARROW] && lexer->lookahead == '>') {
             lexer->advance(lexer, false);
             lexer->result_symbol = ARROW;
+            return true;
         }
-        return true;
     }
     return false;
 }

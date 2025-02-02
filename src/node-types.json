@@ -54,6 +54,29 @@
     }
   },
   {
+    "type": "condition_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "line_start",
+          "named": true
+        },
+        {
+          "type": "rest",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "dialog_text",
     "named": true,
     "fields": {},
@@ -134,10 +157,6 @@
       "required": true,
       "types": [
         {
-          "type": "body_start",
-          "named": true
-        },
-        {
           "type": "code_text",
           "named": true
         },
@@ -147,6 +166,10 @@
         },
         {
           "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "line_start",
           "named": true
         }
       ]
@@ -358,15 +381,15 @@
       "required": true,
       "types": [
         {
-          "type": "body_start",
-          "named": true
-        },
-        {
           "type": "choice_text",
           "named": true
         },
         {
           "type": "code_text",
+          "named": true
+        },
+        {
+          "type": "condition_block",
           "named": true
         },
         {
@@ -380,6 +403,10 @@
         {
           "type": "line_end",
           "named": true
+        },
+        {
+          "type": "line_start",
+          "named": true
         }
       ]
     }
@@ -390,10 +417,6 @@
   },
   {
     "type": "arrow",
-    "named": true
-  },
-  {
-    "type": "body_start",
     "named": true
   },
   {
@@ -413,7 +436,15 @@
     "named": true
   },
   {
+    "type": "line_start",
+    "named": true
+  },
+  {
     "type": "other",
+    "named": true
+  },
+  {
+    "type": "rest",
     "named": true
   },
   {

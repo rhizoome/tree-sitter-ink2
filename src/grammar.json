@@ -193,7 +193,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "body_start"
+          "name": "line_start"
         },
         {
           "type": "CHOICE",
@@ -216,6 +216,10 @@
                 {
                   "type": "SYMBOL",
                   "name": "gather_text"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "condition_block"
                 }
               ]
             },
@@ -482,7 +486,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "body_start"
+          "name": "line_start"
         },
         {
           "type": "CHOICE",
@@ -540,6 +544,87 @@
         }
       ]
     },
+    "condition_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\{"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "rest"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "line_start"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "rest"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "line_end"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_start"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\}"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "rest"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "any": {
+      "type": "PATTERN",
+      "value": "[^\\r\\n]"
+    },
+    "rest": {
+      "type": "PATTERN",
+      "value": "[^\\r\\n]+"
+    },
     "other": {
       "type": "PATTERN",
       "value": "[^\\s\\n\\r\\p{N}\\p{L}_]+"
@@ -568,7 +653,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "body_start"
+      "name": "line_start"
     },
     {
       "type": "SYMBOL",
