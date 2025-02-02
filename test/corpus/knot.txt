@@ -362,3 +362,45 @@ a
               (text
                 (vocabular)))
             (line_end)))))
+
+=======
+numbers
+=======
+
+11
+1
+=== 1sadf ===
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (body_start)
+          (dialog_text
+            (text
+              (vocabular)))
+          (line_end))
+        (weave_body_line
+          (body_start)
+          (dialog_text
+            (text
+              (vocabular)))
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
+
+==============
+condition text
+==============
+
+=== test ===
+{found:
+  - 0: not found
+  - 1: found
+}
+
+--------------------------------------------------------------------------------

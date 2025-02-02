@@ -1,5 +1,15 @@
 const WS = /[ \t\v\f\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u2028\u2029\u202F\u205F\u3000]/;
 
+/* Note
+- Where it is possible without adding complications, clear error or confusion,
+  we keep the grammar more flexible than the ink-language
+    - Because it is difficult to correctly lint parse-errors
+    - Examples of the grammar being more flexible:
+        - Function-, knot- and stitch-bodies are the same
+            - Diverts in functions are allow
+        - Function and stitch bodies are optional
+*/
+
 module.exports = grammar({
     name: "ink",
     extras: $ => [WS],
@@ -68,7 +78,8 @@ module.exports = grammar({
                 $.choice_text,
                 $.code_text,
                 $.dialog_text,
-                $.gather_text
+                $.gather_text,
+                //$.condition_text
             )),
             $.line_end
         ),
@@ -100,6 +111,17 @@ module.exports = grammar({
             /~/,
             $.text,
         ),
+
+        //condition_text: $ => seq(
+        //    /\{/,
+        //    repeat1(
+        //        seq(
+        //            $.text,
+        //            $.weave_body_line
+        //        )
+        //    ),
+        //    /\}/
+        //),
 
         dialog_text: $ => choice(
             $.text,
@@ -155,9 +177,9 @@ module.exports = grammar({
             optional(/,/),
         ),
 
-        other: $ => /[^\s\n\r\p{L}_]+/,
-        vocabular: $ => /[\p{L}_-]+/,
-        identifier: $ => /[\p{L}_]+/
+        other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
+        vocabular: $ => /[\p{N}\p{L}_-]+/,
+        identifier: $ => /[\p{N}\p{L}_]+/
 
     }
 })

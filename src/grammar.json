@@ -542,15 +542,15 @@
     },
     "other": {
       "type": "PATTERN",
-      "value": "[^\\s\\n\\r\\p{L}_]+"
+      "value": "[^\\s\\n\\r\\p{N}\\p{L}_]+"
     },
     "vocabular": {
       "type": "PATTERN",
-      "value": "[\\p{L}_-]+"
+      "value": "[\\p{N}\\p{L}_-]+"
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[\\p{L}_]+"
+      "value": "[\\p{N}\\p{L}_]+"
     }
   },
   "extras": [
