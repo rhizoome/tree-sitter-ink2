@@ -72,6 +72,21 @@
         {
           "type": "line_start",
           "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "condition_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "condition_block",
+          "named": true
         },
         {
           "type": "text",
@@ -393,7 +408,7 @@
           "named": true
         },
         {
-          "type": "condition_block",
+          "type": "condition_text",
           "named": true
         },
         {

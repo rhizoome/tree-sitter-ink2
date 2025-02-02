@@ -81,7 +81,7 @@ module.exports = grammar({
                 $.code_text,
                 $.dialog_text,
                 $.gather_text,
-                $.condition_block
+                $.condition_text
             )),
             $.line_end
         ),
@@ -169,6 +169,11 @@ module.exports = grammar({
             optional(/,/),
         ),
 
+        condition_text: $ => seq(
+            $.condition_block,
+            optional($.text)
+        ),
+
         // TODO parse code within condition block
         condition_block: $ => seq(
             /\{/,
@@ -182,8 +187,7 @@ module.exports = grammar({
                 )
             ),
             $.line_start,
-            /\}/,
-            optional($.text),
+            /\}/
         ),
 
         block_rest: $ => /[^\r\n\}]+/,
