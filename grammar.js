@@ -16,6 +16,7 @@ module.exports = grammar({
     name: "ink",
     extras: $ => [WS],
     conflicts: $ => [
+        [$.divert_continue, $.divert_return]
     ],
     externals: $ => [
         $.arrow,
@@ -116,8 +117,8 @@ module.exports = grammar({
 
         dialog_text: $ => choice(
             $.text,
-            $.divert,
-            seq($.text, $.divert)
+            $.divert_chain,
+            seq($.text, $.divert_chain)
         ),
 
         // TODO inline code goes here
@@ -126,9 +127,24 @@ module.exports = grammar({
             $.other
         )),
 
+        divert_chain: $ => choice(
+            $.divert_return,
+            seq(
+                repeat1(
+                    $.divert
+                ),
+                optional($.divert_continue),
+                optional($.divert_return)
+            )
+        ),
         divert: $ => seq(
             $.arrow,
             $.identifier,
+        ),
+        divert_continue: $ => $.arrow,
+        divert_return: $ => seq(
+            $.arrow,
+            $.arrow
         ),
 
         function_header: $ => seq(

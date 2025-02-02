@@ -130,9 +130,10 @@ test
           (dialog_text
             (text
               (vocabular))
-            (divert
-              (arrow)
-              (identifier)))
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))))
           (line_end)))
       (knot
         (knot_header
@@ -163,9 +164,10 @@ asdsdf -> test asdf
           (dialog_text
             (text
               (vocabular))
-            (divert
-              (arrow)
-              (identifier)))
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))))
           (ERROR
             (vocabular))
           (line_end)))
@@ -281,7 +283,7 @@ a
           (line_end))))
 
 ========
-function
+Function
 ========
 
 === function asd() ===
@@ -313,7 +315,7 @@ a
             (line_end)))))
 
 ===============
-function spaces
+Function spaces
 ===============
 
 === function asd ( asd , sd ) ===
@@ -339,7 +341,7 @@ a
             (line_end)))))
 
 =====================
-function space at end
+Function space at end
 =====================
 
 === function asd ( asd , sd ) 
@@ -364,7 +366,7 @@ a
             (line_end)))))
 
 =======
-numbers
+Numbers
 =======
 
 11
@@ -394,7 +396,7 @@ numbers
           (line_end))))
 
 ======
-colons
+Colons
 ======
 
 1:
@@ -429,7 +431,7 @@ colons
             (line_end)))))
 
 =====================
-condition text (TODO)
+Condition text (TODO)
 =====================
 
  {test:
@@ -453,7 +455,7 @@ asdf
           (line_end))))
 
 ==========================
-condition text rest (TODO)
+Condition text rest (TODO)
 ==========================
 
 {test:
@@ -476,4 +478,123 @@ asdf
               (line_start))
             (text
               (vocabular)))
+          (line_end))))
+
+===========
+Multidivert
+===========
+
+->a
+->a->
+->a->b->c
+->a->->
+->->
+->a->b->c->->
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))
+              (divert_continue
+                (arrow))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))
+              (divert
+                (arrow)
+                (identifier))
+              (divert
+                (arrow)
+                (identifier))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))
+              (divert_return
+                (arrow)
+                (arrow))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert_return
+                (arrow)
+                (arrow))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))
+              (divert
+                (arrow)
+                (identifier))
+              (divert
+                (arrow)
+                (identifier))
+              (divert_return
+                (arrow)
+                (arrow))))
+          (line_end))))
+
+===================
+Illigal multidivert
+===================
+
+->->a
+->a->->b
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert_return
+                (arrow)
+                (arrow))))
+          (ERROR
+            (vocabular))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier))
+              (divert_return
+                (arrow)
+                (arrow))))
+          (ERROR
+            (vocabular))
           (line_end))))

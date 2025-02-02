@@ -333,7 +333,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "divert"
+          "name": "divert_chain"
         },
         {
           "type": "SEQ",
@@ -344,7 +344,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "divert"
+              "name": "divert_chain"
             }
           ]
         }
@@ -366,6 +366,51 @@
         ]
       }
     },
+    "divert_chain": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "divert_return"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "REPEAT1",
+              "content": {
+                "type": "SYMBOL",
+                "name": "divert"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "divert_continue"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "divert_return"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "divert": {
       "type": "SEQ",
       "members": [
@@ -376,6 +421,23 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        }
+      ]
+    },
+    "divert_continue": {
+      "type": "SYMBOL",
+      "name": "arrow"
+    },
+    "divert_return": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "arrow"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "arrow"
         }
       ]
     },
@@ -649,7 +711,12 @@
       "value": "[ \\t\\v\\f\\u00A0\\u1680\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000]"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "divert_continue",
+      "divert_return"
+    ]
+  ],
   "precedences": [],
   "externals": [
     {
