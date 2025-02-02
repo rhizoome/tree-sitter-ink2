@@ -535,16 +535,14 @@ Multidivert
                 (arrow)
                 (identifier))
               (divert_return
-                (arrow)
-                (arrow))))
+                (double_arrow))))
           (line_end))
         (weave_body_line
           (line_start)
           (dialog_text
             (divert_chain
               (divert_return
-                (arrow)
-                (arrow))))
+                (double_arrow))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -560,8 +558,7 @@ Multidivert
                 (arrow)
                 (identifier))
               (divert_return
-                (arrow)
-                (arrow))))
+                (double_arrow))))
           (line_end))))
 
 ===================
@@ -580,8 +577,7 @@ Illigal multidivert
           (dialog_text
             (divert_chain
               (divert_return
-                (arrow)
-                (arrow))))
+                (double_arrow))))
           (ERROR
             (vocabular))
           (line_end))
@@ -593,8 +589,7 @@ Illigal multidivert
                 (arrow)
                 (identifier))
               (divert_return
-                (arrow)
-                (arrow))))
+                (double_arrow))))
           (ERROR
             (vocabular))
           (line_end))))

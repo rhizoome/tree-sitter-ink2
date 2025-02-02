@@ -487,17 +487,8 @@
       "name": "arrow"
     },
     "divert_return": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "arrow"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "arrow"
-        }
-      ]
+      "type": "SYMBOL",
+      "name": "double_arrow"
     },
     "function_header": {
       "type": "SEQ",
@@ -718,17 +709,16 @@
       "value": "[ \\t\\v\\f\\u00A0\\u1680\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000]"
     }
   ],
-  "conflicts": [
-    [
-      "divert_continue",
-      "divert_return"
-    ]
-  ],
+  "conflicts": [],
   "precedences": [],
   "externals": [
     {
       "type": "SYMBOL",
       "name": "arrow"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "double_arrow"
     },
     {
       "type": "SYMBOL",

@@ -15,6 +15,7 @@
 
 enum TokenType {
     ARROW,
+    DOUBLE_ARROW,
     LINE_START,
     STITCH_START,
     KNOT_START,
@@ -192,10 +193,26 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         skip_newline(lexer);
         return true;
     }
-    if (valid_symbols[ARROW]&& lexer->lookahead == '-') {
+    if (
+        (
+            valid_symbols[ARROW] ||
+            valid_symbols[DOUBLE_ARROW]
+        )
+        && lexer->lookahead == '-'
+    ) {
         lexer->advance(lexer, false);
-        if (valid_symbols[ARROW] && lexer->lookahead == '>') {
+        if (lexer->lookahead == '>') {
             lexer->advance(lexer, false);
+            lexer->mark_end(lexer);
+            if (valid_symbols[DOUBLE_ARROW] && lexer->lookahead == '-') {
+                lexer->advance(lexer, false);
+                if (lexer->lookahead == '>') {
+                    lexer->advance(lexer, false);
+                    lexer->mark_end(lexer);
+                    lexer->result_symbol = DOUBLE_ARROW;
+                    return true;
+                }
+            }
             lexer->result_symbol = ARROW;
             return true;
         }

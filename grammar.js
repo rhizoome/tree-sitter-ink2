@@ -16,10 +16,10 @@ module.exports = grammar({
     name: "ink",
     extras: $ => [WS],
     conflicts: $ => [
-        [$.divert_continue, $.divert_return]
     ],
     externals: $ => [
         $.arrow,
+        $.double_arrow,
         $.line_start,
         $.stitch_start,
         $.knot_start,
@@ -162,10 +162,7 @@ module.exports = grammar({
             $.identifier,
         ),
         divert_continue: $ => $.arrow,
-        divert_return: $ => seq(
-            $.arrow,
-            $.arrow
-        ),
+        divert_return: $ => $.double_arrow,
 
         function_header: $ => seq(
             $.function_start,

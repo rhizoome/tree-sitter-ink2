@@ -199,11 +199,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "arrow",
+          "type": "double_arrow",
           "named": true
         }
       ]
@@ -509,6 +509,10 @@
   },
   {
     "type": "const_start",
+    "named": true
+  },
+  {
+    "type": "double_arrow",
     "named": true
   },
   {
