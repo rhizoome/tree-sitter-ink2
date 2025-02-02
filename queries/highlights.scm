@@ -11,6 +11,8 @@
 (function_header (identifier) @function)
 (function_header (arguments) @string)
 
+(condition_block) @keyword
+
 (divert) @function
 
 (ERROR) @error

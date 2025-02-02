@@ -62,6 +62,10 @@
       "required": true,
       "types": [
         {
+          "type": "block_rest",
+          "named": true
+        },
+        {
           "type": "line_end",
           "named": true
         },
@@ -70,7 +74,7 @@
           "named": true
         },
         {
-          "type": "rest",
+          "type": "text",
           "named": true
         }
       ]
@@ -420,6 +424,10 @@
     "named": true
   },
   {
+    "type": "block_rest",
+    "named": true
+  },
+  {
     "type": "function_start",
     "named": true
   },
@@ -441,10 +449,6 @@
   },
   {
     "type": "other",
-    "named": true
-  },
-  {
-    "type": "rest",
     "named": true
   },
   {

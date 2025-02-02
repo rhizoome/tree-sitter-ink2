@@ -556,7 +556,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "rest"
+              "name": "block_rest"
             },
             {
               "type": "BLANK"
@@ -581,7 +581,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "rest"
+                    "name": "block_rest"
                   },
                   {
                     "type": "BLANK"
@@ -608,7 +608,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "rest"
+              "name": "text"
             },
             {
               "type": "BLANK"
@@ -617,13 +617,9 @@
         }
       ]
     },
-    "any": {
+    "block_rest": {
       "type": "PATTERN",
-      "value": "[^\\r\\n]"
-    },
-    "rest": {
-      "type": "PATTERN",
-      "value": "[^\\r\\n]+"
+      "value": "[^\\r\\n\\}]+"
     },
     "other": {
       "type": "PATTERN",

@@ -120,6 +120,7 @@ module.exports = grammar({
             seq($.text, $.divert)
         ),
 
+        // TODO inline code goes here
         text: $ => repeat1(choice(
             $.vocabular,
             $.other
@@ -168,24 +169,24 @@ module.exports = grammar({
             optional(/,/),
         ),
 
+        // TODO parse code within condition block
         condition_block: $ => seq(
             /\{/,
-            optional($.rest),
+            optional($.block_rest),
             $.line_end,
             repeat(
                 seq(
                     $.line_start,
-                    optional($.rest),
+                    optional($.block_rest),
                     $.line_end
                 )
             ),
             $.line_start,
             /\}/,
-            optional($.rest),
+            optional($.text),
         ),
 
-        any: $ => /[^\r\n]/,
-        rest: $ => /[^\r\n]+/,
+        block_rest: $ => /[^\r\n\}]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
         vocabular: $ => /[\p{N}\p{L}_-]+/,
         identifier: $ => /[\p{N}\p{L}_]+/

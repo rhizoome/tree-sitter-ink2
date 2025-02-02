@@ -428,9 +428,9 @@ colons
                   (other))))
             (line_end)))))
 
-==============
-condition text
-==============
+=====================
+condition text (TODO)
+=====================
 
  {test:
 asdf
@@ -443,10 +443,35 @@ asdf
         (weave_body_line
           (line_start)
           (condition_block
-            (rest)
+            (block_rest)
             (line_end)
             (line_start)
-            (rest)
+            (block_rest)
             (line_end)
             (line_start))
+          (line_end))))
+
+==========================
+condition text rest (TODO)
+==========================
+
+{test:
+asdf
+} rest
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (condition_block
+            (block_rest)
+            (line_end)
+            (line_start)
+            (block_rest)
+            (line_end)
+            (line_start)
+            (text
+              (vocabular)))
           (line_end))))

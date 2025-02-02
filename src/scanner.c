@@ -74,7 +74,7 @@ static void skip_function_spacing(TSLexer *lexer) {
 
 static void skip_whitespace(TSLexer *lexer) {
     while (is_unicode_whitespace(lexer->lookahead)) {
-        lexer->advance(lexer, true);
+        lexer->advance(lexer, false);
     }
 }
 
@@ -84,13 +84,13 @@ static void skip_whitespace_and_newline(TSLexer *lexer) {
         lexer->lookahead == '\n' ||
         lexer->lookahead == '\r'
     ) {
-        lexer->advance(lexer, true);
+        lexer->advance(lexer, false);
     }
 }
 
 static void skip_newline(TSLexer *lexer) {
     while (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
-        lexer->advance(lexer, true);
+        lexer->advance(lexer, false);
     }
 }
 
