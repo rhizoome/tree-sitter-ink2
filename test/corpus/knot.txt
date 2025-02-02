@@ -119,7 +119,7 @@ Divert
 
 asdf-sdf -> test
 === test ===
-test
+test -> test.bla
 
 --------------------------------------------------------------------------------
 
@@ -133,7 +133,8 @@ test
             (divert_chain
               (divert
                 (arrow)
-                (identifier))))
+                (identifier_path
+                  (identifier)))))
           (line_end)))
       (knot
         (knot_header
@@ -145,14 +146,21 @@ test
             (line_start)
             (dialog_text
               (text
-                (vocabular)))
+                (vocabular))
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)
+                    (dot)
+                    (identifier)))))
             (line_end)))))
 
 ================
 Illegal divert 1
 ================
 
-asdsdf -> test asdf
+asdsdf -> test.bla asdf
 === huhu ===
 
 --------------------------------------------------------------------------------
@@ -167,7 +175,10 @@ asdsdf -> test asdf
             (divert_chain
               (divert
                 (arrow)
-                (identifier))))
+                (identifier_path
+                  (identifier)
+                  (dot)
+                  (identifier)))))
           (ERROR
             (vocabular))
           (line_end)))
@@ -486,7 +497,7 @@ Multidivert
 
 ->a
 ->a->
-->a->b->c
+->a->b->c.d
 ->a->->
 ->->
 ->a->b->c->->
@@ -501,7 +512,8 @@ Multidivert
             (divert_chain
               (divert
                 (arrow)
-                (identifier))))
+                (identifier_path
+                  (identifier)))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -509,7 +521,8 @@ Multidivert
             (divert_chain
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert_continue
                 (arrow))))
           (line_end))
@@ -519,13 +532,18 @@ Multidivert
             (divert_chain
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert
                 (arrow)
-                (identifier))))
+                (identifier_path
+                  (identifier)
+                  (dot)
+                  (identifier)))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -533,7 +551,8 @@ Multidivert
             (divert_chain
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert_return
                 (double_arrow))))
           (line_end))
@@ -550,13 +569,16 @@ Multidivert
             (divert_chain
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert_return
                 (double_arrow))))
           (line_end))))
@@ -587,7 +609,8 @@ Illigal multidivert
             (divert_chain
               (divert
                 (arrow)
-                (identifier))
+                (identifier_path
+                  (identifier)))
               (divert_return
                 (double_arrow))))
           (ERROR

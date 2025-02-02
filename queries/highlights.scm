@@ -14,6 +14,7 @@
 (condition_block) @keyword
 
 (divert) @function
+(divert (dot)  @keyword.directive)
 
 (var_line) @attribute
 (const_line) @constant

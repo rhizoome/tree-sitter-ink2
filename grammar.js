@@ -159,7 +159,7 @@ module.exports = grammar({
         ),
         divert: $ => seq(
             $.arrow,
-            $.identifier,
+            $.identifier_path,
         ),
         divert_continue: $ => $.arrow,
         divert_return: $ => $.double_arrow,
@@ -207,6 +207,15 @@ module.exports = grammar({
             /\}/
         ),
 
+        identifier_path: $ => seq(
+            $.identifier,
+            optional(seq(
+                $.dot,
+                $.identifier
+            ))
+        ),
+
+        dot: $ => /\./,
         block_rest: $ => /[^\r\n\}]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
         vocabular: $ => /[\p{N}\p{L}_-]+/,

@@ -478,7 +478,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "identifier_path"
         }
       ]
     },
@@ -685,6 +685,40 @@
           "value": "\\}"
         }
       ]
+    },
+    "identifier_path": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "dot"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "dot": {
+      "type": "PATTERN",
+      "value": "\\."
     },
     "block_rest": {
       "type": "PATTERN",

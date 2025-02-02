@@ -150,7 +150,7 @@
           "named": true
         },
         {
-          "type": "identifier",
+          "type": "identifier_path",
           "named": true
         }
       ]
@@ -274,6 +274,25 @@
         },
         {
           "type": "gather_mark",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identifier_path",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dot",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         }
       ]
@@ -509,6 +528,10 @@
   },
   {
     "type": "const_start",
+    "named": true
+  },
+  {
+    "type": "dot",
     "named": true
   },
   {
