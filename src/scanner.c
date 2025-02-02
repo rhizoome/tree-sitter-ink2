@@ -154,18 +154,20 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
             lexer->result_symbol = 0;
         }
     }
+
+    // Position independant lexes (whitespaces must be consumed)
+    skip_whitespace(lexer);
     if (
         valid_symbols[LINE_END] &&
-        (lexer->lookahead == '\n' || lexer->lookahead == '\r' || lexer->eof(lexer))
+        (
+            lexer->lookahead == '\n' ||
+            lexer->lookahead == '\r' ||
+            lexer->eof(lexer)
+        )
     ) {
         lexer->result_symbol = LINE_END;
         skip_newline(lexer);
         return true;
-    }
-
-    // Position independant lexes (whitespaces must be consumed)
-    while (is_unicode_whitespace(lexer->lookahead)) {
-        lexer->advance(lexer, true);
     }
     if (valid_symbols[ARROW]&& lexer->lookahead == '-') {
         lexer->advance(lexer, false);
