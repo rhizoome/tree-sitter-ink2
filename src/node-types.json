@@ -96,6 +96,29 @@
     }
   },
   {
+    "type": "const_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "const_start",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "dialog_text",
     "named": true,
     "fields": {},
@@ -195,61 +218,11 @@
       "required": true,
       "types": [
         {
-          "type": "function_body",
-          "named": true
-        },
-        {
           "type": "function_header",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "function_body_line",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_body_line",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "code_text",
-          "named": true
         },
         {
-          "type": "condition_text",
-          "named": true
-        },
-        {
-          "type": "dialog_text",
-          "named": true
-        },
-        {
-          "type": "line_end",
-          "named": true
-        },
-        {
-          "type": "line_start",
-          "named": true
-        },
-        {
-          "type": "var_text",
+          "type": "weave_body",
           "named": true
         }
       ]
@@ -438,7 +411,7 @@
     }
   },
   {
-    "type": "var_text",
+    "type": "var_line",
     "named": true,
     "fields": {},
     "children": {
@@ -447,6 +420,14 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "var_start",
           "named": true
         }
       ]
@@ -460,6 +441,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "const_line",
+          "named": true
+        },
+        {
+          "type": "var_line",
+          "named": true
+        },
         {
           "type": "weave_body_line",
           "named": true
@@ -502,10 +491,6 @@
         {
           "type": "line_start",
           "named": true
-        },
-        {
-          "type": "var_text",
-          "named": true
         }
       ]
     }
@@ -520,6 +505,10 @@
   },
   {
     "type": "block_rest",
+    "named": true
+  },
+  {
+    "type": "const_start",
     "named": true
   },
   {
@@ -548,6 +537,10 @@
   },
   {
     "type": "stitch_start",
+    "named": true
+  },
+  {
+    "type": "var_start",
     "named": true
   },
   {

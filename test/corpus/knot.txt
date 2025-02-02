@@ -300,14 +300,14 @@ a
           (function_start)
           (identifier)
           (line_end))
-        (function_body
-          (function_body_line
+        (weave_body
+          (weave_body_line
             (line_start)
             (dialog_text
               (text
                 (vocabular)))
             (line_end))
-          (function_body_line
+          (weave_body_line
             (line_start)
             (dialog_text
               (text
@@ -332,8 +332,8 @@ a
             (identifier)
             (identifier))
           (line_end))
-        (function_body
-          (function_body_line
+        (weave_body
+          (weave_body_line
             (line_start)
             (dialog_text
               (text
@@ -357,8 +357,8 @@ a
             (identifier)
             (identifier))
           (line_end))
-        (function_body
-          (function_body_line
+        (weave_body
+          (weave_body_line
             (line_start)
             (dialog_text
               (text
@@ -615,11 +615,10 @@ VAR huhu = 1
 
     (program
       (weave_body
-        (weave_body_line
-          (line_start)
-          (var_text
-            (identifier)
-            (identifier))
+        (var_line
+          (var_start)
+          (identifier)
+          (identifier)
           (line_end)))
       (knot
         (knot_header
@@ -627,11 +626,10 @@ VAR huhu = 1
           (identifier)
           (line_end))
         (weave_body
-          (weave_body_line
-            (line_start)
-            (var_text
-              (identifier)
-              (identifier))
+          (var_line
+            (var_start)
+            (identifier)
+            (identifier)
             (line_end)))
         (stitch
           (stitch_header
@@ -639,21 +637,74 @@ VAR huhu = 1
             (identifier)
             (line_end))
           (weave_body
-            (weave_body_line
-              (line_start)
-              (var_text
-                (identifier)
-                (identifier))
+            (var_line
+              (var_start)
+              (identifier)
+              (identifier)
               (line_end)))))
       (function
         (function_header
           (function_start)
           (identifier)
           (line_end))
-        (function_body
-          (function_body_line
-            (line_start)
-            (var_text
+        (weave_body
+          (var_line
+            (var_start)
+            (identifier)
+            (identifier)
+            (line_end)))))
+
+=====
+CONST
+=====
+
+CONST huhu = 1
+=== huhu ===
+CONST huhu = 1
+= huhu
+CONST huhu = 1
+=== function sdf() ===
+CONST huhu = 1
+
+--------------------------------------------------------------------------------
+
+    (program
+      (weave_body
+        (const_line
+          (const_start)
+          (identifier)
+          (identifier)
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))
+        (weave_body
+          (const_line
+            (const_start)
+            (identifier)
+            (identifier)
+            (line_end)))
+        (stitch
+          (stitch_header
+            (stitch_start)
+            (identifier)
+            (line_end))
+          (weave_body
+            (const_line
+              (const_start)
               (identifier)
-              (identifier))
+              (identifier)
+              (line_end)))))
+      (function
+        (function_header
+          (function_start)
+          (identifier)
+          (line_end))
+        (weave_body
+          (const_line
+            (const_start)
+            (identifier)
+            (identifier)
             (line_end)))))

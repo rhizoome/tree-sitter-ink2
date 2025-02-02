@@ -155,8 +155,18 @@ static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
         }
         if (lexer->lookahead == 'V' && valid_symbols[VAR_START]) {
             if (lex_keyword(lexer, KW_VAR)) {
-                lexer->mark_end(lexer);
                 if (is_unicode_whitespace(lexer->lookahead)) {
+                    lexer->mark_end(lexer);
+                    lexer->result_symbol = VAR_START;
+                    return true;
+                }
+            }
+        }
+        if (lexer->lookahead == 'C' && valid_symbols[CONST_START]) {
+            if (lex_keyword(lexer, KW_CONST)) {
+                if (is_unicode_whitespace(lexer->lookahead)) {
+                    lexer->mark_end(lexer);
+                    lexer->result_symbol = CONST_START;
                     return true;
                 }
             }

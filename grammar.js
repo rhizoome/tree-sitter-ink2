@@ -73,6 +73,8 @@ module.exports = grammar({
         weave_body: $ => prec.right(repeat1(
             choice(
                 $.weave_body_line,
+                $.var_line,
+                $.const_line,
                 alias($.empty_line, "")
             )
         )),
@@ -85,14 +87,13 @@ module.exports = grammar({
                 $.dialog_text,
                 $.gather_text,
                 $.condition_text,
-                $.var_text
             )),
             $.line_end
         ),
 
         function: $ => seq(
             $.function_header,
-            optional($.function_body) // actually not optional
+            optional($.weave_body) // actually not optional
         ),
 
         gather_text: $ => seq(
@@ -118,11 +119,20 @@ module.exports = grammar({
             $.text,
         ),
 
-        var_text: $ => seq(
-            /VAR/,
+        var_line: $ => seq(
+            $.var_start,
             $.identifier,
             /=/,
-            $.identifier
+            $.identifier,
+            $.line_end
+        ),
+
+        const_line: $ => seq(
+            $.const_start,
+            $.identifier,
+            /=/,
+            $.identifier,
+            $.line_end
         ),
 
         dialog_text: $ => choice(
@@ -165,24 +175,6 @@ module.exports = grammar({
             optional($.arguments),
             optional(/\)/),
             optional(/=+/),
-            $.line_end
-        ),
-
-        function_body: $ => prec.right(repeat1(
-            choice(
-                $.function_body_line,
-                alias($.empty_line, "")
-            )
-        )),
-
-        function_body_line: $ => seq(
-            $.line_start,
-            choice(
-                $.condition_text,
-                $.code_text,
-                $.dialog_text,
-                $.var_text
-            ),
             $.line_end
         ),
 

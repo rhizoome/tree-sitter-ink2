@@ -15,6 +15,7 @@
 
 (divert) @function
 
-(var_text) @attribute
+(var_line) @attribute
+(const_line) @constant
 
 (ERROR) @error
