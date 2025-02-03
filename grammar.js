@@ -241,6 +241,18 @@ module.exports = grammar({
             ))
         ),
 
+        value: $ => choice(
+            $string,
+            $identifier
+        ),
+        string: $ => seq(
+            '"',
+            repeat(choice(
+                /[^"\\\n\r]/,
+                /\\./
+            )),
+            '"'
+        ),
         dot: $ => /\./,
         block_rest: $ => /[^\r\n\}]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
