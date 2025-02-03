@@ -377,8 +377,8 @@
           "name": "identifier"
         },
         {
-          "type": "PATTERN",
-          "value": "="
+          "type": "SYMBOL",
+          "name": "assignment"
         },
         {
           "type": "SYMBOL",
@@ -402,8 +402,8 @@
           "name": "identifier"
         },
         {
-          "type": "PATTERN",
-          "value": "="
+          "type": "SYMBOL",
+          "name": "assignment"
         },
         {
           "type": "SYMBOL",
@@ -427,8 +427,8 @@
           "name": "identifier"
         },
         {
-          "type": "PATTERN",
-          "value": "="
+          "type": "SYMBOL",
+          "name": "assignment"
         },
         {
           "type": "SYMBOL",
@@ -893,6 +893,10 @@
           "value": "\""
         }
       ]
+    },
+    "assignment": {
+      "type": "PATTERN",
+      "value": "="
     },
     "dot": {
       "type": "PATTERN",

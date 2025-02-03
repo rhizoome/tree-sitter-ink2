@@ -22,15 +22,15 @@ enum ts_symbol_identifiers {
   aux_sym_gather_mark_token1 = 4,
   aux_sym_choice_mark_token1 = 5,
   aux_sym_code_text_token1 = 6,
-  aux_sym_var_line_token1 = 7,
-  aux_sym_list_token1 = 8,
-  aux_sym_mark_start_token1 = 9,
-  aux_sym_mark_end_token1 = 10,
-  aux_sym_condition_block_token1 = 11,
-  aux_sym_condition_block_token2 = 12,
-  anon_sym_DQUOTE = 13,
-  aux_sym_string_token1 = 14,
-  aux_sym_string_token2 = 15,
+  aux_sym_list_token1 = 7,
+  aux_sym_mark_start_token1 = 8,
+  aux_sym_mark_end_token1 = 9,
+  aux_sym_condition_block_token1 = 10,
+  aux_sym_condition_block_token2 = 11,
+  anon_sym_DQUOTE = 12,
+  aux_sym_string_token1 = 13,
+  aux_sym_string_token2 = 14,
+  sym_assignment = 15,
   sym_dot = 16,
   sym_block_rest = 17,
   sym_other = 18,
@@ -107,7 +107,6 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_gather_mark_token1] = "gather_mark_token1",
   [aux_sym_choice_mark_token1] = "choice_mark_token1",
   [aux_sym_code_text_token1] = "code_text_token1",
-  [aux_sym_var_line_token1] = "var_line_token1",
   [aux_sym_list_token1] = "list_token1",
   [aux_sym_mark_start_token1] = "mark_start_token1",
   [aux_sym_mark_end_token1] = "mark_end_token1",
@@ -116,6 +115,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_DQUOTE] = "\"",
   [aux_sym_string_token1] = "string_token1",
   [aux_sym_string_token2] = "string_token2",
+  [sym_assignment] = "assignment",
   [sym_dot] = "dot",
   [sym_block_rest] = "block_rest",
   [sym_other] = "other",
@@ -192,7 +192,6 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_gather_mark_token1] = aux_sym_gather_mark_token1,
   [aux_sym_choice_mark_token1] = aux_sym_choice_mark_token1,
   [aux_sym_code_text_token1] = aux_sym_code_text_token1,
-  [aux_sym_var_line_token1] = aux_sym_var_line_token1,
   [aux_sym_list_token1] = aux_sym_list_token1,
   [aux_sym_mark_start_token1] = aux_sym_mark_start_token1,
   [aux_sym_mark_end_token1] = aux_sym_mark_end_token1,
@@ -201,6 +200,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_DQUOTE] = anon_sym_DQUOTE,
   [aux_sym_string_token1] = aux_sym_string_token1,
   [aux_sym_string_token2] = aux_sym_string_token2,
+  [sym_assignment] = sym_assignment,
   [sym_dot] = sym_dot,
   [sym_block_rest] = sym_block_rest,
   [sym_other] = sym_other,
@@ -298,10 +298,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [aux_sym_var_line_token1] = {
-    .visible = false,
-    .named = false,
-  },
   [aux_sym_list_token1] = {
     .visible = false,
     .named = false,
@@ -333,6 +329,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   [aux_sym_string_token2] = {
     .visible = false,
     .named = false,
+  },
+  [sym_assignment] = {
+    .visible = true,
+    .named = true,
   },
   [sym_dot] = {
     .visible = true,
@@ -1001,16 +1001,16 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 0:
       if (eof) ADVANCE(12);
       ADVANCE_MAP(
-        '"', 30,
-        '(', 25,
-        ')', 26,
-        ',', 24,
+        '"', 29,
+        '(', 24,
+        ')', 25,
+        ',', 23,
         '-', 18,
         '.', 34,
         '=', 16,
         '\\', 10,
-        '{', 27,
-        '}', 29,
+        '{', 26,
+        '}', 28,
         '~', 21,
         '*', 19,
         '+', 19,
@@ -1019,20 +1019,20 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (set_contains(sym_identifier_character_set_1, 476, lookahead)) ADVANCE(43);
       END_STATE();
     case 1:
-      if (lookahead == '"') ADVANCE(30);
-      if (lookahead == '(') ADVANCE(25);
-      if (lookahead == ')') ADVANCE(26);
-      if (lookahead == ',') ADVANCE(24);
+      if (lookahead == '"') ADVANCE(29);
+      if (lookahead == '(') ADVANCE(24);
+      if (lookahead == ')') ADVANCE(25);
+      if (lookahead == ',') ADVANCE(23);
       if (lookahead == '=') ADVANCE(16);
       if (set_contains(extras_character_set_1, 10, lookahead)) SKIP(1);
       if (set_contains(sym_identifier_character_set_1, 476, lookahead)) ADVANCE(45);
       END_STATE();
     case 2:
-      if (lookahead == '"') ADVANCE(30);
+      if (lookahead == '"') ADVANCE(29);
       if (lookahead == '\\') ADVANCE(10);
-      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(32);
+      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(31);
       if (lookahead != 0 &&
-          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(31);
+          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(30);
       END_STATE();
     case 3:
       if (lookahead == '*') ADVANCE(11);
@@ -1041,7 +1041,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 4:
       if (lookahead == '-') ADVANCE(17);
-      if (lookahead == '{') ADVANCE(28);
+      if (lookahead == '{') ADVANCE(27);
       if (lookahead == '~') ADVANCE(22);
       if (lookahead == '*' ||
           lookahead == '+') ADVANCE(20);
@@ -1118,18 +1118,18 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           (lookahead < '\t' || '\r' < lookahead)) ADVANCE(42);
       END_STATE();
     case 8:
-      if (lookahead == '=') ADVANCE(23);
+      if (lookahead == '=') ADVANCE(33);
       if (set_contains(extras_character_set_1, 10, lookahead)) SKIP(8);
       END_STATE();
     case 9:
-      if (lookahead == '}') ADVANCE(29);
+      if (lookahead == '}') ADVANCE(28);
       if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(35);
       if (lookahead != 0 &&
           (lookahead < '\t' || '\r' < lookahead)) ADVANCE(36);
       END_STATE();
     case 10:
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(33);
+          lookahead != '\n') ADVANCE(32);
       END_STATE();
     case 11:
       if (lookahead != 0 &&
@@ -1181,43 +1181,43 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if ((!eof && set_contains(sym_other_character_set_1, 479, lookahead))) ADVANCE(42);
       END_STATE();
     case 23:
-      ACCEPT_TOKEN(aux_sym_var_line_token1);
-      END_STATE();
-    case 24:
       ACCEPT_TOKEN(aux_sym_list_token1);
       END_STATE();
-    case 25:
+    case 24:
       ACCEPT_TOKEN(aux_sym_mark_start_token1);
       END_STATE();
-    case 26:
+    case 25:
       ACCEPT_TOKEN(aux_sym_mark_end_token1);
+      END_STATE();
+    case 26:
+      ACCEPT_TOKEN(aux_sym_condition_block_token1);
       END_STATE();
     case 27:
       ACCEPT_TOKEN(aux_sym_condition_block_token1);
-      END_STATE();
-    case 28:
-      ACCEPT_TOKEN(aux_sym_condition_block_token1);
       if ((!eof && set_contains(sym_other_character_set_1, 479, lookahead))) ADVANCE(42);
       END_STATE();
-    case 29:
+    case 28:
       ACCEPT_TOKEN(aux_sym_condition_block_token2);
       END_STATE();
-    case 30:
+    case 29:
       ACCEPT_TOKEN(anon_sym_DQUOTE);
+      END_STATE();
+    case 30:
+      ACCEPT_TOKEN(aux_sym_string_token1);
       END_STATE();
     case 31:
       ACCEPT_TOKEN(aux_sym_string_token1);
-      END_STATE();
-    case 32:
-      ACCEPT_TOKEN(aux_sym_string_token1);
-      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(32);
+      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(31);
       if (lookahead != 0 &&
           (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != '"' &&
-          lookahead != '\\') ADVANCE(31);
+          lookahead != '\\') ADVANCE(30);
+      END_STATE();
+    case 32:
+      ACCEPT_TOKEN(aux_sym_string_token2);
       END_STATE();
     case 33:
-      ACCEPT_TOKEN(aux_sym_string_token2);
+      ACCEPT_TOKEN(sym_assignment);
       END_STATE();
     case 34:
       ACCEPT_TOKEN(sym_dot);
@@ -1239,7 +1239,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 37:
       ACCEPT_TOKEN(sym_other);
       if (lookahead == '-') ADVANCE(17);
-      if (lookahead == '{') ADVANCE(28);
+      if (lookahead == '{') ADVANCE(27);
       if (lookahead == '~') ADVANCE(22);
       if (lookahead == '*' ||
           lookahead == '+') ADVANCE(20);
@@ -1524,7 +1524,6 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_gather_mark_token1] = ACTIONS(1),
     [aux_sym_choice_mark_token1] = ACTIONS(1),
     [aux_sym_code_text_token1] = ACTIONS(1),
-    [aux_sym_var_line_token1] = ACTIONS(1),
     [aux_sym_list_token1] = ACTIONS(1),
     [aux_sym_mark_start_token1] = ACTIONS(1),
     [aux_sym_mark_end_token1] = ACTIONS(1),
@@ -1532,6 +1531,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_condition_block_token2] = ACTIONS(1),
     [anon_sym_DQUOTE] = ACTIONS(1),
     [aux_sym_string_token2] = ACTIONS(1),
+    [sym_assignment] = ACTIONS(1),
     [sym_dot] = ACTIONS(1),
     [sym_vocabular] = ACTIONS(1),
     [sym_identifier] = ACTIONS(1),
@@ -4003,7 +4003,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(442), 1,
-      aux_sym_var_line_token1,
+      sym_assignment,
     STATE(155), 1,
       sym_block_comment,
   [3397] = 4,
@@ -4012,7 +4012,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(444), 1,
-      aux_sym_var_line_token1,
+      sym_assignment,
     STATE(156), 1,
       sym_block_comment,
   [3410] = 4,
@@ -4066,7 +4066,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(452), 1,
-      aux_sym_var_line_token1,
+      sym_assignment,
     STATE(162), 1,
       sym_block_comment,
   [3488] = 4,
@@ -4228,7 +4228,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(482), 1,
-      aux_sym_var_line_token1,
+      sym_assignment,
     STATE(180), 1,
       sym_block_comment,
   [3722] = 4,
@@ -4237,7 +4237,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(484), 1,
-      aux_sym_var_line_token1,
+      sym_assignment,
     STATE(181), 1,
       sym_block_comment,
   [3735] = 4,
@@ -4246,7 +4246,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(486), 1,
-      aux_sym_var_line_token1,
+      sym_assignment,
     STATE(182), 1,
       sym_block_comment,
   [3748] = 4,

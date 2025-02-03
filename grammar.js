@@ -144,7 +144,7 @@ module.exports = grammar({
         var_line: $ => seq(
             $.var_start,
             $.identifier,
-            /=/,
+            $.assignment,
             $.value,
             $.line_end
         ),
@@ -152,7 +152,7 @@ module.exports = grammar({
         const_line: $ => seq(
             $.const_start,
             $.identifier,
-            /=/,
+            $.assignment,
             $.value,
             $.line_end
         ),
@@ -160,7 +160,7 @@ module.exports = grammar({
         list_line: $ => seq(
             $.list_start,
             $.identifier,
-            /=/,
+            $.assignment,
             $.list,
             $.line_end
         ),
@@ -276,6 +276,7 @@ module.exports = grammar({
             )),
             '"'
         ),
+        assignment: $ => /=/,
         dot: $ => /\./,
         block_rest: $ => /[^\r\n\}]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,

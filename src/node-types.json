@@ -123,6 +123,10 @@
       "required": true,
       "types": [
         {
+          "type": "assignment",
+          "named": true
+        },
+        {
           "type": "const_start",
           "named": true
         },
@@ -391,6 +395,10 @@
       "required": true,
       "types": [
         {
+          "type": "assignment",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -560,6 +568,10 @@
       "required": true,
       "types": [
         {
+          "type": "assignment",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -654,6 +666,10 @@
   },
   {
     "type": "arrow",
+    "named": true
+  },
+  {
+    "type": "assignment",
     "named": true
   },
   {
