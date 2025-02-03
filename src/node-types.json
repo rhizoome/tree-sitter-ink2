@@ -51,7 +51,26 @@
           "named": true
         },
         {
-          "type": "dialog_text",
+          "type": "choice_words",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "choice_words",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "divert_chain",
+          "named": true
+        },
+        {
+          "type": "words",
           "named": true
         }
       ]
@@ -680,6 +699,37 @@
     }
   },
   {
+    "type": "words",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "hide_end",
+          "named": true
+        },
+        {
+          "type": "hide_start",
+          "named": true
+        },
+        {
+          "type": "inline_block",
+          "named": true
+        },
+        {
+          "type": "other",
+          "named": true
+        },
+        {
+          "type": "vocabular",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "",
     "named": false
   },
@@ -721,6 +771,14 @@
   },
   {
     "type": "function_start",
+    "named": true
+  },
+  {
+    "type": "hide_end",
+    "named": true
+  },
+  {
+    "type": "hide_start",
     "named": true
   },
   {

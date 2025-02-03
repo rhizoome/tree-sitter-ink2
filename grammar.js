@@ -129,7 +129,7 @@ module.exports = grammar({
 
         choice_text: $ => seq(
             $.choice_mark,
-            optional($.dialog_text)
+            optional($.choice_words)
         ),
 
         choice_mark: $ => repeat1(
@@ -189,13 +189,27 @@ module.exports = grammar({
             $.divert_chain,
             seq($.text, $.divert_chain)
         ),
-
-        // TODO inline code goes here
         text: $ => repeat1(choice(
             $.inline_block,
             $.vocabular,
-            $.other
+            $.other,
         )),
+
+        choice_words: $ => choice(
+            $.words,
+            $.divert_chain,
+            seq($.words, $.divert_chain)
+        ),
+
+        words: $ => repeat1(choice(
+            $.inline_block,
+            $.vocabular,
+            $.other,
+            $.hide_start,
+            $.hide_end,
+        )),
+        hide_start: $ => /\[/,
+        hide_end: $ => /\]/,
 
         divert_chain: $ => choice(
             $.divert_return,

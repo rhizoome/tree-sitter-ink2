@@ -843,3 +843,25 @@ asdf {teer} asdf
             (block_remainder))
           (vocabular)))
       (line_end))))
+
+====
+Hide
+====
+
+* [Hide] me
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (choice_text
+        (choice_mark)
+        (choice_words
+          (words
+            (hide_start)
+            (vocabular)
+            (hide_end)
+            (vocabular))))
+      (line_end))))

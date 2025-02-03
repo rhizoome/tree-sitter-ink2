@@ -336,7 +336,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "dialog_text"
+              "name": "choice_words"
             },
             {
               "type": "BLANK"
@@ -563,6 +563,68 @@
           }
         ]
       }
+    },
+    "choice_words": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "words"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "divert_chain"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "words"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "divert_chain"
+            }
+          ]
+        }
+      ]
+    },
+    "words": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "inline_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "vocabular"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "other"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hide_start"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hide_end"
+          }
+        ]
+      }
+    },
+    "hide_start": {
+      "type": "PATTERN",
+      "value": "\\["
+    },
+    "hide_end": {
+      "type": "PATTERN",
+      "value": "\\]"
     },
     "divert_chain": {
       "type": "CHOICE",

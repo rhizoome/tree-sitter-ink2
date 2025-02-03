@@ -24,6 +24,8 @@
 (dot) @keyword.directive
 (mark_start) @keyword.directive
 (mark_end) @keyword.directive
+(hide_start) @keyword.directive
+(hide_end) @keyword.directive
 
 ; declarations
 (var_line) @attribute
