@@ -149,7 +149,7 @@ module.exports = grammar({
             $.var_start,
             $.identifier,
             /=/,
-            $.identifier,
+            $.value,
             $.line_end
         ),
 
@@ -157,7 +157,7 @@ module.exports = grammar({
             $.const_start,
             $.identifier,
             /=/,
-            $.identifier,
+            $.value,
             $.line_end
         ),
 
@@ -206,7 +206,7 @@ module.exports = grammar({
             repeat(
                 seq(
                     /,/,
-                    $.identifier
+                    $.value
                 )
             ),
             optional(/,/),
@@ -242,8 +242,8 @@ module.exports = grammar({
         ),
 
         value: $ => choice(
-            $string,
-            $identifier
+            $.string,
+            $.identifier
         ),
         string: $ => seq(
             '"',

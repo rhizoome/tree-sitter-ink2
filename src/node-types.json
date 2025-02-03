@@ -10,6 +10,10 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "value",
+          "named": true
         }
       ]
     }
@@ -132,6 +136,10 @@
         },
         {
           "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "value",
           "named": true
         }
       ]
@@ -449,6 +457,11 @@
     }
   },
   {
+    "type": "string",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "text",
     "named": true,
     "fields": {},
@@ -468,6 +481,25 @@
     }
   },
   {
+    "type": "value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "var_line",
     "named": true,
     "fields": {},
@@ -481,6 +513,10 @@
         },
         {
           "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "value",
           "named": true
         },
         {
@@ -554,6 +590,10 @@
   },
   {
     "type": "",
+    "named": false
+  },
+  {
+    "type": "\"",
     "named": false
   },
   {

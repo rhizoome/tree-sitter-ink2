@@ -1,8 +1,8 @@
 (knot_header) @keyword
-(knot_header (identifier) @function)
-
 (stitch_header) @keyword
-(stitch_header (identifier) @function)
+
+(identifier) @function
+(string) @string
 
 (choice_mark) @keyword.directive
 (gather_mark) @type.builtin

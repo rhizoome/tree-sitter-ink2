@@ -1,0 +1,787 @@
+===========
+Single knot
+===========
+
+=== teäst ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+===========
+Next knot
+===========
+
+=== test ===
+=== test ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+=================
+Knot and stitches
+=================
+
+=== test ===
+=== test ===
+ = test
+asd
+ = test
+asd
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (stitch
+      (stitch_header
+        (stitch_start)
+        (identifier)
+        (line_end))
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (text
+              (vocabular)))
+          (line_end))))
+    (stitch
+      (stitch_header
+        (stitch_start)
+        (identifier)
+        (line_end))
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (text
+              (vocabular)))
+          (line_end))))))
+
+=====================
+Knot with simple body
+=====================
+
+=== test ===
+body
+=== test ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end))))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+======
+Divert
+======
+
+asdf-sdf -> test
+=== test ===
+test -> test.bla
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular))
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular))
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)
+                (dot)
+                (identifier)))))
+        (line_end)))))
+
+================
+Illegal divert 1
+================
+
+asdsdf -> test.bla asdf
+=== huhu ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular))
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)
+              (dot)
+              (identifier)))))
+      (ERROR
+        (vocabular))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+================
+Illegal divert 2
+================
+
+asdsdf ->
+=== huhu ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)))
+      (ERROR
+        (arrow))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+===========
+End newline
+===========
+
+=== teet ===
+
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+=========
+End space
+=========
+
+=== teet ===
+ 
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body)))
+
+==========
+Empty line
+==========
+
+=== teet ===
+a
+
+b
+
+--------------------------------------------------------------------------------
+
+(program
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end)))))
+
+=============
+Spaces at end
+=============
+a 
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)))
+      (line_end))))
+
+========
+Function
+========
+
+=== function asd() ===
+a
+
+
+a
+
+--------------------------------------------------------------------------------
+
+(program
+  (function
+    (function_header
+      (function_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end)))))
+
+===============
+Function spaces
+===============
+
+=== function asd ( asd , sd ) ===
+a
+
+--------------------------------------------------------------------------------
+
+(program
+  (function
+    (function_header
+      (function_start)
+      (identifier)
+      (arguments
+        (identifier)
+        (value
+          (identifier)))
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end)))))
+
+=====================
+Function space at end
+=====================
+
+=== function asd ( asd , sd ) 
+a
+--------------------------------------------------------------------------------
+
+(program
+  (function
+    (function_header
+      (function_start)
+      (identifier)
+      (arguments
+        (identifier)
+        (value
+          (identifier)))
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabular)))
+        (line_end)))))
+
+=======
+Numbers
+=======
+
+11
+1
+=== 1sadf ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
+
+======
+Colons
+======
+
+1:
+=== test ====
+- 1:
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)
+          (other)))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (weave_body_line
+        (line_start)
+        (gather_text
+          (gather_mark)
+          (dialog_text
+            (text
+              (vocabular)
+              (other))))
+        (line_end)))))
+
+=====================
+Condition text (TODO)
+=====================
+
+ {test:
+asdf
+ }
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (condition_text
+        (condition_block
+          (block_rest)
+          (line_end)
+          (line_start)
+          (block_rest)
+          (line_end)
+          (line_start)))
+      (line_end))))
+
+==========================
+Condition text rest (TODO)
+==========================
+
+{test:
+asdf
+} rest
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (condition_text
+        (condition_block
+          (block_rest)
+          (line_end)
+          (line_start)
+          (block_rest)
+          (line_end)
+          (line_start))
+        (text
+          (vocabular)))
+      (line_end))))
+
+===========
+Multidivert
+===========
+
+->a
+->a->
+->a->b->c.d
+->a->->
+->->
+->a->b->c->->
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert_continue
+            (arrow))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)
+              (dot)
+              (identifier)))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert_return
+            (double_arrow))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert_return
+            (double_arrow))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert_return
+            (double_arrow))))
+      (line_end))))
+
+===================
+Illigal multidivert
+===================
+
+->->a
+->a->->b
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert_return
+            (double_arrow))))
+      (ERROR
+        (vocabular))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert_return
+            (double_arrow))))
+      (ERROR
+        (vocabular))
+      (line_end))))
+
+===
+VAR
+===
+
+VAR huhu = 1
+=== huhu ===
+VAR huhu = 1
+= huhu
+VAR huhu = 1
+=== function sdf() ===
+VAR huhu = 1
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (var_line
+      (var_start)
+      (identifier)
+      (value
+        (identifier))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (var_line
+        (var_start)
+        (identifier)
+        (value
+          (identifier))
+        (line_end)))
+    (stitch
+      (stitch_header
+        (stitch_start)
+        (identifier)
+        (line_end))
+      (weave_body
+        (var_line
+          (var_start)
+          (identifier)
+          (value
+            (identifier))
+          (line_end)))))
+  (function
+    (function_header
+      (function_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (var_line
+        (var_start)
+        (identifier)
+        (value
+          (identifier))
+        (line_end)))))
+
+=====
+CONST
+=====
+
+CONST huhu = 1
+=== huhu ===
+CONST huhu = 1
+= huhu
+CONST huhu = 1
+=== function sdf() ===
+CONST huhu = 1
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (const_line
+      (const_start)
+      (identifier)
+      (value
+        (identifier))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (const_line
+        (const_start)
+        (identifier)
+        (value
+          (identifier))
+        (line_end)))
+    (stitch
+      (stitch_header
+        (stitch_start)
+        (identifier)
+        (line_end))
+      (weave_body
+        (const_line
+          (const_start)
+          (identifier)
+          (value
+            (identifier))
+          (line_end)))))
+  (function
+    (function_header
+      (function_start)
+      (identifier)
+      (line_end))
+    (weave_body
+      (const_line
+        (const_start)
+        (identifier)
+        (value
+          (identifier))
+        (line_end)))))
+
+==============
+Block commment
+==============
+
+test /* asdf */ bla
+=== /** other* */ hello ===
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)
+          (block_comment
+            (block_comment_start)
+            (block_comment_end))
+          (vocabular)))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (block_comment
+        (block_comment_start)
+        (block_comment_end))
+      (identifier)
+      (line_end))))
+
+============
+Line comment
+============
+
+asdf // asdf
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)))
+      (line_comment
+        (line_comment_start)
+        (line_end))
+      (line_end))))
