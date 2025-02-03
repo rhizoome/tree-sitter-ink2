@@ -372,25 +372,6 @@
     }
   },
   {
-    "type": "line_comment",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "line_comment_start",
-          "named": true
-        },
-        {
-          "type": "line_end",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "program",
     "named": true,
     "root": true,
@@ -637,7 +618,7 @@
     "named": true
   },
   {
-    "type": "line_comment_start",
+    "type": "line_comment",
     "named": true
   },
   {

@@ -29,7 +29,7 @@ module.exports = grammar({
         $.double_arrow,
         $.block_comment_start,
         $.block_comment_end,
-        $.line_comment_start,
+        $.line_comment,
         $.glue,
         $.line_start,
         $.stitch_start,
@@ -61,12 +61,6 @@ module.exports = grammar({
                 /\*[^/]/
             )),
             $.block_comment_end
-        ),
-
-        line_comment: $ => seq(
-            $.line_comment_start,
-            repeat(/[^\n\r]/),
-            $.line_end
         ),
 
         knot: $ => seq(

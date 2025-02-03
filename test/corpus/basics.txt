@@ -771,6 +771,7 @@ Line comment
 ============
 
 asdf // asdf
+CONST test = 1
 
 --------------------------------------------------------------------------------
 
@@ -781,7 +782,11 @@ asdf // asdf
       (dialog_text
         (text
           (vocabular)))
-      (line_comment
-        (line_comment_start)
-        (line_end))
+      (line_comment)
+      (line_end))
+    (const_line
+      (const_start)
+      (identifier)
+      (value
+        (identifier))
       (line_end))))

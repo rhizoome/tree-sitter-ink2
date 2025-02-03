@@ -85,26 +85,6 @@
         }
       ]
     },
-    "line_comment": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "line_comment_start"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "PATTERN",
-            "value": "[^\\n\\r]"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "line_end"
-        }
-      ]
-    },
     "knot": {
       "type": "SEQ",
       "members": [
@@ -863,7 +843,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "line_comment_start"
+      "name": "line_comment"
     },
     {
       "type": "SYMBOL",

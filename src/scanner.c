@@ -20,7 +20,7 @@ enum TokenType {
     DOUBLE_ARROW,
     BLOCK_COMMENT_START,
     BLOCK_COMMENT_END,
-    LINE_COMMENT_START,
+    LINE_COMMENT,
     GLUE,
     LINE_START,
     STITCH_START,
@@ -259,7 +259,7 @@ static bool check_commment_start(TSLexer *lexer, const bool *valid_symbols) {
     if (
         (
             valid_symbols[BLOCK_COMMENT_START] ||
-            valid_symbols[LINE_COMMENT_START]
+            valid_symbols[LINE_COMMENT]
         )
         && lexer->lookahead == '/'
     ) {
@@ -270,7 +270,10 @@ static bool check_commment_start(TSLexer *lexer, const bool *valid_symbols) {
             return true;
         } else if (lexer->lookahead == '/') {
             lexer->advance(lexer, false);
-            lexer->result_symbol = LINE_COMMENT_START;
+            lexer->result_symbol = LINE_COMMENT;
+            while (lexer->lookahead != '\n' && lexer->lookahead != '\r') {
+                lexer->advance(lexer, false);
+            }
             return true;
         }
     }
