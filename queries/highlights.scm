@@ -12,6 +12,7 @@
 (function_header (arguments) @string)
 
 (condition_block) @keyword
+(code_text) @keyword
 
 (divert_chain) @function
 
