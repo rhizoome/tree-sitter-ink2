@@ -460,10 +460,10 @@ asdf
       (line_start)
       (condition_text
         (condition_block
-          (block_rest)
+          (block_remainder)
           (line_end)
           (line_start)
-          (block_rest)
+          (block_remainder)
           (line_end)
           (line_start)))
       (line_end))))
@@ -484,10 +484,10 @@ asdf
       (line_start)
       (condition_text
         (condition_block
-          (block_rest)
+          (block_remainder)
           (line_end)
           (line_start)
-          (block_rest)
+          (block_remainder)
           (line_end)
           (line_start))
         (text
@@ -822,4 +822,24 @@ LIST HuHu = HuHa, (HuHe)
           (mark_start)
           (identifier)
           (mark_end)))
+      (line_end))))
+
+============
+Inline block
+============
+
+asdf {teer} asdf
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)
+          (inline_block
+            (block_remainder))
+          (vocabular)))
       (line_end))))

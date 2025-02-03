@@ -551,6 +551,10 @@
         "members": [
           {
             "type": "SYMBOL",
+            "name": "inline_block"
+          },
+          {
+            "type": "SYMBOL",
             "name": "vocabular"
           },
           {
@@ -773,7 +777,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "block_rest"
+              "name": "block_remainder"
             },
             {
               "type": "BLANK"
@@ -798,7 +802,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "block_rest"
+                    "name": "block_remainder"
                   },
                   {
                     "type": "BLANK"
@@ -815,6 +819,31 @@
         {
           "type": "SYMBOL",
           "name": "line_start"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\}"
+        }
+      ]
+    },
+    "inline_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\{"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "block_remainder"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -902,7 +931,7 @@
       "type": "PATTERN",
       "value": "\\."
     },
-    "block_rest": {
+    "block_remainder": {
       "type": "PATTERN",
       "value": "[^\\r\\n\\}]+"
     },

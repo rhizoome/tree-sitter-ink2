@@ -192,6 +192,7 @@ module.exports = grammar({
 
         // TODO inline code goes here
         text: $ => repeat1(choice(
+            $.inline_block,
             $.vocabular,
             $.other
         )),
@@ -243,16 +244,23 @@ module.exports = grammar({
         // TODO parse code within condition block
         condition_block: $ => seq(
             /\{/,
-            optional($.block_rest),
+            optional($.block_remainder),
             $.line_end,
             repeat(
                 seq(
                     $.line_start,
-                    optional($.block_rest),
+                    optional($.block_remainder),
                     $.line_end
                 )
             ),
             $.line_start,
+            /\}/
+        ),
+
+        // TODO parse code within inline block
+        inline_block: $ => seq(
+            /\{/,
+            optional($.block_remainder),
             /\}/
         ),
 
@@ -278,7 +286,7 @@ module.exports = grammar({
         ),
         assignment: $ => /=/,
         dot: $ => /\./,
-        block_rest: $ => /[^\r\n\}]+/,
+        block_remainder: $ => /[^\r\n\}]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
         vocabular: $ => /[\p{N}\p{L}_-]+/,
         identifier: $ => /[\p{N}\p{L}_]+/

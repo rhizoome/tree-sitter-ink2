@@ -81,7 +81,7 @@
       "required": true,
       "types": [
         {
-          "type": "block_rest",
+          "type": "block_remainder",
           "named": true
         },
         {
@@ -326,6 +326,21 @@
     }
   },
   {
+    "type": "inline_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "block_remainder",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "knot",
     "named": true,
     "fields": {},
@@ -530,6 +545,10 @@
       "required": true,
       "types": [
         {
+          "type": "inline_block",
+          "named": true
+        },
+        {
           "type": "other",
           "named": true
         },
@@ -681,7 +700,7 @@
     "named": true
   },
   {
-    "type": "block_rest",
+    "type": "block_remainder",
     "named": true
   },
   {
