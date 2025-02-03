@@ -890,6 +890,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "SYMBOL",
           "name": "identifier"
         }
       ]
@@ -922,6 +926,10 @@
           "value": "\""
         }
       ]
+    },
+    "number": {
+      "type": "PATTERN",
+      "value": "\\d+"
     },
     "assignment": {
       "type": "PATTERN",

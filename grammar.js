@@ -274,6 +274,7 @@ module.exports = grammar({
 
         value: $ => choice(
             $.string,
+            $.number,
             $.identifier
         ),
         string: $ => seq(
@@ -284,6 +285,7 @@ module.exports = grammar({
             )),
             '"'
         ),
+        number: $ => /\d+/,
         assignment: $ => /=/,
         dot: $ => /\./,
         block_remainder: $ => /[^\r\n\}]+/,

@@ -6,6 +6,7 @@
 ; values
 (identifier) @function
 (string) @string
+(number) @constant
 
 ; marks (ink)
 (choice_mark) @keyword.directive
@@ -34,6 +35,7 @@
 (block_comment) @comment
 
 ; unparsed code
+(inline_block) @keyword
 (condition_block) @keyword
 (code_text) @keyword
 

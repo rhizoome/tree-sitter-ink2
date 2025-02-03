@@ -641,7 +641,7 @@ VAR huhu = 1
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (number))
       (line_end)))
   (knot
     (knot_header
@@ -654,7 +654,7 @@ VAR huhu = 1
         (identifier)
         (assignment)
         (value
-          (identifier))
+          (number))
         (line_end)))
     (stitch
       (stitch_header
@@ -667,7 +667,7 @@ VAR huhu = 1
           (identifier)
           (assignment)
           (value
-            (identifier))
+            (number))
           (line_end)))))
   (function
     (function_header
@@ -680,7 +680,7 @@ VAR huhu = 1
         (identifier)
         (assignment)
         (value
-          (identifier))
+          (number))
         (line_end)))))
 
 =====
@@ -704,7 +704,7 @@ CONST huhu = 1
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (number))
       (line_end)))
   (knot
     (knot_header
@@ -717,7 +717,7 @@ CONST huhu = 1
         (identifier)
         (assignment)
         (value
-          (identifier))
+          (number))
         (line_end)))
     (stitch
       (stitch_header
@@ -730,7 +730,7 @@ CONST huhu = 1
           (identifier)
           (assignment)
           (value
-            (identifier))
+            (number))
           (line_end)))))
   (function
     (function_header
@@ -743,7 +743,7 @@ CONST huhu = 1
         (identifier)
         (assignment)
         (value
-          (identifier))
+          (number))
         (line_end)))))
 
 ==============
@@ -799,7 +799,7 @@ CONST test = 1
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (number))
       (line_end))))
 
 ====
