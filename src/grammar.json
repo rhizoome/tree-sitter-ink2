@@ -597,6 +597,14 @@
         "members": [
           {
             "type": "SYMBOL",
+            "name": "hide_start"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hide_end"
+          },
+          {
+            "type": "SYMBOL",
             "name": "inline_block"
           },
           {
@@ -605,15 +613,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "other"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "hide_start"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "hide_end"
+            "name": "word_other"
           }
         ]
       }
@@ -1008,6 +1008,10 @@
     "other": {
       "type": "PATTERN",
       "value": "[^\\s\\n\\r\\p{N}\\p{L}_]+"
+    },
+    "word_other": {
+      "type": "PATTERN",
+      "value": "[^\\s\\n\\r\\p{N}\\p{L}\\[\\]_]+"
     },
     "vocabular": {
       "type": "PATTERN",

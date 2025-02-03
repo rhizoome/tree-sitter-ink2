@@ -202,11 +202,11 @@ module.exports = grammar({
         ),
 
         words: $ => repeat1(choice(
-            $.inline_block,
-            $.vocabular,
-            $.other,
             $.hide_start,
             $.hide_end,
+            $.inline_block,
+            $.vocabular,
+            $.word_other,
         )),
         hide_start: $ => /\[/,
         hide_end: $ => /\]/,
@@ -304,6 +304,7 @@ module.exports = grammar({
         dot: $ => /\./,
         block_remainder: $ => /[^\r\n\}]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
+        word_other: $ => /[^\s\n\r\p{N}\p{L}\[\]_]+/,
         vocabular: $ => /[\p{N}\p{L}_-]+/,
         identifier: $ => /[\p{N}\p{L}_]+/
 

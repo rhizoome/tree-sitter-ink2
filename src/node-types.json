@@ -719,11 +719,11 @@
           "named": true
         },
         {
-          "type": "other",
+          "type": "vocabular",
           "named": true
         },
         {
-          "type": "vocabular",
+          "type": "word_other",
           "named": true
         }
       ]
@@ -823,6 +823,10 @@
   },
   {
     "type": "vocabular",
+    "named": true
+  },
+  {
+    "type": "word_other",
     "named": true
   }
 ]

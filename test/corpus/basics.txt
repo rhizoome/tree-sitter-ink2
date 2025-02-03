@@ -865,3 +865,42 @@ Hide
             (hide_end)
             (vocabular))))
       (line_end))))
+
+============
+Hide problem
+============
+
++ [<b>◉</b> Beschreibung] ->e->Schau->Basis
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (choice_text
+        (choice_mark)
+        (choice_words
+          (words
+            (hide_start)
+            (word_other)
+            (vocabular)
+            (word_other)
+            (vocabular)
+            (word_other)
+            (vocabular)
+            (hide_end))
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier))))))
+      (line_end))))
