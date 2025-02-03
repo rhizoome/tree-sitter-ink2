@@ -1,6 +1,9 @@
 const WS = /[ \t\v\f\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u2028\u2029\u202F\u205F\u3000]/;
 
 /* Note
+- PLEASE remember that repeat($.line_start, $.catch_all, $.line_end) can also
+  match on previous line!! So the catch_all has always to exclude the block-end
+  character
 - In ink line-endings are significant in many places, therefore we have to handle
   line-endings throughout the grammar
 - Where it is possible without adding complications, clear error or confusion,
@@ -20,6 +23,10 @@ module.exports = grammar({
     externals: $ => [
         $.arrow,
         $.double_arrow,
+        $.block_comment_start,
+        $.block_comment_end,
+        $.line_comment,
+        $.glue,
         $.line_start,
         $.stitch_start,
         $.knot_start,
@@ -31,6 +38,12 @@ module.exports = grammar({
     ],
 
     rules: {
+
+        //program: $ => seq(
+        //    /\}/,
+        //    optional(/[^\r\n]+/),
+        //    $.line_end
+        //),
 
         program: $ => prec(1, seq(
             optional(alias($.empty_line, "")),
