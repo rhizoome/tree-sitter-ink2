@@ -213,6 +213,10 @@
               "name": "const_line"
             },
             {
+              "type": "SYMBOL",
+              "name": "list_line"
+            },
+            {
               "type": "ALIAS",
               "content": {
                 "type": "SYMBOL",
@@ -411,6 +415,109 @@
         }
       ]
     },
+    "list_line": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "list_start"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "PATTERN",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "list"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        }
+      ]
+    },
+    "list": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "marked_identifier"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "marked_identifier"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": ","
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "marked_identifier": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "mark_start"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "mark_end"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "mark_start": {
+      "type": "PATTERN",
+      "value": "\\("
+    },
+    "mark_end": {
+      "type": "PATTERN",
+      "value": "\\)"
+    },
     "dialog_text": {
       "type": "CHOICE",
       "members": [
@@ -601,7 +708,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "value"
         },
         {
           "type": "REPEAT",
@@ -872,6 +979,10 @@
     {
       "type": "SYMBOL",
       "name": "const_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "list_start"
     },
     {
       "type": "SYMBOL",

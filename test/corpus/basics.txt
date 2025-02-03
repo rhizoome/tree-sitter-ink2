@@ -339,7 +339,8 @@ a
       (function_start)
       (identifier)
       (arguments
-        (identifier)
+        (value
+          (identifier))
         (value
           (identifier)))
       (line_end))
@@ -365,7 +366,8 @@ a
       (function_start)
       (identifier)
       (arguments
-        (identifier)
+        (value
+          (identifier))
         (value
           (identifier)))
       (line_end))
@@ -789,4 +791,25 @@ CONST test = 1
       (identifier)
       (value
         (identifier))
+      (line_end))))
+
+====
+LIST
+====
+
+LIST HuHu = HuHa, (HuHe)
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (list_line
+      (list_start)
+      (identifier)
+      (list
+        (marked_identifier
+          (identifier))
+        (marked_identifier
+          (mark_start)
+          (identifier)
+          (mark_end)))
       (line_end))))

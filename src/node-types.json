@@ -8,10 +8,6 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
           "type": "value",
           "named": true
         }
@@ -372,6 +368,81 @@
     }
   },
   {
+    "type": "list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "marked_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "line_end",
+          "named": true
+        },
+        {
+          "type": "list",
+          "named": true
+        },
+        {
+          "type": "list_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mark_end",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "mark_start",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "marked_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mark_end",
+          "named": true
+        },
+        {
+          "type": "mark_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "program",
     "named": true,
     "root": true,
@@ -520,6 +591,10 @@
           "named": true
         },
         {
+          "type": "list_line",
+          "named": true
+        },
+        {
           "type": "var_line",
           "named": true
         },
@@ -627,6 +702,10 @@
   },
   {
     "type": "line_start",
+    "named": true
+  },
+  {
+    "type": "list_start",
     "named": true
   },
   {

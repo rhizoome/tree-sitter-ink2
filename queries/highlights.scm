@@ -19,9 +19,12 @@
 (arrow) @keyword.directive
 (double_arrow) @keyword.directive
 (dot) @keyword.directive
+(mark_start) @keyword.directive
+(mark_end) @keyword.directive
 
 (var_line) @attribute
 (const_line) @constant
+(list_line) @namespace
 
 (line_comment) @comment
 (block_comment) @comment

@@ -37,6 +37,7 @@ module.exports = grammar({
         $.function_start,
         $.var_start,
         $.const_start,
+        $.list_start,
         $.empty_line,
         $.line_end
     ],
@@ -95,6 +96,7 @@ module.exports = grammar({
                 $.weave_body_line,
                 $.var_line,
                 $.const_line,
+                $.list_line,
                 alias($.empty_line, "")
             )
         )),
@@ -155,6 +157,33 @@ module.exports = grammar({
             $.line_end
         ),
 
+        list_line: $ => seq(
+            $.list_start,
+            $.identifier,
+            /=/,
+            $.list,
+            $.line_end
+        ),
+
+        list: $ => seq(
+            $.marked_identifier,
+            repeat(
+                seq(
+                    /,/,
+                    $.marked_identifier
+                )
+            ),
+            optional(/,/),
+        ),
+
+        marked_identifier: $ => seq(
+            optional($.mark_start),
+            $.identifier,
+            optional($.mark_end),
+        ),
+        mark_start: $ => /\(/,
+        mark_end: $ => /\)/,
+
         dialog_text: $ => choice(
             $.text,
             $.divert_chain,
@@ -196,7 +225,7 @@ module.exports = grammar({
         ),
 
         arguments: $ => seq(
-            $.identifier,
+            $.value,
             repeat(
                 seq(
                     /,/,

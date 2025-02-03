@@ -28,6 +28,7 @@ enum TokenType {
     FUNCTION_START,
     VAR_START,
     CONST_START,
+    LIST_START,
     EMPTY_LINE,
     LINE_END,
 };
@@ -35,6 +36,7 @@ enum TokenType {
 static const char *KW_FUNCTION = "function";
 static const char *KW_VAR = "VAR";
 static const char *KW_CONST = "CONST";
+static const char *KW_LIST = "LIST";
 static const char *PAIR_BLOCK_COMMENT_END = "*/";
 static const char *PAIR_GLUE = "<>";
 
@@ -200,6 +202,9 @@ static bool check_start_tokens(TSLexer *lexer, const bool *valid_symbols) {
             return true;
         }
         if (check_keyword(lexer, valid_symbols, CONST_START, KW_CONST)) {
+            return true;
+        }
+        if (check_keyword(lexer, valid_symbols, LIST_START, KW_LIST)) {
             return true;
         }
         if (valid_symbols[LINE_START]) {
