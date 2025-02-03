@@ -4,6 +4,8 @@
 /* Notes
 - There is no need to lex single characters. Only multi-character symbols and
   position dependent symbols need to be lexed by the scanner.
+- We never skip with lexer->advance(lexer, true); because it improves the
+  readablity of debug output of "tree-sitter parse"
 */
 
 /* Goals
@@ -18,7 +20,7 @@ enum TokenType {
     DOUBLE_ARROW,
     BLOCK_COMMENT_START,
     BLOCK_COMMENT_END,
-    LINE_COMMENT,
+    LINE_COMMENT_START,
     GLUE,
     LINE_START,
     STITCH_START,
@@ -33,9 +35,7 @@ enum TokenType {
 static const char *KW_FUNCTION = "function";
 static const char *KW_VAR = "VAR";
 static const char *KW_CONST = "CONST";
-static const char *PAIR_BLOCK_COMMENT_START = "/*";
 static const char *PAIR_BLOCK_COMMENT_END = "*/";
-static const char *PAIR_LINE_COMMNENT = "//";
 static const char *PAIR_GLUE = "<>";
 
 static int is_unicode_whitespace(int32_t wc) {
@@ -255,21 +255,38 @@ static bool check_arrows(TSLexer *lexer, const bool *valid_symbols) {
     return false;
 }
 
+static bool check_commment_start(TSLexer *lexer, const bool *valid_symbols) {
+    if (
+        (
+            valid_symbols[BLOCK_COMMENT_START] ||
+            valid_symbols[LINE_COMMENT_START]
+        )
+        && lexer->lookahead == '/'
+    ) {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == '*') {
+            lexer->advance(lexer, false);
+            lexer->result_symbol = BLOCK_COMMENT_START;
+            return true;
+        } else if (lexer->lookahead == '/') {
+            lexer->advance(lexer, false);
+            lexer->result_symbol = LINE_COMMENT_START;
+            return true;
+        }
+    }
+    return false;
+}
+
 static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     // Position dependant lexes (whitespaces may not be consumed)
-    if (check_start_tokens(lexer, valid_symbols)) { return true; }
+    if (check_start_tokens(lexer, valid_symbols)) return true;
 
     // Position independant lexes (whitespaces must be consumed)
     skip_whitespace(lexer);
-    if (check_line_end(lexer, valid_symbols)) {  return true; }
-    if (check_arrows(lexer, valid_symbols)) { return true; }
-    if (check_pair(lexer, valid_symbols, BLOCK_COMMENT_START, PAIR_BLOCK_COMMENT_START)) {
-        return true;
-    }
+    if (check_line_end(lexer, valid_symbols)) return true;
+    if (check_arrows(lexer, valid_symbols)) return true;
+    if (check_commment_start(lexer, valid_symbols)) return true;
     if (check_pair(lexer, valid_symbols, BLOCK_COMMENT_END, PAIR_BLOCK_COMMENT_END)) {
-        return true;
-    }
-    if (check_pair(lexer, valid_symbols, LINE_COMMENT, PAIR_LINE_COMMNENT)) {
         return true;
     }
     if (check_pair(lexer, valid_symbols, GLUE, PAIR_GLUE)) {

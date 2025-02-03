@@ -22,4 +22,7 @@
 (var_line) @attribute
 (const_line) @constant
 
+(line_comment) @comment
+(block_comment) @comment
+
 (ERROR) @error

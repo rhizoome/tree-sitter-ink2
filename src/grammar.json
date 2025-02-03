@@ -56,6 +56,55 @@
         ]
       }
     },
+    "block_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "block_comment_start"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[^*]"
+              },
+              {
+                "type": "PATTERN",
+                "value": "\\*[^/]"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block_comment_end"
+        }
+      ]
+    },
+    "line_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "line_comment_start"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "PATTERN",
+            "value": "[^\\n\\r]"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_end"
+        }
+      ]
+    },
     "knot": {
       "type": "SEQ",
       "members": [
@@ -741,6 +790,14 @@
     {
       "type": "PATTERN",
       "value": "[ \\t\\v\\f\\u00A0\\u1680\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000]"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "block_comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "line_comment"
     }
   ],
   "conflicts": [],
@@ -764,7 +821,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "line_comment"
+      "name": "line_comment_start"
     },
     {
       "type": "SYMBOL",

@@ -17,7 +17,11 @@ const WS = /[ \t\v\f\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007
 
 module.exports = grammar({
     name: "ink",
-    extras: $ => [WS],
+    extras: $ => [
+        WS,
+        $.block_comment,
+        $.line_comment
+    ],
     conflicts: $ => [
     ],
     externals: $ => [
@@ -25,7 +29,7 @@ module.exports = grammar({
         $.double_arrow,
         $.block_comment_start,
         $.block_comment_end,
-        $.line_comment,
+        $.line_comment_start,
         $.glue,
         $.line_start,
         $.stitch_start,
@@ -39,12 +43,6 @@ module.exports = grammar({
 
     rules: {
 
-        //program: $ => seq(
-        //    /\}/,
-        //    optional(/[^\r\n]+/),
-        //    $.line_end
-        //),
-
         program: $ => prec(1, seq(
             optional(alias($.empty_line, "")),
             optional($.weave_body),
@@ -55,6 +53,21 @@ module.exports = grammar({
                 )
             )
         )),
+
+        block_comment: $ => seq(
+            $.block_comment_start,
+            repeat(choice(
+                /[^*]/,
+                /\*[^/]/
+            )),
+            $.block_comment_end
+        ),
+
+        line_comment: $ => seq(
+            $.line_comment_start,
+            repeat(/[^\n\r]/),
+            $.line_end
+        ),
 
         knot: $ => seq(
             $.knot_header,
