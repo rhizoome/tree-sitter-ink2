@@ -240,14 +240,18 @@ module.exports = grammar({
         ),
 
         arguments: $ => seq(
-            $.value,
+            $.argument,
             repeat(
                 seq(
                     /,/,
-                    $.value
+                    $.argument
                 )
             ),
             optional(/,/),
+        ),
+        argument: $ => seq(
+            optional($.ref),
+            $.identifier
         ),
 
         condition_text: $ => seq(
@@ -307,6 +311,8 @@ module.exports = grammar({
             )),
             '"'
         ),
+
+        ref: $ => /ref/,
         number: $ => /\d+/,
         assignment: $ => /=/,
         dot: $ => /\./,

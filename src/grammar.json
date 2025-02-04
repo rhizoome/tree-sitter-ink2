@@ -774,7 +774,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "value"
+          "name": "argument"
         },
         {
           "type": "REPEAT",
@@ -787,7 +787,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "value"
+                "name": "argument"
               }
             ]
           }
@@ -803,6 +803,27 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "argument": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "ref"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
@@ -1036,6 +1057,10 @@
           "value": "\""
         }
       ]
+    },
+    "ref": {
+      "type": "PATTERN",
+      "value": "ref"
     },
     "number": {
       "type": "PATTERN",

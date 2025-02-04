@@ -1,5 +1,24 @@
 [
   {
+    "type": "argument",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "arguments",
     "named": true,
     "fields": {},
@@ -8,7 +27,7 @@
       "required": true,
       "types": [
         {
-          "type": "value",
+          "type": "argument",
           "named": true
         }
       ]
@@ -842,6 +861,10 @@
   },
   {
     "type": "other",
+    "named": true
+  },
+  {
+    "type": "ref",
     "named": true
   },
   {
