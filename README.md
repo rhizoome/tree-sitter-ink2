@@ -32,7 +32,7 @@ name = "ink"
 source = { git = "~/Repos/tree-sitter-ink", rev = "$long_revision" }
 ```
 
-Copy the `highlights.scp` from this repo and install latest grammars.
+Copy the `highlights.scm` from this repo and install latest grammars.
 
 ```shell
 mkdir -p ~/.config/helix/runtime/queries/ink
