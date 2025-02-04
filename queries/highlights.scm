@@ -29,7 +29,7 @@
 ; special operators (ink)
 (arrow) @keyword.directive
 (double_arrow) @keyword.directive
-(back_arrow) @keyword
+(back_arrow) @constant
 (dot) @keyword.directive
 (mark_start) @keyword.directive
 (mark_end) @keyword.directive
