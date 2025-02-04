@@ -323,10 +323,13 @@ module.exports = grammar({
         assignment: $ => /=/,
         dot: $ => /\./,
         block_remainder: $ => /[^\r\n\}\{]+/,
-        other: $ => prec.right(repeat1(/[^\s\n\r\p{N}\p{L}_]/)),
-        word_other: $ => prec.right(repeat1(/[^\s\n\r\p{N}\p{L}\[\]_]/)),
         vocabulary: $ => /[\p{N}\p{L}_-]+/,
-        identifier: $ => /[\p{N}\p{L}_]+/
+        identifier: $ => /[\p{N}\p{L}_]+/,
+        // Single character catch-all in the form /[]+/ would be to
+        // greedy, these are meant to catch punctionation. Therefore we use
+        // prec.right(repeat1(/[]/)).
+        other: $ => prec.right(repeat1(/[^\s\n\r\p{N}\p{L}_]/)),
+        word_other: $ => prec.right(repeat1(/[^\s\n\r\p{N}\p{L}\[\]_]/))
 
     }
 })
