@@ -68,7 +68,7 @@ asd
           (line_start)
           (dialog_text
             (text
-              (vocabular)))
+              (vocabulary)))
           (line_end))))
     (stitch
       (stitch_header
@@ -80,7 +80,7 @@ asd
           (line_start)
           (dialog_text
             (text
-              (vocabular)))
+              (vocabulary)))
           (line_end))))))
 
 =====================
@@ -104,7 +104,7 @@ body
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end))))
   (knot
     (knot_header
@@ -128,7 +128,7 @@ test -> test.bla
       (line_start)
       (dialog_text
         (text
-          (vocabular))
+          (vocabulary))
         (divert_chain
           (divert
             (arrow)
@@ -145,7 +145,7 @@ test -> test.bla
         (line_start)
         (dialog_text
           (text
-            (vocabular))
+            (vocabulary))
           (divert_chain
             (divert
               (arrow)
@@ -164,28 +164,28 @@ asdsdf -> test.bla asdf
 
 --------------------------------------------------------------------------------
 
-    (program
-      (weave_body
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (text
-              (vocabular))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)
-                  (dot)
-                  (ERROR
-                    (identifier))
-                  (identifier)))))
-          (line_end)))
-      (knot
-        (knot_header
-          (knot_start)
-          (identifier)
-          (line_end))))
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabulary))
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)
+              (dot)
+              (ERROR
+                (identifier))
+              (identifier)))))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
 
 ================
 Illegal divert 2
@@ -202,7 +202,7 @@ asdsdf ->
       (line_start)
       (dialog_text
         (text
-          (vocabular)))
+          (vocabulary)))
       (ERROR
         (arrow))
       (line_end)))
@@ -267,13 +267,13 @@ b
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end))
       (weave_body_line
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end)))))
 
 =============
@@ -289,7 +289,7 @@ a
       (line_start)
       (dialog_text
         (text
-          (vocabular)))
+          (vocabulary)))
       (line_end))))
 
 ========
@@ -315,13 +315,13 @@ a
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end))
       (weave_body_line
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end)))))
 
 ===============
@@ -349,7 +349,7 @@ a
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end)))))
 
 =====================
@@ -376,7 +376,7 @@ a
         (line_start)
         (dialog_text
           (text
-            (vocabular)))
+            (vocabulary)))
         (line_end)))))
 
 =======
@@ -395,13 +395,13 @@ Numbers
       (line_start)
       (dialog_text
         (text
-          (vocabular)))
+          (vocabulary)))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
         (text
-          (vocabular)))
+          (vocabulary)))
       (line_end)))
   (knot
     (knot_header
@@ -425,7 +425,7 @@ Colons
       (line_start)
       (dialog_text
         (text
-          (vocabular)
+          (vocabulary)
           (other)))
       (line_end)))
   (knot
@@ -440,7 +440,7 @@ Colons
           (gather_mark)
           (dialog_text
             (text
-              (vocabular)
+              (vocabulary)
               (other))))
         (line_end)))))
 
@@ -497,7 +497,7 @@ asdf
             (line_end)
             (line_start))
           (text
-            (vocabular))))
+            (vocabulary))))
       (line_end))))
 
 ==========================
@@ -668,30 +668,30 @@ Illigal multidivert
 
 --------------------------------------------------------------------------------
 
-    (program
-      (weave_body
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (divert_chain
-              (divert_return
-                (double_arrow))))
-          (ERROR
-            (identifier))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))
-              (divert_return
-                (double_arrow))))
-          (ERROR
-            (identifier))
-          (line_end))))
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert_return
+            (double_arrow))))
+      (ERROR
+        (identifier))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_chain
+          (divert
+            (arrow)
+            (identifier_path
+              (identifier)))
+          (divert_return
+            (double_arrow))))
+      (ERROR
+        (identifier))
+      (line_end))))
 
 ===
 VAR
@@ -834,11 +834,11 @@ test /* asdf */ bla
       (line_start)
       (dialog_text
         (text
-          (vocabular)
+          (vocabulary)
           (block_comment
             (block_comment_start)
             (block_comment_end))
-          (vocabular)))
+          (vocabulary)))
       (line_end)))
   (knot
     (knot_header
@@ -863,14 +863,14 @@ test /* asdf /* test */ */ bla
       (line_start)
       (dialog_text
         (text
-          (vocabular)
+          (vocabulary)
           (block_comment
             (block_comment_start)
             (block_comment
               (block_comment_start)
               (block_comment_end))
             (block_comment_end))
-          (vocabular)))
+          (vocabulary)))
       (line_end))))
 
 ============
@@ -888,7 +888,7 @@ CONST test = 1
       (line_start)
       (dialog_text
         (text
-          (vocabular)))
+          (vocabulary)))
       (line_comment)
       (line_end))
     (const_line
@@ -935,10 +935,10 @@ asdf {teer} asdf
       (line_start)
       (dialog_text
         (text
-          (vocabular)
+          (vocabulary)
           (inline_block
             (block_remainder))
-          (vocabular)))
+          (vocabulary)))
       (line_end))))
 
 ===================
@@ -955,13 +955,13 @@ asdf {teer:{test:asdf|asdf}|asd} asdf
       (line_start)
       (dialog_text
         (text
-          (vocabular)
+          (vocabulary)
           (inline_block
             (block_remainder)
             (inline_block
               (block_remainder))
             (block_remainder))
-          (vocabular)))
+          (vocabulary)))
       (line_end))))
 
 ====
@@ -981,9 +981,9 @@ Hide
         (choice_words
           (words
             (hide_start)
-            (vocabular)
+            (vocabulary)
             (hide_end)
-            (vocabular))))
+            (vocabulary))))
       (line_end))))
 
 ============
@@ -1004,11 +1004,11 @@ Hide problem
           (words
             (hide_start)
             (word_other)
-            (vocabular)
+            (vocabulary)
             (word_other)
-            (vocabular)
+            (vocabulary)
             (word_other)
-            (vocabular)
+            (vocabulary)
             (hide_end))
           (divert_chain
             (divert

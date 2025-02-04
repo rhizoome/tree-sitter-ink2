@@ -649,7 +649,7 @@
           "named": true
         },
         {
-          "type": "vocabular",
+          "type": "vocabulary",
           "named": true
         }
       ]
@@ -792,7 +792,7 @@
           "named": true
         },
         {
-          "type": "vocabular",
+          "type": "vocabulary",
           "named": true
         },
         {
@@ -899,7 +899,7 @@
     "named": true
   },
   {
-    "type": "vocabular",
+    "type": "vocabulary",
     "named": true
   },
   {

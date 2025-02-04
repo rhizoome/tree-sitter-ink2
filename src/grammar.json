@@ -622,7 +622,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "vocabular"
+            "name": "vocabulary"
           },
           {
             "type": "SYMBOL",
@@ -650,7 +650,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "vocabular"
+            "name": "vocabulary"
           },
           {
             "type": "SYMBOL",
@@ -1127,7 +1127,7 @@
       "type": "PATTERN",
       "value": "[^\\s\\n\\r\\p{N}\\p{L}\\[\\]_]+"
     },
-    "vocabular": {
+    "vocabulary": {
       "type": "PATTERN",
       "value": "[\\p{N}\\p{L}_-]+"
     },
