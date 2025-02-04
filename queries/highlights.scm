@@ -21,7 +21,7 @@
 (glue) @type.builtin
 
 ; calls
-(divert_cr_thread) @function
+(divert_or_thread) @function
 
 ; operators
 (assignment) @operator
@@ -29,6 +29,7 @@
 ; special operators (ink)
 (arrow) @keyword.directive
 (double_arrow) @keyword.directive
+(back_arrow) @keyword
 (dot) @keyword.directive
 (mark_start) @keyword.directive
 (mark_end) @keyword.directive
