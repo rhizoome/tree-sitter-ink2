@@ -23,14 +23,13 @@ injection-regex = "ink"
 file-types = ["ink"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/"}
-#language-servers = ["linky"]
 indent = { tab-width = 4, unit = "\t" }
 soft-wrap = { enable = true }
 grammar = "ink"
 
 [[grammar]]
 name = "ink"
-source = { git = "~/Repos/tree-sitter-ink", rev = "$long_revision" }
+source = { git = "https://github.com/rhizoome/tree-sitter-ink", rev = "$long_revision" }
 ```
 
 Copy the `highlights.scm` from this repo and install latest grammars.
