@@ -845,6 +845,30 @@ test /* asdf */ bla
       (identifier)
       (line_end))))
 
+===================
+Block commment nest
+===================
+
+test /* asdf /* test */ */ bla
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)
+          (block_comment
+            (block_comment_start)
+            (block_comment
+              (block_comment_start)
+              (block_comment_end))
+            (block_comment_end))
+          (vocabular)))
+      (line_end))))
+
 ============
 Line comment
 ============
