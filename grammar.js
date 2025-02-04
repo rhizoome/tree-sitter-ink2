@@ -71,7 +71,6 @@ module.exports = grammar({
                 $.stitch
             )
         ),
-
         knot_header: $ => seq(
             $.knot_start,
             optional(/=+/),
@@ -84,7 +83,6 @@ module.exports = grammar({
             $.stitch_header,
             optional($.weave_body), // actually not optional
         ),
-
         stitch_header: $ => seq(
             $.stitch_start,
             $.identifier,
@@ -100,7 +98,6 @@ module.exports = grammar({
                 alias($.empty_line, "")
             )
         )),
-
         weave_body_line: $ => seq(
             $.line_start,
             optional(choice(
@@ -159,7 +156,6 @@ module.exports = grammar({
             $.value,
             $.line_end
         ),
-
         const_line: $ => seq(
             $.const_start,
             $.identifier,
@@ -167,7 +163,6 @@ module.exports = grammar({
             $.value,
             $.line_end
         ),
-
         list_line: $ => seq(
             $.list_start,
             $.identifier,
@@ -175,7 +170,6 @@ module.exports = grammar({
             $.list,
             $.line_end
         ),
-
         list: $ => seq(
             $.marked_identifier,
             repeat(
