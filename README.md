@@ -8,8 +8,8 @@ unicode support.
 ## State
 
 It currently does not parse code and conditions further, but I plan to implement
-this. First I am working on a language-server based on tree-sitter-ink with goal of
-having an IDE with full unicode support.
+this. First I am working on a language-server based on tree-sitter-ink with the
+goal of having an IDE with full unicode support.
 
 ## Install for helix
 
