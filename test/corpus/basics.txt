@@ -460,17 +460,19 @@ asdf
       (line_start)
       (condition_text
         (condition_block
-          (block_remainder)
+          (condition_block_content
+            (block_remainder))
           (line_end)
           (line_start)
-          (block_remainder)
+          (condition_block_content
+            (block_remainder))
           (line_end)
           (line_start)))
       (line_end))))
 
-==========================
-Condition text rest (TODO)
-==========================
+=========================
+Condition text rem (TODO)
+=========================
 
 {test:
 asdf
@@ -484,14 +486,81 @@ asdf
       (line_start)
       (condition_text
         (condition_block
-          (block_remainder)
+          (condition_block_content
+            (block_remainder))
           (line_end)
           (line_start)
-          (block_remainder)
+          (condition_block_content
+            (block_remainder))
           (line_end)
           (line_start))
         (text
           (vocabular)))
+      (line_end))))
+
+==========================
+Condition text nest (TODO)
+==========================
+
+{test:
+  - {test2:
+  asdf
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (condition_text
+        (condition_block
+          (condition_block_content
+            (block_remainder))
+          (line_end)
+          (line_start)
+          (condition_block_content
+            (block_remainder)
+            (condition_block
+              (condition_block
+                (condition_block_content
+                  (block_remainder))
+                (line_end)
+                (line_start)
+                (condition_block_content
+                  (block_remainder))
+                (line_end)
+                (line_start))))
+          (line_end)
+          (line_start)))
+      (line_end))))
+
+=================================
+Condition text nest inline (TODO)
+=================================
+
+{test:
+  {test2:asdf}
+}
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (condition_text
+        (condition_block
+          (condition_block_content
+            (block_remainder))
+          (line_end)
+          (line_start)
+          (condition_block_content
+            (inline_block
+              (block_remainder)))
+          (line_end)
+          (line_start)))
       (line_end))))
 
 ===========
@@ -840,6 +909,29 @@ asdf {teer} asdf
         (text
           (vocabular)
           (inline_block
+            (block_remainder))
+          (vocabular)))
+      (line_end))))
+
+===================
+Inline block nested
+===================
+
+asdf {teer:{test:asdf|asdf}|asd} asdf
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabular)
+          (inline_block
+            (block_remainder)
+            (inline_block
+              (block_remainder))
             (block_remainder))
           (vocabular)))
       (line_end))))

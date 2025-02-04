@@ -23,6 +23,7 @@ module.exports = grammar({
         $.line_comment
     ],
     conflicts: $ => [
+        [$.condition_block_content, $.inline_block],
     ],
     externals: $ => [
         $.arrow,
@@ -255,26 +256,34 @@ module.exports = grammar({
             optional($.text)
         ),
 
-        // TODO parse code within condition block
         condition_block: $ => seq(
             /\{/,
-            optional($.block_remainder),
+            optional($.condition_block_content),
             $.line_end,
             repeat(
                 seq(
                     $.line_start,
-                    optional($.block_remainder),
+                    optional($.condition_block_content),
                     $.line_end
                 )
             ),
             $.line_start,
             /\}/
         ),
+        condition_block_content: $ => repeat1(choice(
+            $.block_remainder,
+            $.inline_block,
+            alias($.condition_block_nested, $.condition_block)
+        )),
+        condition_block_nested: $ => prec.dynamic(2, $.condition_block),
 
         // TODO parse code within inline block
         inline_block: $ => seq(
             /\{/,
-            optional($.block_remainder),
+            optional(repeat1(choice(
+                $.block_remainder,
+                $.inline_block
+            ))),
             /\}/
         ),
 
@@ -302,7 +311,7 @@ module.exports = grammar({
         number: $ => /\d+/,
         assignment: $ => /=/,
         dot: $ => /\./,
-        block_remainder: $ => /[^\r\n\}]+/,
+        block_remainder: $ => /[^\r\n\}\{]+/,
         other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
         word_other: $ => /[^\s\n\r\p{N}\p{L}\[\]_]+/,
         vocabular: $ => /[\p{N}\p{L}_-]+/,

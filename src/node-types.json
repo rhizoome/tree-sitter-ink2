@@ -100,7 +100,11 @@
       "required": true,
       "types": [
         {
-          "type": "block_remainder",
+          "type": "condition_block",
+          "named": true
+        },
+        {
+          "type": "condition_block_content",
           "named": true
         },
         {
@@ -109,6 +113,29 @@
         },
         {
           "type": "line_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "condition_block_content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block_remainder",
+          "named": true
+        },
+        {
+          "type": "condition_block",
+          "named": true
+        },
+        {
+          "type": "inline_block",
           "named": true
         }
       ]
@@ -349,11 +376,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
           "type": "block_remainder",
+          "named": true
+        },
+        {
+          "type": "inline_block",
           "named": true
         }
       ]
