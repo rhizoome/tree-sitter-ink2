@@ -914,12 +914,8 @@
       }
     },
     "condition_block_nested": {
-      "type": "PREC_DYNAMIC",
-      "value": 2,
-      "content": {
-        "type": "SYMBOL",
-        "name": "condition_block"
-      }
+      "type": "SYMBOL",
+      "name": "condition_block"
     },
     "inline_block": {
       "type": "SEQ",
@@ -934,17 +930,21 @@
             {
               "type": "REPEAT1",
               "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "block_remainder"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "inline_block"
-                  }
-                ]
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "block_remainder"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "inline_block"
+                    }
+                  ]
+                }
               }
             },
             {
@@ -1081,12 +1081,7 @@
       "name": "line_comment"
     }
   ],
-  "conflicts": [
-    [
-      "condition_block_content",
-      "inline_block"
-    ]
-  ],
+  "conflicts": [],
   "precedences": [],
   "externals": [
     {

@@ -23,7 +23,6 @@ module.exports = grammar({
         $.line_comment
     ],
     conflicts: $ => [
-        [$.condition_block_content, $.inline_block],
     ],
     externals: $ => [
         $.arrow,
@@ -275,15 +274,15 @@ module.exports = grammar({
             $.inline_block,
             alias($.condition_block_nested, $.condition_block)
         )),
-        condition_block_nested: $ => prec.dynamic(2, $.condition_block),
+        condition_block_nested: $ => $.condition_block,
 
         // TODO parse code within inline block
         inline_block: $ => seq(
             /\{/,
-            optional(repeat1(choice(
+            optional(repeat1(prec(2, choice(
                 $.block_remainder,
                 $.inline_block
-            ))),
+            )))),
             /\}/
         ),
 
