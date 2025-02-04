@@ -127,13 +127,11 @@ module.exports = grammar({
         ),
 
         option_text: $ => seq(
-            $.option_mark,
+            repeat1($.option_mark),
             optional($.label),
             optional($.option_words)
         ),
-        option_mark: $ => repeat1(
-            /[\+\*]/,
-        ),
+        option_mark: $ => /[\+\*]/,
         option_words: $ => choice(
             $.words,
             $.divert_chain,
@@ -325,8 +323,8 @@ module.exports = grammar({
         assignment: $ => /=/,
         dot: $ => /\./,
         block_remainder: $ => /[^\r\n\}\{]+/,
-        other: $ => /[^\s\n\r\p{N}\p{L}_]+/,
-        word_other: $ => /[^\s\n\r\p{N}\p{L}\[\]_]+/,
+        other: $ => prec.right(repeat1(/[^\s\n\r\p{N}\p{L}_]/)),
+        word_other: $ => prec.right(repeat1(/[^\s\n\r\p{N}\p{L}\[\]_]/)),
         vocabulary: $ => /[\p{N}\p{L}_-]+/,
         identifier: $ => /[\p{N}\p{L}_]+/
 

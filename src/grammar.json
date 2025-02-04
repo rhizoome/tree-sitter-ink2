@@ -336,8 +336,11 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "option_mark"
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "option_mark"
+          }
         },
         {
           "type": "CHOICE",
@@ -366,11 +369,8 @@
       ]
     },
     "option_mark": {
-      "type": "REPEAT1",
-      "content": {
-        "type": "PATTERN",
-        "value": "[\\+\\*]"
-      }
+      "type": "PATTERN",
+      "value": "[\\+\\*]"
     },
     "option_words": {
       "type": "CHOICE",
@@ -1141,12 +1141,26 @@
       "value": "[^\\r\\n\\}\\{]+"
     },
     "other": {
-      "type": "PATTERN",
-      "value": "[^\\s\\n\\r\\p{N}\\p{L}_]+"
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "PATTERN",
+          "value": "[^\\s\\n\\r\\p{N}\\p{L}_]"
+        }
+      }
     },
     "word_other": {
-      "type": "PATTERN",
-      "value": "[^\\s\\n\\r\\p{N}\\p{L}\\[\\]_]+"
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "PATTERN",
+          "value": "[^\\s\\n\\r\\p{N}\\p{L}\\[\\]_]"
+        }
+      }
     },
     "vocabulary": {
       "type": "PATTERN",

@@ -1054,3 +1054,32 @@ Default option
           (default_option_mark
             (arrow))))
       (line_end))))
+
+==========
+Option bug
+==========
+
+** huhu
+* * huhu
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (option_text
+        (option_mark)
+        (option_mark)
+        (option_words
+          (words
+            (vocabulary))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (option_text
+        (option_mark)
+        (option_mark)
+        (option_words
+          (words
+            (vocabulary))))
+      (line_end))))

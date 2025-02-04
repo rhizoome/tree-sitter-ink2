@@ -530,11 +530,6 @@
     }
   },
   {
-    "type": "option_mark",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "option_text",
     "named": true,
     "fields": {},
@@ -579,6 +574,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "other",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "program",
@@ -791,6 +791,11 @@
     }
   },
   {
+    "type": "word_other",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "words",
     "named": true,
     "fields": {},
@@ -902,7 +907,7 @@
     "named": true
   },
   {
-    "type": "other",
+    "type": "option_mark",
     "named": true
   },
   {
@@ -919,10 +924,6 @@
   },
   {
     "type": "vocabulary",
-    "named": true
-  },
-  {
-    "type": "word_other",
     "named": true
   }
 ]

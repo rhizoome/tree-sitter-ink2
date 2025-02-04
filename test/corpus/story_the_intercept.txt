@@ -2112,16 +2112,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (dialog_text
           (text
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)))
+            (inline_block
+              (block_remainder))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -2262,6 +2254,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (label
             (identifier))
           (option_words
@@ -2337,6 +2330,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -2399,6 +2393,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (label
             (identifier))
@@ -2553,7 +2548,6 @@ It's time I tackled a problem I can solve.
             (text
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -2802,7 +2796,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
-                (other)
                 (other))))
           (line_end))
         (weave_body_line
@@ -3039,7 +3032,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
-                (other)
                 (other)
                 (vocabulary)
                 (other)
@@ -3825,7 +3817,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -3875,7 +3866,6 @@ It's time I tackled a problem I can solve.
               (word_other)
               (vocabulary)
               (vocabulary)
-              (word_other)
               (word_other)
               (vocabulary)
               (vocabulary)
@@ -4029,7 +4019,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -4083,6 +4072,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -4181,6 +4171,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -4192,26 +4184,8 @@ It's time I tackled a problem I can solve.
         (dialog_text
           (text
             (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
+            (inline_block
+              (block_remainder))
             (other)
             (vocabulary)
             (other)
@@ -4243,6 +4217,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -4283,6 +4259,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -4427,7 +4405,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -4443,6 +4420,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -4461,6 +4440,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (label
             (identifier))
@@ -4484,6 +4465,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -4512,6 +4495,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -4607,7 +4591,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -4653,6 +4636,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -4755,11 +4739,8 @@ It's time I tackled a problem I can solve.
         (dialog_text
           (text
             (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
+            (inline_block
+              (block_remainder))
             (other)
             (vocabulary)
             (vocabulary)
@@ -4775,7 +4756,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -4906,19 +4886,8 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (other)
+            (inline_block
+              (block_remainder))
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -5054,7 +5023,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -5080,8 +5048,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
-            (vocabulary)))
+            (other))
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5310,7 +5282,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -5341,7 +5312,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -5405,7 +5375,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -5696,7 +5665,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (other)
@@ -5754,7 +5722,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -5954,7 +5921,6 @@ It's time I tackled a problem I can solve.
             (inline_block
               (block_remainder))
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -6063,7 +6029,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -6316,6 +6281,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -6330,6 +6296,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -6348,6 +6315,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -6691,7 +6659,6 @@ It's time I tackled a problem I can solve.
               (inline_block
                 (block_remainder))
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -6750,7 +6717,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -6867,7 +6833,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -6957,7 +6922,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -6999,7 +6963,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -7101,7 +7064,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -7227,7 +7189,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -7240,7 +7201,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (other)
@@ -7262,6 +7222,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -7293,6 +7254,7 @@ It's time I tackled a problem I can solve.
           (line_start)
           (option_text
             (option_mark)
+            (option_mark)
             (option_words
               (words
                 (hide_start)
@@ -7326,7 +7288,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -7354,6 +7315,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -7413,7 +7375,6 @@ It's time I tackled a problem I can solve.
                 (other)
                 (vocabulary)
                 (vocabulary)
-                (other)
                 (other)
                 (vocabulary)
                 (vocabulary)
@@ -7579,23 +7540,8 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
+            (inline_block
+              (block_remainder))
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -7611,7 +7557,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -7650,7 +7595,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -7750,7 +7694,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -7777,7 +7720,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -7861,7 +7803,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -8201,7 +8142,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -8277,7 +8217,6 @@ It's time I tackled a problem I can solve.
           (text
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -8310,7 +8249,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -8362,7 +8300,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -8412,7 +8349,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (word_other)
-              (word_other)
               (vocabulary)
               (word_other)
               (vocabulary)
@@ -8449,6 +8385,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -8473,7 +8410,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -8483,6 +8419,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -8510,7 +8447,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -8672,7 +8608,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -8972,7 +8907,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -8996,6 +8930,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (label
             (identifier))
@@ -9034,6 +8969,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (label
             (identifier))
           (option_words
@@ -9056,6 +8992,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -9070,6 +9007,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -9119,7 +9057,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -9250,7 +9187,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -9271,6 +9207,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (label
             (identifier))
@@ -9303,6 +9240,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (label
             (identifier))
           (option_words
@@ -9320,6 +9258,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -9334,6 +9273,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -9435,6 +9375,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -9449,6 +9391,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (label
             (identifier))
@@ -9488,6 +9432,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -9502,6 +9448,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -9628,7 +9576,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -9725,7 +9672,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -9895,7 +9841,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -10016,6 +9961,7 @@ It's time I tackled a problem I can solve.
           (line_start)
           (option_text
             (option_mark)
+            (option_mark)
             (option_words
               (words
                 (hide_start)
@@ -10035,7 +9981,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (other)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -10123,6 +10068,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -10660,7 +10606,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (word_other)
-              (word_other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -10707,7 +10652,6 @@ It's time I tackled a problem I can solve.
               (word_other)
               (vocabulary)
               (vocabulary)
-              (word_other)
               (word_other)
               (vocabulary)
               (word_other)
@@ -10831,6 +10775,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -10862,6 +10807,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -10897,7 +10843,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -11015,6 +10960,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -11035,7 +10981,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -11171,7 +11116,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other))))
         (line_end))
       (weave_body_line
@@ -11261,7 +11205,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -11361,7 +11304,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -11407,7 +11349,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -11435,6 +11376,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -11459,6 +11401,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (word_other)
@@ -11618,7 +11561,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (other)
@@ -11659,6 +11601,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -11771,6 +11715,9 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (word_other)
@@ -11792,7 +11739,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -11817,6 +11763,9 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (word_other)
@@ -11840,7 +11789,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -11959,6 +11907,9 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (word_other)
@@ -12031,6 +11982,9 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -12077,6 +12031,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (word_other)
@@ -12123,6 +12079,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -12235,6 +12193,7 @@ It's time I tackled a problem I can solve.
           (line_start)
           (option_text
             (option_mark)
+            (option_mark)
             (option_words
               (words
                 (word_other)
@@ -12290,6 +12249,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -12511,7 +12471,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -12703,7 +12662,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -12794,7 +12752,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (other)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -13046,7 +13003,6 @@ It's time I tackled a problem I can solve.
                 (other)
                 (vocabulary)
                 (other)
-                (other)
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
@@ -13286,13 +13242,11 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -13453,7 +13407,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -13464,7 +13417,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -13670,12 +13622,10 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -13743,6 +13693,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -13839,6 +13790,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (word_other)
@@ -13881,6 +13833,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -13956,7 +13909,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -13964,7 +13916,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -13990,7 +13941,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -14093,7 +14043,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -14210,7 +14159,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -14335,7 +14283,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -14359,7 +14306,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -14445,12 +14391,10 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -14637,7 +14581,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -14656,6 +14599,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -14726,6 +14670,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -14741,7 +14686,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -14767,6 +14711,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -14999,7 +14944,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -15013,6 +14957,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -15053,6 +14998,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -15086,6 +15032,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (label
             (identifier))
@@ -15180,6 +15127,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -15321,7 +15269,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (other)
@@ -15352,6 +15299,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -15443,6 +15391,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -15462,7 +15411,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -15497,6 +15445,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -15545,7 +15494,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (other)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -15756,7 +15704,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -15786,7 +15733,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -16276,7 +16222,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -16342,7 +16287,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -16390,6 +16334,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -16464,12 +16409,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -16565,6 +16510,7 @@ It's time I tackled a problem I can solve.
           (line_start)
           (option_text
             (option_mark)
+            (option_mark)
             (option_words
               (words
                 (hide_start)
@@ -16581,6 +16527,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -16876,7 +16823,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (other)
-                (other)
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
@@ -16986,7 +16932,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -17117,7 +17062,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -17170,7 +17114,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
-                (other)
                 (other)
                 (vocabulary)
                 (other)
@@ -17242,7 +17185,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (other)
@@ -17466,7 +17408,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (other)))
@@ -17530,7 +17471,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -17592,9 +17532,12 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
-              (other)
-              (vocabulary)))
+              (other))
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier)))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17705,6 +17648,7 @@ It's time I tackled a problem I can solve.
           (line_start)
           (option_text
             (option_mark)
+            (option_mark)
             (option_words
               (words
                 (hide_start)
@@ -17771,6 +17715,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -17814,6 +17759,7 @@ It's time I tackled a problem I can solve.
           (line_start)
           (option_text
             (option_mark)
+            (option_mark)
             (option_words
               (words
                 (hide_start)
@@ -17879,6 +17825,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -18450,7 +18397,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -18726,6 +18672,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -18740,6 +18687,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -18782,6 +18730,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -18799,6 +18749,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19105,7 +19057,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -19127,6 +19078,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19232,6 +19184,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19327,6 +19280,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19345,6 +19300,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19390,6 +19347,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19429,6 +19388,9 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19446,6 +19408,9 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19519,6 +19484,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19536,6 +19502,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19556,6 +19523,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19667,6 +19635,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19685,6 +19655,8 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19701,6 +19673,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19769,6 +19743,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -19785,6 +19760,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -19803,6 +19779,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -20437,7 +20414,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -20531,7 +20507,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -20577,6 +20552,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -20615,6 +20591,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (inline_block
@@ -20664,6 +20641,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (inline_block
@@ -20704,7 +20682,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -20800,7 +20777,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -20847,7 +20823,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -20897,7 +20872,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (other)
-                (other)
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
@@ -20915,7 +20889,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
-                (other)
                 (other))))
           (line_end))
         (weave_body_line
@@ -21066,7 +21039,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (other)
-                (other)
                 (vocabulary)
                 (vocabulary)
                 (other)
@@ -21075,7 +21047,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (vocabulary)
-                (other)
                 (other))))
           (line_end))
         (weave_body_line
@@ -21165,7 +21136,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -21320,7 +21290,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (other)
@@ -21352,7 +21321,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -21363,7 +21331,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (other)
@@ -21484,7 +21451,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (other)
@@ -21494,7 +21460,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -21520,6 +21485,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -21564,6 +21530,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (option_text
+            (option_mark)
             (option_mark)
             (option_words
               (words
@@ -21621,7 +21588,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -21765,7 +21731,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -21813,7 +21778,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -22035,7 +21999,6 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (other)
-                (other)
                 (vocabulary)
                 (other)
                 (vocabulary)
@@ -22165,7 +22128,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)))
           (line_end))
         (weave_body_line
@@ -22206,7 +22168,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -22478,6 +22439,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -22497,6 +22459,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -22664,7 +22627,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -22675,7 +22637,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -22687,6 +22648,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -22743,12 +22705,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -22795,7 +22757,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (other)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
@@ -22861,6 +22822,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -22899,12 +22861,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -22936,7 +22898,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -23024,6 +22985,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -23056,6 +23018,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23124,7 +23087,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (other)
               (vocabulary)
@@ -23160,6 +23122,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -23169,6 +23132,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23229,7 +23193,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -23271,6 +23234,8 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23318,6 +23283,9 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23413,6 +23381,10 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23540,18 +23512,9 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
-          (option_words
-            (words
-              (hide_start)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (hide_end))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23565,6 +23528,24 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_words
+            (words
+              (hide_start)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (hide_end))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -23647,7 +23628,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -23769,6 +23749,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -23783,6 +23764,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -24061,7 +24043,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -24139,7 +24120,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -24344,7 +24324,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -25510,7 +25489,6 @@ It's time I tackled a problem I can solve.
             (other)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)))
         (line_end))
       (weave_body_line
@@ -25598,7 +25576,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -25697,6 +25674,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -25715,6 +25693,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -25828,7 +25807,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -25878,7 +25856,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -26008,7 +25985,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -26061,7 +26037,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -26245,7 +26220,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -26309,7 +26283,6 @@ It's time I tackled a problem I can solve.
               (other)
               (vocabulary)
               (other)
-              (other)
               (vocabulary)
               (vocabulary)
               (vocabulary)
@@ -26357,7 +26330,6 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary)
-              (other)
               (other)
               (vocabulary)
               (vocabulary)
@@ -26423,7 +26395,6 @@ It's time I tackled a problem I can solve.
           (text
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -26569,6 +26540,7 @@ It's time I tackled a problem I can solve.
         (line_start)
         (option_text
           (option_mark)
+          (option_mark)
           (option_words
             (words
               (hide_start)
@@ -26591,7 +26563,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -26613,6 +26584,7 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (option_text
+          (option_mark)
           (option_mark)
           (option_words
             (words
@@ -26863,7 +26835,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (vocabulary)
@@ -27182,7 +27153,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -27277,7 +27247,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other)
-            (other)
             (vocabulary)
             (other)
             (vocabulary)
@@ -27306,7 +27275,6 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
             (other)
             (vocabulary)
             (other)
