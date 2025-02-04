@@ -288,10 +288,10 @@ module.exports = grammar({
 
         identifier_path: $ => seq(
             $.identifier,
-            optional(seq(
+            optional(repeat1(seq(
                 $.dot,
                 $.identifier
-            ))
+            )))
         ),
 
         value: $ => choice(
