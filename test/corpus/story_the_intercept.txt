@@ -2188,11 +2188,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -2464,11 +2465,12 @@ It's time I tackled a problem I can solve.
         (gather_text
           (gather_mark)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -2678,11 +2680,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -2754,11 +2757,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -2990,11 +2994,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (vocabulary))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -3117,11 +3122,12 @@ It's time I tackled a problem I can solve.
                 (hide_start)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -3452,11 +3458,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -3471,26 +3478,28 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier)))
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end)))))
   (knot
     (knot_header
@@ -3532,244 +3541,246 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert_return
-              (double_arrow))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (gather_text
-          (gather_mark)
-          (dialog_text
-            (text
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (gather_text
-          (gather_mark)
-          (dialog_text
-            (text
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (inline_block
-                (block_remainder))
-              (hide_start)
-              (vocabulary)
-              (hide_end)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (code_text
-          (text
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (hide_start)
-              (vocabulary)
-              (hide_end)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (code_text
-          (text
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (inline_block
-                (block_remainder))
-              (hide_start)
-              (vocabulary)
-              (hide_end)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (word_other))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (code_text
-          (text
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (gather_text
-          (gather_mark)
-          (dialog_text
+          (divert_or_thread
             (divert_chain
               (divert_return
                 (double_arrow)))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (gather_text
+          (gather_mark)
+          (dialog_text
+            (text
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (gather_text
+          (gather_mark)
+          (dialog_text
+            (text
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (inline_block
+                (block_remainder))
+              (hide_start)
+              (vocabulary)
+              (hide_end)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (code_text
+          (text
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (hide_start)
+              (vocabulary)
+              (hide_end)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (code_text
+          (text
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (inline_block
+                (block_remainder))
+              (hide_start)
+              (vocabulary)
+              (hide_end)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (word_other))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (code_text
+          (text
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (gather_text
+          (gather_mark)
+          (dialog_text
+            (divert_or_thread
+              (divert_chain
+                (divert_return
+                  (double_arrow))))))
         (line_end))))
   (knot
     (knot_header
@@ -4328,11 +4339,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4476,11 +4488,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4681,22 +4694,7 @@ It's time I tackled a problem I can solve.
             (other)
             (inline_block
               (block_remainder)))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (hide_start)
-              (vocabulary)
-              (vocabulary)
-              (hide_end))
+          (divert_or_thread
             (divert_chain
               (divert
                 (arrow)
@@ -4711,12 +4709,30 @@ It's time I tackled a problem I can solve.
             (words
               (hide_start)
               (vocabulary)
+              (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (hide_start)
+              (vocabulary)
+              (hide_end))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4725,11 +4741,12 @@ It's time I tackled a problem I can solve.
           (label
             (identifier))
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))))
   (knot
     (knot_header
@@ -4790,11 +4807,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4817,11 +4835,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4832,11 +4851,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4932,11 +4952,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -4972,11 +4993,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5052,11 +5074,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5110,11 +5133,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5168,11 +5192,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5404,11 +5429,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5445,11 +5471,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5505,29 +5532,13 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)
-                (dot)
-                (identifier)))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (inline_block
-                (block_remainder))
-              (hide_start)
-              (vocabulary)
-              (hide_end))
+          (divert_or_thread
             (divert_chain
               (divert
                 (arrow)
                 (identifier_path
+                  (identifier)
+                  (dot)
                   (identifier))))))
         (line_end))
       (weave_body_line
@@ -5541,11 +5552,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5558,11 +5570,30 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (inline_block
+                (block_remainder))
+              (hide_start)
+              (vocabulary)
+              (hide_end))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5635,11 +5666,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -5689,209 +5721,211 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (inline_block
+                (block_remainder))
+              (hide_start)
+              (vocabulary)
+              (hide_end))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (other)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (code_text
+          (text
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (inline_block
+                (block_remainder))
+              (hide_start)
+              (vocabulary)
+              (hide_end))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (code_text
+          (text
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (divert_or_thread
             (divert_chain
               (divert
                 (arrow)
                 (identifier_path
                   (identifier))))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (inline_block
-                (block_remainder))
-              (hide_start)
-              (vocabulary)
-              (hide_end))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (dialog_text
-          (text
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (code_text
-          (text
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (inline_block
-                (block_remainder))
-              (hide_start)
-              (vocabulary)
-              (hide_end))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (dialog_text
-          (text
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (code_text
-          (text
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (dialog_text
-          (text
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -5986,11 +6020,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6008,11 +6043,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -6134,11 +6170,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end)))))
   (knot
     (knot_header
@@ -6290,11 +6327,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6309,11 +6347,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6327,11 +6366,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6364,11 +6404,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6381,11 +6422,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6427,11 +6469,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6560,11 +6603,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -6634,11 +6678,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -6696,11 +6741,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end)))))
   (knot
     (knot_header
@@ -6793,11 +6839,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -6809,11 +6856,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -7007,11 +7055,12 @@ It's time I tackled a problem I can solve.
           (dialog_text
             (text
               (glue))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -7420,11 +7469,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end)))))
   (knot
     (knot_header
@@ -7853,11 +7903,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -7939,11 +7990,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -8007,11 +8059,12 @@ It's time I tackled a problem I can solve.
         (gather_text
           (gather_mark)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))))
   (knot
     (knot_header
@@ -8644,11 +8697,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -8965,11 +9019,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -8988,11 +9043,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9004,11 +9060,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9022,11 +9079,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9236,11 +9294,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9254,11 +9313,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9270,11 +9330,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9388,11 +9449,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9428,23 +9490,7 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_mark)
-          (option_mark)
-          (option_words
-            (words
-              (hide_start)
-              (vocabulary)
-              (hide_end))
+          (divert_or_thread
             (divert_chain
               (divert
                 (arrow)
@@ -9462,11 +9508,30 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_mark)
+          (option_mark)
+          (option_words
+            (words
+              (hide_start)
+              (vocabulary)
+              (hide_end))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9479,11 +9544,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -9494,11 +9560,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -9862,11 +9929,12 @@ It's time I tackled a problem I can solve.
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -10063,13 +10131,14 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)
-                  (dot)
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)
+                    (dot)
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -10081,6 +10150,115 @@ It's time I tackled a problem I can solve.
                 (hide_start)
                 (vocabulary)
                 (hide_end))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)
+                      (dot)
+                      (identifier)))))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (option_text
+            (option_mark)
+            (option_words
+              (words
+                (hide_start)
+                (vocabulary)
+                (vocabulary)
+                (vocabulary)
+                (hide_end))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (text
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (vocabulary)
+              (other)
+              (vocabulary)
+              (other)))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_or_thread
               (divert_chain
                 (divert
                   (arrow)
@@ -10097,113 +10275,6 @@ It's time I tackled a problem I can solve.
               (words
                 (hide_start)
                 (vocabulary)
-                (vocabulary)
-                (vocabulary)
-                (hide_end))))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (text
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (vocabulary)
-              (other)
-              (vocabulary)
-              (other)))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)
-                  (dot)
-                  (identifier)))))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (option_text
-            (option_mark)
-            (option_words
-              (words
-                (hide_start)
-                (vocabulary)
                 (hide_end))))
           (line_end))
         (weave_body_line
@@ -10256,13 +10327,14 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)
-                  (dot)
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)
+                    (dot)
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -10496,11 +10568,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -10956,11 +11029,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -11089,11 +11163,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -11398,11 +11473,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -11980,11 +12056,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -12028,11 +12105,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (word_other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -12077,11 +12155,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -12097,11 +12176,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (word_other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -12112,11 +12192,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -12247,11 +12328,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -12328,11 +12410,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -12357,11 +12440,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -12426,11 +12510,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -12452,11 +12537,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -12522,11 +12608,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -12616,11 +12703,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -12730,11 +12818,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -12884,11 +12973,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -13206,22 +13296,24 @@ It's time I tackled a problem I can solve.
                 (hide_start)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -13894,11 +13986,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -14373,11 +14466,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -14789,11 +14883,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -14997,11 +15092,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -15143,22 +15239,24 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
         (gather_text
           (gather_mark)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -15530,11 +15628,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -15627,11 +15726,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -15685,11 +15785,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -15754,11 +15855,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -15837,11 +15939,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -15870,11 +15973,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -15967,46 +16071,7 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (option_text
-            (option_mark)
-            (option_words
-              (words
-                (inline_block
-                  (block_remainder))
-                (hide_start)
-                (vocabulary)
-                (vocabulary)
-                (vocabulary)
-                (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (option_text
-            (option_mark)
-            (option_words
-              (words
-                (inline_block
-                  (block_remainder))
-                (inline_block
-                  (block_remainder))
-                (hide_start)
-                (vocabulary)
-                (vocabulary)
-                (vocabulary)
-                (hide_end))
+            (divert_or_thread
               (divert_chain
                 (divert
                   (arrow)
@@ -16026,11 +16091,54 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (option_text
+            (option_mark)
+            (option_words
+              (words
+                (inline_block
+                  (block_remainder))
+                (inline_block
+                  (block_remainder))
+                (hide_start)
+                (vocabulary)
+                (vocabulary)
+                (vocabulary)
+                (hide_end))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (option_text
+            (option_mark)
+            (option_words
+              (words
+                (inline_block
+                  (block_remainder))
+                (hide_start)
+                (vocabulary)
+                (vocabulary)
+                (vocabulary)
+                (hide_end))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -16079,11 +16187,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -16158,11 +16267,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -16434,11 +16544,12 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -16530,11 +16641,12 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -16568,11 +16680,12 @@ It's time I tackled a problem I can solve.
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -17339,11 +17452,12 @@ It's time I tackled a problem I can solve.
                 (hide_start)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17546,11 +17660,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (other)
               (glue))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17562,11 +17677,12 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -17719,11 +17835,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17762,11 +17879,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17829,11 +17947,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17848,11 +17967,12 @@ It's time I tackled a problem I can solve.
                 (vocabulary)
                 (vocabulary)
                 (hide_end))
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17884,11 +18004,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -17944,11 +18065,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end)))))
   (knot
     (knot_header
@@ -18143,11 +18265,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -18575,11 +18698,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -18597,11 +18721,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -18692,11 +18817,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -18754,11 +18880,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -18777,11 +18904,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19189,11 +19317,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19305,11 +19434,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19351,11 +19481,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19413,11 +19544,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19433,11 +19565,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19507,11 +19640,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19528,11 +19662,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19659,11 +19794,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19678,11 +19814,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19700,11 +19837,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19765,11 +19903,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19784,11 +19923,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -19804,11 +19944,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -19995,11 +20136,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -20065,11 +20207,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -20184,11 +20327,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -20300,11 +20444,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -20452,11 +20597,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -20595,11 +20741,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -20645,11 +20792,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -20720,11 +20868,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -20740,11 +20889,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -20953,11 +21103,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -21101,11 +21252,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -21266,11 +21418,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -21539,11 +21692,12 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -21585,11 +21739,12 @@ It's time I tackled a problem I can solve.
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -21669,15 +21824,16 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)
-                  (dot)
-                  (identifier)
-                  (dot)
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)
+                    (dot)
+                    (identifier)
+                    (dot)
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -21695,15 +21851,16 @@ It's time I tackled a problem I can solve.
         (weave_body_line
           (line_start)
           (dialog_text
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)
-                  (dot)
-                  (identifier)
-                  (dot)
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)
+                    (dot)
+                    (identifier)
+                    (dot)
+                    (identifier))))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -21805,11 +21962,12 @@ It's time I tackled a problem I can solve.
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end))))
     (stitch
       (stitch_header
@@ -22228,11 +22386,12 @@ It's time I tackled a problem I can solve.
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end)))))
   (knot
     (knot_header
@@ -23526,11 +23685,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -23779,11 +23939,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -23896,11 +24057,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -23913,11 +24075,12 @@ It's time I tackled a problem I can solve.
               (hide_start)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -24109,11 +24272,12 @@ It's time I tackled a problem I can solve.
           (gather_text
             (gather_mark)
             (dialog_text
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier))))))
+              (divert_or_thread
+                (divert_chain
+                  (divert
+                    (arrow)
+                    (identifier_path
+                      (identifier)))))))
           (line_end)))))
   (knot
     (knot_header
@@ -24234,11 +24398,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -24491,11 +24656,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -24528,11 +24694,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -24699,11 +24866,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -24832,11 +25000,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -24863,11 +25032,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -25106,11 +25276,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -25191,11 +25362,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -25709,11 +25881,12 @@ It's time I tackled a problem I can solve.
               (word_other)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -25915,11 +26088,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -26159,11 +26333,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -26396,11 +26571,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -26429,11 +26605,12 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (other))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -26445,11 +26622,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (hide_end))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -26638,10 +26816,98 @@ It's time I tackled a problem I can solve.
         (gather_text
           (gather_mark)
           (dialog_text
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (option_text
+          (option_mark)
+          (option_words
+            (words
+              (inline_block
+                (block_remainder))
+              (hide_start)
+              (vocabulary)
+              (hide_end))))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (text
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (vocabulary)
+            (other)
+            (vocabulary)
+            (vocabulary)
+            (other)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (code_text
+          (text
+            (vocabulary)
+            (other)
+            (vocabulary)))
+        (line_end))
+      (weave_body_line
+        (line_start)
+        (dialog_text
+          (divert_or_thread
             (divert_chain
               (divert
                 (arrow)
                 (identifier_path
+                  (identifier)
+                  (dot)
                   (identifier))))))
         (line_end))
       (weave_body_line
@@ -26654,92 +26920,6 @@ It's time I tackled a problem I can solve.
                 (block_remainder))
               (hide_start)
               (vocabulary)
-              (hide_end))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (dialog_text
-          (text
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (vocabulary)
-            (other)
-            (vocabulary)
-            (vocabulary)
-            (other)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (code_text
-          (text
-            (vocabulary)
-            (other)
-            (vocabulary)))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)
-                (dot)
-                (identifier)))))
-        (line_end))
-      (weave_body_line
-        (line_start)
-        (option_text
-          (option_mark)
-          (option_words
-            (words
-              (inline_block
-                (block_remainder))
-              (hide_start)
-              (vocabulary)
               (vocabulary)
               (hide_end))))
         (line_end))
@@ -26890,11 +27070,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -26977,11 +27158,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end)))
     (stitch
       (stitch_header
@@ -27023,11 +27205,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier)))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier))))))
           (line_end)))))
   (knot
     (knot_header
@@ -27240,11 +27423,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -27339,11 +27523,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -27386,11 +27571,12 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end))))
   (knot
     (knot_header
@@ -27566,11 +27752,12 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (vocabulary)
               (word_other))
-            (divert_chain
-              (divert
-                (arrow)
-                (identifier_path
-                  (identifier))))))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))))))
         (line_end))
       (weave_body_line
         (line_start)
@@ -28193,9 +28380,10 @@ It's time I tackled a problem I can solve.
       (weave_body_line
         (line_start)
         (dialog_text
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier))))))
         (line_end)))))

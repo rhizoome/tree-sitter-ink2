@@ -18,6 +18,7 @@
 enum TokenType {
     ARROW,
     DOUBLE_ARROW,
+    BACK_ARROW,
     BLOCK_COMMENT_START,
     BLOCK_COMMENT_END,
     LINE_COMMENT,
@@ -38,7 +39,6 @@ static const char *KW_VAR = "VAR";
 static const char *KW_CONST = "CONST";
 static const char *KW_LIST = "LIST";
 static const char *PAIR_BLOCK_COMMENT_END = "*/";
-static const char *PAIR_GLUE = "<>";
 
 static int is_unicode_whitespace(int32_t wc) {
     // Does not contain \n and \r since this is handled by LINE_END
@@ -285,19 +285,39 @@ static bool check_commment_start(TSLexer *lexer, const bool *valid_symbols) {
     return false;
 }
 
+static bool check_glue_back_arrow(TSLexer *lexer, const bool *valid_symbols) {
+    if (
+        (
+            valid_symbols[BACK_ARROW] ||
+            valid_symbols[GLUE]
+        )
+        && lexer->lookahead == '<'
+    ) {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == '-') {
+            lexer->advance(lexer, false);
+            lexer->result_symbol = BACK_ARROW;
+            return true;
+        } else if (lexer->lookahead == '>') {
+            lexer->advance(lexer, false);
+            lexer->result_symbol = GLUE;
+            return true;
+        }
+    }
+    return false;
+}
+
 static bool scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     // Position dependant lexes (whitespaces may not be consumed)
     if (check_start_tokens(lexer, valid_symbols)) return true;
 
     // Position independant lexes (whitespaces must be consumed)
     skip_whitespace(lexer);
+    if (check_glue_back_arrow(lexer, valid_symbols)) return true;
     if (check_line_end(lexer, valid_symbols)) return true;
     if (check_arrows(lexer, valid_symbols)) return true;
     if (check_commment_start(lexer, valid_symbols)) return true;
     if (check_pair(lexer, valid_symbols, BLOCK_COMMENT_END, PAIR_BLOCK_COMMENT_END)) {
-        return true;
-    }
-    if (check_pair(lexer, valid_symbols, GLUE, PAIR_GLUE)) {
         return true;
     }
     return false;

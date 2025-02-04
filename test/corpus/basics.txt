@@ -129,11 +129,12 @@ test -> test.bla
       (dialog_text
         (text
           (vocabulary))
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier))))))
       (line_end)))
   (knot
     (knot_header
@@ -146,13 +147,14 @@ test -> test.bla
         (dialog_text
           (text
             (vocabulary))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)
-                (dot)
-                (identifier)))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier)
+                  (dot)
+                  (identifier))))))
         (line_end)))))
 
 ================
@@ -164,28 +166,29 @@ asdsdf -> test.bla asdf
 
 --------------------------------------------------------------------------------
 
-(program
-  (weave_body
-    (weave_body_line
-      (line_start)
-      (dialog_text
-        (text
-          (vocabulary))
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)
-              (dot)
-              (ERROR
-                (identifier))
-              (identifier)))))
-      (line_end)))
-  (knot
-    (knot_header
-      (knot_start)
-      (identifier)
-      (line_end))))
+    (program
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (text
+              (vocabulary))
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)
+                    (dot)
+                    (ERROR
+                      (identifier))
+                    (identifier))))))
+          (line_end)))
+      (knot
+        (knot_header
+          (knot_start)
+          (identifier)
+          (line_end))))
 
 ================
 Illegal divert 2
@@ -585,82 +588,88 @@ Multidivert
     (weave_body_line
       (line_start)
       (dialog_text
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier))))))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert_continue
-            (arrow))))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert_continue
+              (arrow)))))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)
-              (dot)
-              (identifier)))))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)
+                (dot)
+                (identifier))))))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert_return
-            (double_arrow))))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert_return
+              (double_arrow)))))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (divert_chain
-          (divert_return
-            (double_arrow))))
+        (divert_or_thread
+          (divert_chain
+            (divert_return
+              (double_arrow)))))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert_return
-            (double_arrow))))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert_return
+              (double_arrow)))))
       (line_end))))
 
 ===================
-Illigal multidivert
+Illegal multidivert
 ===================
 
 ->->a
@@ -668,30 +677,32 @@ Illigal multidivert
 
 --------------------------------------------------------------------------------
 
-(program
-  (weave_body
-    (weave_body_line
-      (line_start)
-      (dialog_text
-        (divert_chain
-          (divert_return
-            (double_arrow))))
-      (ERROR
-        (identifier))
-      (line_end))
-    (weave_body_line
-      (line_start)
-      (dialog_text
-        (divert_chain
-          (divert
-            (arrow)
-            (identifier_path
-              (identifier)))
-          (divert_return
-            (double_arrow))))
-      (ERROR
-        (identifier))
-      (line_end))))
+    (program
+      (weave_body
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_or_thread
+              (divert_chain
+                (divert_return
+                  (double_arrow)))))
+          (ERROR
+            (identifier))
+          (line_end))
+        (weave_body_line
+          (line_start)
+          (dialog_text
+            (divert_or_thread
+              (divert_chain
+                (divert
+                  (arrow)
+                  (identifier_path
+                    (identifier)))
+                (divert_return
+                  (double_arrow)))))
+          (ERROR
+            (identifier))
+          (line_end))))
 
 ===
 VAR
@@ -1010,19 +1021,20 @@ Hide problem
             (word_other)
             (vocabulary)
             (hide_end))
-          (divert_chain
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier)))
-            (divert
-              (arrow)
-              (identifier_path
-                (identifier))))))
+          (divert_or_thread
+            (divert_chain
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier)))
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier)))
+              (divert
+                (arrow)
+                (identifier_path
+                  (identifier)))))))
       (line_end))))
 
 ==============

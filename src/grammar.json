@@ -381,7 +381,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "divert_chain"
+          "name": "divert_or_thread"
         },
         {
           "type": "SYMBOL",
@@ -396,7 +396,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "divert_chain"
+              "name": "divert_or_thread"
             }
           ]
         },
@@ -418,6 +418,19 @@
     "default_option_mark": {
       "type": "SYMBOL",
       "name": "arrow"
+    },
+    "divert_or_thread": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "divert_chain"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "thread"
+        }
+      ]
     },
     "label": {
       "type": "SEQ",
@@ -615,7 +628,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "divert_chain"
+          "name": "divert_or_thread"
         },
         {
           "type": "SYMBOL",
@@ -630,7 +643,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "divert_chain"
+              "name": "divert_or_thread"
             }
           ]
         },
@@ -778,6 +791,19 @@
     "divert_return": {
       "type": "SYMBOL",
       "name": "double_arrow"
+    },
+    "thread": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "back_arrow"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier_path"
+        }
+      ]
     },
     "function_header": {
       "type": "SEQ",
@@ -1270,6 +1296,10 @@
     {
       "type": "SYMBOL",
       "name": "double_arrow"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "back_arrow"
     },
     {
       "type": "SYMBOL",

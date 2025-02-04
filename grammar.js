@@ -27,6 +27,7 @@ module.exports = grammar({
     externals: $ => [
         $.arrow,
         $.double_arrow,
+        $.back_arrow,
         $.block_comment_start,
         $.block_comment_end,
         $.line_comment,
@@ -131,12 +132,17 @@ module.exports = grammar({
         option_mark: $ => /[\+\*]/,
         option_words: $ => choice(
             $.words,
-            $.divert_chain,
+            $.divert_or_thread,
             $.default_option_mark,
-            seq($.words, $.divert_chain),
+            seq($.words, $.divert_or_thread),
             seq($.words, $.default_option_mark)
         ),
         default_option_mark: $ => $.arrow,
+
+        divert_or_thread: $ => choice(
+            $.divert_chain,
+            $.thread
+        ),
 
         label: $ => seq(
             /\(/,
@@ -192,9 +198,9 @@ module.exports = grammar({
         dialog_text: $ => choice(
             $.condition_text,
             $.text,
-            $.divert_chain,
+            $.divert_or_thread,
             $.tag,
-            seq($.text, $.divert_chain),
+            seq($.text, $.divert_or_thread),
             seq($.text, $.tag)
         ),
         text: $ => repeat1(choice(
@@ -231,6 +237,10 @@ module.exports = grammar({
         ),
         divert_continue: $ => $.arrow,
         divert_return: $ => $.double_arrow,
+        thread: $ => seq(
+            $.back_arrow,
+            $.identifier_path
+        ),
 
         function_header: $ => seq(
             $.function_start,

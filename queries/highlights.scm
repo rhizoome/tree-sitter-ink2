@@ -4,16 +4,16 @@
 (tag (identifier) @type)
 (tag) @type
 
-; headers
-(knot_header) @keyword
-(stitch_header) @keyword
-(function_header) @keyword
-
 ; values
 (identifier) @function
 (string) @string
 (boolean) @constant
 (number) @constant
+
+; headers
+(knot_header) @keyword
+(stitch_header) @keyword
+(function_header) @keyword
 
 ; marks (ink)
 (option_mark) @keyword.directive
@@ -21,7 +21,7 @@
 (glue) @type.builtin
 
 ; calls
-(divert_chain) @function
+(divert_cr_thread) @function
 
 ; operators
 (assignment) @operator
