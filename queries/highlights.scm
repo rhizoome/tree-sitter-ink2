@@ -50,5 +50,7 @@
 (condition_block) @keyword
 (code_text) @keyword
 
-
 (ERROR) @error
+
+; support injection
+(program) @ui.text

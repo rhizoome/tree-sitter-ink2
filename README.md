@@ -19,6 +19,7 @@ Edit `hx ~/.config/helix/languages.toml` and replace `$long_revision`.
 [[language]]
 name = "ink"
 scope = "source.ink"
+injection-regex = "ink"
 file-types = ["ink"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/"}
