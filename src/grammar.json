@@ -656,6 +656,10 @@
         "members": [
           {
             "type": "SYMBOL",
+            "name": "glue"
+          },
+          {
+            "type": "SYMBOL",
             "name": "inline_block"
           },
           {
@@ -681,6 +685,10 @@
           {
             "type": "SYMBOL",
             "name": "hide_end"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "glue"
           },
           {
             "type": "SYMBOL",
@@ -1109,8 +1117,8 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "PATTERN",
-                  "value": ":"
+                  "type": "SYMBOL",
+                  "name": "tag_delimiter"
                 },
                 {
                   "type": "SYMBOL",
@@ -1128,6 +1136,10 @@
     "tag_remainder": {
       "type": "PATTERN",
       "value": "[^\\r\\n:]+"
+    },
+    "tag_delimiter": {
+      "type": "PATTERN",
+      "value": ":"
     },
     "value": {
       "type": "CHOICE",

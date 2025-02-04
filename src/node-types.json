@@ -668,6 +668,10 @@
           "named": true
         },
         {
+          "type": "tag_delimiter",
+          "named": true
+        },
+        {
           "type": "tag_remainder",
           "named": true
         }
@@ -682,6 +686,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "glue",
+          "named": true
+        },
         {
           "type": "inline_block",
           "named": true
@@ -831,6 +839,10 @@
       "required": true,
       "types": [
         {
+          "type": "glue",
+          "named": true
+        },
+        {
           "type": "hide_end",
           "named": true
         },
@@ -902,6 +914,10 @@
     "named": true
   },
   {
+    "type": "glue",
+    "named": true
+  },
+  {
     "type": "hide_end",
     "named": true
   },
@@ -947,6 +963,10 @@
   },
   {
     "type": "stitch_start",
+    "named": true
+  },
+  {
+    "type": "tag_delimiter",
     "named": true
   },
   {

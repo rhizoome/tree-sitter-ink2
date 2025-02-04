@@ -614,6 +614,7 @@ VAR time = 0
       (dialog_text
         (tag
           (identifier)
+          (tag_delimiter)
           (tag_remainder)))
       (line_end))
     (weave_body_line
@@ -621,6 +622,7 @@ VAR time = 0
       (dialog_text
         (tag
           (identifier)
+          (tag_delimiter)
           (tag_remainder)))
       (line_end))
     (weave_body_line
@@ -628,6 +630,7 @@ VAR time = 0
       (dialog_text
         (tag
           (identifier)
+          (tag_delimiter)
           (tag_remainder)))
       (line_end))
     (var_line
@@ -728,7 +731,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)
+              (glue)
               (inline_block
                 (block_remainder))))
           (line_end))
@@ -1108,6 +1111,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
+              (glue)
               (other)))
           (line_end))
         (weave_body_line
@@ -1135,6 +1139,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
+              (glue)
               (other)))
           (line_end))
         (weave_body_line
@@ -1213,6 +1218,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
+              (glue)
               (other)))
           (line_end))
         (weave_body_line
@@ -1497,7 +1503,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -1861,7 +1867,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -1875,7 +1881,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -1889,7 +1895,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -3189,6 +3195,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
+              (glue)
               (other)))
           (line_end))
         (weave_body_line
@@ -3241,6 +3248,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
+              (glue)
               (other)))
           (line_end))
         (weave_body_line
@@ -3326,7 +3334,8 @@ VAR time = 0
                 (hide_start)
                 (word_other)
                 (hide_end)
-                (word_other))))
+                (word_other)
+                (glue))))
           (line_end))
         (weave_body_line
           (line_start)
@@ -3492,7 +3501,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -3506,7 +3515,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -4210,7 +4219,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)
@@ -4224,7 +4233,7 @@ VAR time = 0
           (line_start)
           (dialog_text
             (text
-              (other)))
+              (glue)))
           (line_end))
         (weave_body_line
           (line_start)

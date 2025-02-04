@@ -198,6 +198,7 @@ module.exports = grammar({
             seq($.text, $.tag)
         ),
         text: $ => repeat1(choice(
+            $.glue,
             $.inline_block,
             $.vocabulary,
             $.other,
@@ -206,6 +207,7 @@ module.exports = grammar({
         words: $ => repeat1(choice(
             $.hide_start,
             $.hide_end,
+            $.glue,
             $.inline_block,
             $.vocabulary,
             $.word_other,
@@ -304,11 +306,12 @@ module.exports = grammar({
             /#/,
             $.identifier,
             optional(seq(
-                /:/,
+                $.tag_delimiter,
                 $.tag_remainder
             ))
         ),
         tag_remainder: $ => /[^\r\n:]+/,
+        tag_delimiter: $ => /:/,
 
         value: $ => choice(
             $.boolean,

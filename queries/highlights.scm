@@ -1,3 +1,9 @@
+; tags and labels
+(tag_delimiter) @keyword
+(label) @function
+(tag (identifier) @type)
+(tag) @type
+
 ; headers
 (knot_header) @keyword
 (stitch_header) @keyword
@@ -12,6 +18,7 @@
 ; marks (ink)
 (option_mark) @keyword.directive
 (gather_mark) @type.builtin
+(glue) @type.builtin
 
 ; calls
 (divert_chain) @function
@@ -42,8 +49,5 @@
 (condition_block) @keyword
 (code_text) @keyword
 
-; tags and labels
-(label) @function
-(tag) @tag
 
 (ERROR) @error

@@ -1100,5 +1100,44 @@ Tags
       (dialog_text
         (tag
           (identifier)
+          (tag_delimiter)
           (tag_remainder)))
+      (line_end))))
+
+====
+Glue
+====
+
+<> asdf
+asdf <> asdf
+* asdf <> asd
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (glue)
+          (vocabulary)))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabulary)
+          (glue)
+          (vocabulary)))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (option_text
+        (option_mark)
+        (option_words
+          (words
+            (vocabulary)
+            (glue)
+            (vocabulary))))
       (line_end))))
