@@ -200,6 +200,10 @@
       "required": true,
       "types": [
         {
+          "type": "condition_text",
+          "named": true
+        },
+        {
           "type": "divert_chain",
           "named": true
         },
@@ -704,10 +708,6 @@
         },
         {
           "type": "code_text",
-          "named": true
-        },
-        {
-          "type": "condition_text",
           "named": true
         },
         {

@@ -458,16 +458,17 @@ asdf
   (weave_body
     (weave_body_line
       (line_start)
-      (condition_text
-        (condition_block
-          (condition_block_content
-            (block_remainder))
-          (line_end)
-          (line_start)
-          (condition_block_content
-            (block_remainder))
-          (line_end)
-          (line_start)))
+      (dialog_text
+        (condition_text
+          (condition_block
+            (condition_block_content
+              (block_remainder))
+            (line_end)
+            (line_start)
+            (condition_block_content
+              (block_remainder))
+            (line_end)
+            (line_start))))
       (line_end))))
 
 =========================
@@ -484,18 +485,19 @@ asdf
   (weave_body
     (weave_body_line
       (line_start)
-      (condition_text
-        (condition_block
-          (condition_block_content
-            (block_remainder))
-          (line_end)
-          (line_start)
-          (condition_block_content
-            (block_remainder))
-          (line_end)
-          (line_start))
-        (text
-          (vocabular)))
+      (dialog_text
+        (condition_text
+          (condition_block
+            (condition_block_content
+              (block_remainder))
+            (line_end)
+            (line_start)
+            (condition_block_content
+              (block_remainder))
+            (line_end)
+            (line_start))
+          (text
+            (vocabular))))
       (line_end))))
 
 ==========================
@@ -514,26 +516,27 @@ Condition text nest (TODO)
   (weave_body
     (weave_body_line
       (line_start)
-      (condition_text
-        (condition_block
-          (condition_block_content
-            (block_remainder))
-          (line_end)
-          (line_start)
-          (condition_block_content
-            (block_remainder)
-            (condition_block
+      (dialog_text
+        (condition_text
+          (condition_block
+            (condition_block_content
+              (block_remainder))
+            (line_end)
+            (line_start)
+            (condition_block_content
+              (block_remainder)
               (condition_block
-                (condition_block_content
-                  (block_remainder))
-                (line_end)
-                (line_start)
-                (condition_block_content
-                  (block_remainder))
-                (line_end)
-                (line_start))))
-          (line_end)
-          (line_start)))
+                (condition_block
+                  (condition_block_content
+                    (block_remainder))
+                  (line_end)
+                  (line_start)
+                  (condition_block_content
+                    (block_remainder))
+                  (line_end)
+                  (line_start))))
+            (line_end)
+            (line_start))))
       (line_end))))
 
 =================================
@@ -550,17 +553,18 @@ Condition text nest inline (TODO)
   (weave_body
     (weave_body_line
       (line_start)
-      (condition_text
-        (condition_block
-          (condition_block_content
-            (block_remainder))
-          (line_end)
-          (line_start)
-          (condition_block_content
-            (inline_block
-              (block_remainder)))
-          (line_end)
-          (line_start)))
+      (dialog_text
+        (condition_text
+          (condition_block
+            (condition_block_content
+              (block_remainder))
+            (line_end)
+            (line_start)
+            (condition_block_content
+              (inline_block
+                (block_remainder)))
+            (line_end)
+            (line_start))))
       (line_end))))
 
 ===========

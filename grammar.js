@@ -108,7 +108,6 @@ module.exports = grammar({
                 $.code_text,
                 $.dialog_text,
                 $.gather_text,
-                $.condition_text,
             )),
             $.line_end
         ),
@@ -185,6 +184,7 @@ module.exports = grammar({
         mark_end: $ => /\)/,
 
         dialog_text: $ => choice(
+            $.condition_text,
             $.text,
             $.divert_chain,
             seq($.text, $.divert_chain)

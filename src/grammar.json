@@ -257,10 +257,6 @@
                 {
                   "type": "SYMBOL",
                   "name": "gather_text"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "condition_text"
                 }
               ]
             },
@@ -521,6 +517,10 @@
     "dialog_text": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "SYMBOL",
+          "name": "condition_text"
+        },
         {
           "type": "SYMBOL",
           "name": "text"
