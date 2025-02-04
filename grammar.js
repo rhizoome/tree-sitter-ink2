@@ -119,6 +119,7 @@ module.exports = grammar({
 
         gather_text: $ => seq(
             $.gather_mark,
+            optional($.label),
             optional($.dialog_text)
         ),
 
@@ -128,11 +129,24 @@ module.exports = grammar({
 
         choice_text: $ => seq(
             $.choice_mark,
+            optional($.label),
             optional($.choice_words)
         ),
 
         choice_mark: $ => repeat1(
             /[\+\*]/,
+        ),
+
+        choice_words: $ => choice(
+            $.words,
+            $.divert_chain,
+            seq($.words, $.divert_chain)
+        ),
+
+        label: $ => seq(
+            /\(/,
+            $.identifier,
+            /\)/
         ),
 
         code_text: $ => seq(
@@ -194,12 +208,6 @@ module.exports = grammar({
             $.vocabular,
             $.other,
         )),
-
-        choice_words: $ => choice(
-            $.words,
-            $.divert_chain,
-            seq($.words, $.divert_chain)
-        ),
 
         words: $ => repeat1(choice(
             $.hide_start,

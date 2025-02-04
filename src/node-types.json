@@ -72,6 +72,10 @@
         {
           "type": "choice_words",
           "named": true
+        },
+        {
+          "type": "label",
+          "named": true
         }
       ]
     }
@@ -371,6 +375,10 @@
         {
           "type": "gather_mark",
           "named": true
+        },
+        {
+          "type": "label",
+          "named": true
         }
       ]
     }
@@ -454,6 +462,21 @@
         },
         {
           "type": "line_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "label",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
           "named": true
         }
       ]

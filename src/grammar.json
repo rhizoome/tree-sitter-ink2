@@ -304,6 +304,18 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "label"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
               "name": "dialog_text"
             },
             {
@@ -332,6 +344,18 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "label"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
               "name": "choice_words"
             },
             {
@@ -347,6 +371,49 @@
         "type": "PATTERN",
         "value": "[\\+\\*]"
       }
+    },
+    "choice_words": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "words"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "divert_chain"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "words"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "divert_chain"
+            }
+          ]
+        }
+      ]
+    },
+    "label": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\)"
+        }
+      ]
     },
     "code_text": {
       "type": "SEQ",
@@ -563,32 +630,6 @@
           }
         ]
       }
-    },
-    "choice_words": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "words"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "divert_chain"
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "words"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "divert_chain"
-            }
-          ]
-        }
-      ]
     },
     "words": {
       "type": "REPEAT1",

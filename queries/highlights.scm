@@ -41,4 +41,7 @@
 (condition_block) @keyword
 (code_text) @keyword
 
+; tags and labels
+(label) @function
+
 (ERROR) @error
