@@ -104,7 +104,7 @@ module.exports = grammar({
         weave_body_line: $ => seq(
             $.line_start,
             optional(choice(
-                $.choice_text,
+                $.option_text,
                 $.code_text,
                 $.dialog_text,
                 $.gather_text,
@@ -122,26 +122,26 @@ module.exports = grammar({
             optional($.label),
             optional($.dialog_text)
         ),
-
         gather_mark: $ => repeat1(
             /-/,
         ),
 
-        choice_text: $ => seq(
-            $.choice_mark,
+        option_text: $ => seq(
+            $.option_mark,
             optional($.label),
-            optional($.choice_words)
+            optional($.option_words)
         ),
-
-        choice_mark: $ => repeat1(
+        option_mark: $ => repeat1(
             /[\+\*]/,
         ),
-
-        choice_words: $ => choice(
+        option_words: $ => choice(
             $.words,
             $.divert_chain,
-            seq($.words, $.divert_chain)
+            $.default_option_mark,
+            seq($.words, $.divert_chain),
+            seq($.words, $.default_option_mark)
         ),
+        default_option_mark: $ => $.arrow,
 
         label: $ => seq(
             /\(/,

@@ -9,7 +9,7 @@
 (number) @constant
 
 ; marks (ink)
-(choice_mark) @keyword.directive
+(option_mark) @keyword.directive
 (gather_mark) @type.builtin
 
 ; calls

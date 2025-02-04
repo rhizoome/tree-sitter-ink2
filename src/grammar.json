@@ -244,7 +244,7 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "choice_text"
+                  "name": "option_text"
                 },
                 {
                   "type": "SYMBOL",
@@ -332,12 +332,12 @@
         "value": "-"
       }
     },
-    "choice_text": {
+    "option_text": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "choice_mark"
+          "name": "option_mark"
         },
         {
           "type": "CHOICE",
@@ -356,7 +356,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "choice_words"
+              "name": "option_words"
             },
             {
               "type": "BLANK"
@@ -365,14 +365,14 @@
         }
       ]
     },
-    "choice_mark": {
+    "option_mark": {
       "type": "REPEAT1",
       "content": {
         "type": "PATTERN",
         "value": "[\\+\\*]"
       }
     },
-    "choice_words": {
+    "option_words": {
       "type": "CHOICE",
       "members": [
         {
@@ -382,6 +382,10 @@
         {
           "type": "SYMBOL",
           "name": "divert_chain"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "default_option_mark"
         },
         {
           "type": "SEQ",
@@ -395,8 +399,25 @@
               "name": "divert_chain"
             }
           ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "words"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "default_option_mark"
+            }
+          ]
         }
       ]
+    },
+    "default_option_mark": {
+      "type": "SYMBOL",
+      "name": "arrow"
     },
     "label": {
       "type": "SEQ",

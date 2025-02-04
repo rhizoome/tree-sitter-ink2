@@ -976,9 +976,9 @@ Hide
   (weave_body
     (weave_body_line
       (line_start)
-      (choice_text
-        (choice_mark)
-        (choice_words
+      (option_text
+        (option_mark)
+        (option_words
           (words
             (hide_start)
             (vocabulary)
@@ -998,9 +998,9 @@ Hide problem
   (weave_body
     (weave_body_line
       (line_start)
-      (choice_text
-        (choice_mark)
-        (choice_words
+      (option_text
+        (option_mark)
+        (option_words
           (words
             (hide_start)
             (word_other)
@@ -1023,4 +1023,34 @@ Hide problem
               (arrow)
               (identifier_path
                 (identifier))))))
+      (line_end))))
+
+==============
+Default option
+==============
+
+* ->
+* asdf ->
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (option_text
+        (option_mark)
+        (option_words
+          (default_option_mark
+            (arrow))))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (option_text
+        (option_mark)
+        (option_words
+          (words
+            (vocabulary))
+          (default_option_mark
+            (arrow))))
       (line_end))))
