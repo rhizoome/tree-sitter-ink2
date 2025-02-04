@@ -1079,6 +1079,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "boolean"
+        },
+        {
+          "type": "SYMBOL",
           "name": "string"
         },
         {
@@ -1090,6 +1094,10 @@
           "name": "identifier"
         }
       ]
+    },
+    "boolean": {
+      "type": "PATTERN",
+      "value": "(true|false)"
     },
     "string": {
       "type": "SEQ",
@@ -1140,6 +1148,14 @@
       "type": "PATTERN",
       "value": "[^\\r\\n\\}\\{]+"
     },
+    "vocabulary": {
+      "type": "PATTERN",
+      "value": "[\\p{N}\\p{L}_-]+"
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[\\p{N}\\p{L}_]+"
+    },
     "other": {
       "type": "PREC_RIGHT",
       "value": 0,
@@ -1161,14 +1177,6 @@
           "value": "[^\\s\\n\\r\\p{N}\\p{L}\\[\\]_]"
         }
       }
-    },
-    "vocabulary": {
-      "type": "PATTERN",
-      "value": "[\\p{N}\\p{L}_-]+"
-    },
-    "identifier": {
-      "type": "PATTERN",
-      "value": "[\\p{N}\\p{L}_]+"
     }
   },
   "extras": [

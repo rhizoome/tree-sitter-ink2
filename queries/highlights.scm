@@ -6,6 +6,7 @@
 ; values
 (identifier) @function
 (string) @string
+(boolean) @constant
 (number) @constant
 
 ; marks (ink)

@@ -683,6 +683,10 @@
       "required": true,
       "types": [
         {
+          "type": "boolean",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -852,6 +856,10 @@
   },
   {
     "type": "block_remainder",
+    "named": true
+  },
+  {
+    "type": "boolean",
     "named": true
   },
   {

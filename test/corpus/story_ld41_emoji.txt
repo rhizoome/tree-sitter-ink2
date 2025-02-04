@@ -665,14 +665,14 @@ VAR time = 0
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
@@ -897,6 +897,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1017,6 +1018,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1129,6 +1131,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1155,6 +1158,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1184,6 +1188,7 @@ VAR time = 0
             (dialog_text
               (text
                 (other)
+                (vocabulary)
                 (vocabulary))))
           (line_end))
         (weave_body_line
@@ -1231,6 +1236,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1273,6 +1279,7 @@ VAR time = 0
             (dialog_text
               (text
                 (other)
+                (vocabulary)
                 (vocabulary))))
           (line_end))
         (weave_body_line
@@ -1355,6 +1362,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1464,6 +1472,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1511,6 +1520,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1524,6 +1534,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1629,6 +1640,7 @@ VAR time = 0
             (text
               (vocabulary)
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1872,6 +1884,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1885,6 +1898,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1898,6 +1912,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1911,6 +1926,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -1939,7 +1955,7 @@ VAR time = 0
           (identifier)
           (assignment)
           (value
-            (identifier))
+            (boolean))
           (line_end))
         (weave_body_line
           (line_start)
@@ -2097,7 +2113,7 @@ VAR time = 0
           (identifier)
           (assignment)
           (value
-            (identifier))
+            (boolean))
           (line_end))
         (var_line
           (var_start)
@@ -2319,6 +2335,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -2743,7 +2760,7 @@ VAR time = 0
           (identifier)
           (assignment)
           (value
-            (identifier))
+            (boolean))
           (line_end))
         (weave_body_line
           (line_start)
@@ -2762,6 +2779,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -2795,6 +2813,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -2970,6 +2989,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3226,6 +3246,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3243,6 +3264,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3493,6 +3515,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3506,6 +3529,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3519,6 +3543,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3579,6 +3604,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3646,6 +3672,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -3981,6 +4008,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -4205,6 +4233,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -4218,6 +4247,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line
@@ -4231,6 +4261,7 @@ VAR time = 0
           (dialog_text
             (text
               (other)
+              (vocabulary)
               (vocabulary)))
           (line_end))
         (weave_body_line

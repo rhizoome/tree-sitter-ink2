@@ -1720,14 +1720,14 @@ It's time I tackled a problem I can solve.
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (weave_body_line
       (line_start)
@@ -1738,28 +1738,28 @@ It's time I tackled a problem I can solve.
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (weave_body_line
       (line_start)
@@ -1805,7 +1805,7 @@ It's time I tackled a problem I can solve.
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (const_line
       (const_start)
@@ -1833,35 +1833,35 @@ It's time I tackled a problem I can solve.
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (weave_body_line
       (line_start)
@@ -1872,28 +1872,28 @@ It's time I tackled a problem I can solve.
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (var_line
       (var_start)
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (weave_body_line
       (line_start)
@@ -1904,7 +1904,7 @@ It's time I tackled a problem I can solve.
       (identifier)
       (assignment)
       (value
-        (identifier))
+        (boolean))
       (line_end))
     (weave_body_line
       (line_start)
@@ -1966,7 +1966,7 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (other)
             (vocabulary)
-            (other)
+            (vocabulary)
             (vocabulary)))
         (line_end))))
   (function
@@ -7619,7 +7619,7 @@ It's time I tackled a problem I can solve.
             (vocabulary)
             (vocabulary)
             (vocabulary)
-            (other)
+            (vocabulary)
             (vocabulary)
             (vocabulary)
             (vocabulary)
@@ -8350,7 +8350,7 @@ It's time I tackled a problem I can solve.
               (vocabulary)
               (word_other)
               (vocabulary)
-              (word_other)
+              (vocabulary)
               (vocabulary)
               (vocabulary)
               (vocabulary)

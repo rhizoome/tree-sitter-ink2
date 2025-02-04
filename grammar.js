@@ -299,10 +299,12 @@ module.exports = grammar({
         ),
 
         value: $ => choice(
+            $.boolean,
             $.string,
             $.number,
             $.identifier
         ),
+        boolean: $ => /(true|false)/,
         string: $ => seq(
             '"',
             repeat(choice(
