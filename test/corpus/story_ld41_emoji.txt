@@ -612,53 +612,23 @@ VAR time = 0
     (weave_body_line
       (line_start)
       (dialog_text
-        (text
-          (other)
-          (vocabulary)
-          (other)
-          (vocabulary)
-          (vocabulary)))
+        (tag
+          (identifier)
+          (tag_remainder)))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (text
-          (other)
-          (vocabulary)
-          (other)))
+        (tag
+          (identifier)
+          (tag_remainder)))
       (line_end))
     (weave_body_line
       (line_start)
       (dialog_text
-        (text
-          (other)
-          (vocabulary)
-          (other)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (other)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (other)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (other)
-          (vocabulary)
-          (other)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (vocabulary)
-          (other)))
+        (tag
+          (identifier)
+          (tag_remainder)))
       (line_end))
     (var_line
       (var_start)

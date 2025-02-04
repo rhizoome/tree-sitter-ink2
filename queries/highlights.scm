@@ -44,5 +44,6 @@
 
 ; tags and labels
 (label) @function
+(tag) @tag
 
 (ERROR) @error

@@ -618,6 +618,10 @@
           "name": "divert_chain"
         },
         {
+          "type": "SYMBOL",
+          "name": "tag"
+        },
+        {
           "type": "SEQ",
           "members": [
             {
@@ -627,6 +631,19 @@
             {
               "type": "SYMBOL",
               "name": "divert_chain"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "text"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "tag"
             }
           ]
         }
@@ -1073,6 +1090,44 @@
           ]
         }
       ]
+    },
+    "tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "#"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": ":"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "tag_remainder"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "tag_remainder": {
+      "type": "PATTERN",
+      "value": "[^\\r\\n:]+"
     },
     "value": {
       "type": "CHOICE",

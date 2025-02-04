@@ -1061,6 +1061,7 @@ Option bug
 
 ** huhu
 * * huhu
+
 --------------------------------------------------------------------------------
 
 (program
@@ -1082,4 +1083,22 @@ Option bug
         (option_words
           (words
             (vocabulary))))
+      (line_end))))
+
+====
+Tags
+====
+
+#tag: text
+
+--------------------------------------------------------------------------------
+
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (tag
+          (identifier)
+          (tag_remainder)))
       (line_end))))

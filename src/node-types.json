@@ -199,6 +199,10 @@
           "named": true
         },
         {
+          "type": "tag",
+          "named": true
+        },
+        {
           "type": "text",
           "named": true
         }
@@ -652,6 +656,25 @@
     "fields": {}
   },
   {
+    "type": "tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "tag_remainder",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "text",
     "named": true,
     "fields": {},
@@ -924,6 +947,10 @@
   },
   {
     "type": "stitch_start",
+    "named": true
+  },
+  {
+    "type": "tag_remainder",
     "named": true
   },
   {

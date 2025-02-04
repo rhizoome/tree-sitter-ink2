@@ -193,7 +193,9 @@ module.exports = grammar({
             $.condition_text,
             $.text,
             $.divert_chain,
-            seq($.text, $.divert_chain)
+            $.tag,
+            seq($.text, $.divert_chain),
+            seq($.text, $.tag)
         ),
         text: $ => repeat1(choice(
             $.inline_block,
@@ -297,6 +299,16 @@ module.exports = grammar({
                 $.identifier
             )))
         ),
+
+        tag: $ => seq(
+            /#/,
+            $.identifier,
+            optional(seq(
+                /:/,
+                $.tag_remainder
+            ))
+        ),
+        tag_remainder: $ => /[^\r\n:]+/,
 
         value: $ => choice(
             $.boolean,
