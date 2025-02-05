@@ -30,8 +30,8 @@ enum ts_symbol_identifiers {
   aux_sym_condition_block_token1 = 12,
   aux_sym_condition_block_token2 = 13,
   aux_sym_tag_token1 = 14,
-  sym_tag_remainder = 15,
-  sym_tag_delimiter = 16,
+  aux_sym_tag_token2 = 15,
+  sym_tag_remainder = 16,
   sym_boolean = 17,
   anon_sym_DQUOTE = 18,
   aux_sym_string_token1 = 19,
@@ -143,8 +143,8 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_condition_block_token1] = "condition_block_token1",
   [aux_sym_condition_block_token2] = "condition_block_token2",
   [aux_sym_tag_token1] = "tag_token1",
+  [aux_sym_tag_token2] = "tag_token2",
   [sym_tag_remainder] = "tag_remainder",
-  [sym_tag_delimiter] = "tag_delimiter",
   [sym_boolean] = "boolean",
   [anon_sym_DQUOTE] = "\"",
   [aux_sym_string_token1] = "string_token1",
@@ -256,8 +256,8 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_condition_block_token1] = aux_sym_condition_block_token1,
   [aux_sym_condition_block_token2] = aux_sym_condition_block_token2,
   [aux_sym_tag_token1] = aux_sym_tag_token1,
+  [aux_sym_tag_token2] = aux_sym_tag_token2,
   [sym_tag_remainder] = sym_tag_remainder,
-  [sym_tag_delimiter] = sym_tag_delimiter,
   [sym_boolean] = sym_boolean,
   [anon_sym_DQUOTE] = anon_sym_DQUOTE,
   [aux_sym_string_token1] = aux_sym_string_token1,
@@ -414,11 +414,11 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [sym_tag_remainder] = {
-    .visible = true,
-    .named = true,
+  [aux_sym_tag_token2] = {
+    .visible = false,
+    .named = false,
   },
-  [sym_tag_delimiter] = {
+  [sym_tag_remainder] = {
     .visible = true,
     .named = true,
   },
@@ -1347,7 +1347,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
         ',', 28,
         '-', 22,
         '.', 45,
-        ':', 36,
+        ':', 34,
         '=', 21,
         '[', 29,
         '\\', 15,
@@ -1558,10 +1558,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           (lookahead < '\t' || '\r' < lookahead)) ADVANCE(47);
       END_STATE();
     case 14:
-      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(34);
+      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(35);
       if (lookahead != 0 &&
           (lookahead < '\t' || '\r' < lookahead) &&
-          lookahead != ':') ADVANCE(35);
+          lookahead != ':') ADVANCE(36);
       END_STATE();
     case 15:
       if (lookahead != 0 &&
@@ -1628,21 +1628,21 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(aux_sym_tag_token1);
       END_STATE();
     case 34:
-      ACCEPT_TOKEN(sym_tag_remainder);
-      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(34);
-      if (lookahead != 0 &&
-          (lookahead < '\t' || '\r' < lookahead) &&
-          lookahead != ':') ADVANCE(35);
+      ACCEPT_TOKEN(aux_sym_tag_token2);
       END_STATE();
     case 35:
+      ACCEPT_TOKEN(sym_tag_remainder);
+      if (set_contains(extras_character_set_1, 10, lookahead)) ADVANCE(35);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ':') ADVANCE(36);
+      END_STATE();
+    case 36:
       ACCEPT_TOKEN(sym_tag_remainder);
       if (lookahead != 0 &&
           lookahead != '\n' &&
           lookahead != '\r' &&
-          lookahead != ':') ADVANCE(35);
-      END_STATE();
-    case 36:
-      ACCEPT_TOKEN(sym_tag_delimiter);
+          lookahead != ':') ADVANCE(36);
       END_STATE();
     case 37:
       ACCEPT_TOKEN(sym_boolean);
@@ -2153,7 +2153,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_condition_block_token1] = ACTIONS(1),
     [aux_sym_condition_block_token2] = ACTIONS(1),
     [aux_sym_tag_token1] = ACTIONS(1),
-    [sym_tag_delimiter] = ACTIONS(1),
+    [aux_sym_tag_token2] = ACTIONS(1),
     [sym_boolean] = ACTIONS(1),
     [anon_sym_DQUOTE] = ACTIONS(1),
     [aux_sym_string_token2] = ACTIONS(1),
@@ -5696,7 +5696,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(5), 1,
       sym_line_comment,
     ACTIONS(610), 1,
-      sym_tag_delimiter,
+      aux_sym_tag_token2,
     ACTIONS(612), 1,
       sym_line_end,
     STATE(189), 1,

@@ -166,29 +166,29 @@ asdsdf -> test.bla asdf
 
 --------------------------------------------------------------------------------
 
-    (program
-      (weave_body
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (text
-              (vocabulary))
-            (divert_or_thread
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier)
-                    (dot)
-                    (ERROR
-                      (identifier))
-                    (identifier))))))
-          (line_end)))
-      (knot
-        (knot_header
-          (knot_start)
-          (identifier)
-          (line_end))))
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (text
+          (vocabulary))
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)
+                (dot)
+                (ERROR
+                  (identifier))
+                (identifier))))))
+      (line_end)))
+  (knot
+    (knot_header
+      (knot_start)
+      (identifier)
+      (line_end))))
 
 ================
 Illegal divert 2
@@ -677,32 +677,32 @@ Illegal multidivert
 
 --------------------------------------------------------------------------------
 
-    (program
-      (weave_body
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (divert_or_thread
-              (divert_chain
-                (divert_return
-                  (double_arrow)))))
-          (ERROR
-            (identifier))
-          (line_end))
-        (weave_body_line
-          (line_start)
-          (dialog_text
-            (divert_or_thread
-              (divert_chain
-                (divert
-                  (arrow)
-                  (identifier_path
-                    (identifier)))
-                (divert_return
-                  (double_arrow)))))
-          (ERROR
-            (identifier))
-          (line_end))))
+(program
+  (weave_body
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_or_thread
+          (divert_chain
+            (divert_return
+              (double_arrow)))))
+      (ERROR
+        (identifier))
+      (line_end))
+    (weave_body_line
+      (line_start)
+      (dialog_text
+        (divert_or_thread
+          (divert_chain
+            (divert
+              (arrow)
+              (identifier_path
+                (identifier)))
+            (divert_return
+              (double_arrow)))))
+      (ERROR
+        (identifier))
+      (line_end))))
 
 ===
 VAR
@@ -1112,7 +1112,6 @@ Tags
       (dialog_text
         (tag
           (identifier)
-          (tag_delimiter)
           (tag_remainder)))
       (line_end))))
 

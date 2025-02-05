@@ -687,10 +687,6 @@
           "named": true
         },
         {
-          "type": "tag_delimiter",
-          "named": true
-        },
-        {
           "type": "tag_remainder",
           "named": true
         }
@@ -1005,10 +1001,6 @@
   },
   {
     "type": "stitch_start",
-    "named": true
-  },
-  {
-    "type": "tag_delimiter",
     "named": true
   },
   {

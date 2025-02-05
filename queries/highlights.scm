@@ -1,14 +1,13 @@
 ; tags and labels
-(tag_delimiter) @keyword
-(label) @function
-(tag (identifier) @type)
-(tag) @type
+(label) @label
+(tag (identifier) @commment)
+(tag) @comment
 
 ; values
 (identifier) @function
 (string) @string
 (boolean) @constant
-(number) @constant
+(number) @constant.numeric
 
 ; headers
 (knot_header) @keyword
@@ -26,15 +25,15 @@
 ; operators
 (assignment) @operator
 
-; special operators (ink)
-(arrow) @keyword.directive
-(double_arrow) @keyword.directive
+; special marks/operators (ink)
+(arrow) @special
+(double_arrow) @special
 (back_arrow) @constant
-(dot) @keyword.directive
-(mark_start) @keyword.directive
-(mark_end) @keyword.directive
-(hide_start) @keyword.directive
-(hide_end) @keyword.directive
+(dot) @special
+(mark_start) @special
+(mark_end) @special
+(hide_start) @special
+(hide_end) @special
 
 ; declarations
 (var_line) @attribute
@@ -49,8 +48,6 @@
 (inline_block) @keyword
 (condition_block) @keyword
 (code_text) @keyword
-
-(ERROR) @error
 
 ; support injection
 (program) @ui.text

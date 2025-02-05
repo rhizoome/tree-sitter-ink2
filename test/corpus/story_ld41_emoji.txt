@@ -614,7 +614,6 @@ VAR time = 0
       (dialog_text
         (tag
           (identifier)
-          (tag_delimiter)
           (tag_remainder)))
       (line_end))
     (weave_body_line
@@ -622,7 +621,6 @@ VAR time = 0
       (dialog_text
         (tag
           (identifier)
-          (tag_delimiter)
           (tag_remainder)))
       (line_end))
     (weave_body_line
@@ -630,7 +628,6 @@ VAR time = 0
       (dialog_text
         (tag
           (identifier)
-          (tag_delimiter)
           (tag_remainder)))
       (line_end))
     (var_line

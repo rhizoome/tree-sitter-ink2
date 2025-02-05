@@ -1143,8 +1143,8 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "tag_delimiter"
+                  "type": "PATTERN",
+                  "value": ":"
                 },
                 {
                   "type": "SYMBOL",
@@ -1162,10 +1162,6 @@
     "tag_remainder": {
       "type": "PATTERN",
       "value": "[^\\r\\n:]+"
-    },
-    "tag_delimiter": {
-      "type": "PATTERN",
-      "value": ":"
     },
     "value": {
       "type": "CHOICE",

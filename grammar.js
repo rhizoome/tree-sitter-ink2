@@ -324,12 +324,11 @@ module.exports = grammar({
             /#/,
             $.identifier,
             optional(seq(
-                $.tag_delimiter,
+                /:/,
                 $.tag_remainder
             ))
         ),
         tag_remainder: $ => /[^\r\n:]+/,
-        tag_delimiter: $ => /:/,
 
         value: $ => choice(
             $.boolean,
