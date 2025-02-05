@@ -15,7 +15,7 @@ classifiers = [
 ]
 authors = [{ name = "Jean-Louis Fuchs", email = "safe.pen2857@rhizoome.ch" }]
 requires-python = ">=3.9"
-license.text = "MIT and Apache"
+license.text = "MIT OR Apache-2.0"
 readme = "README.md"
 
 [project.urls]
